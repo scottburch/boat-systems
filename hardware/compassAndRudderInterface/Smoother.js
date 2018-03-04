@@ -1,5 +1,4 @@
-var values = require('./values');
-var utils = require('./utils');
+const utils = require('./utils');
 
 module.exports = class {
     constructor(smoothing) {
