@@ -2,7 +2,7 @@ const _ = require('lodash');
 
 const dgram = require('dgram');
 const {PORT, IP_ADDRESS, myID} = require('./networkSettings');
-const {nullToUndefined} = require('../autopilot/utils');
+import {msgToObj, objToMsg} from "./utils";
 
 
 const networkSocket = dgram.createSocket('udp4');
@@ -55,7 +55,7 @@ const startNetworkListener = () => {
         clients.forEach(s => ipc.server.emit(s, 'message', objToMsg({...obj, source: 'udp'})));
     };
 
-}
+};
 
 const sendToNetwork = (obj) => {
     obj.hops = (obj.hops || []).concat([myID]);
@@ -66,7 +66,4 @@ const sendToNetwork = (obj) => {
     )
 };
 
-
-const objToMsg = obj => `$${JSON.stringify(obj, (k, v) => v === undefined ? null : v)}\n`;
-const msgToObj = msg => nullToUndefined(JSON.parse(msg.toString().replace(/^\$/, '')));
 

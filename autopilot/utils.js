@@ -11,16 +11,5 @@ module.exports = {
     },
 
     now: () => new Date().getTime(),
-
-    nullToUndefined: obj => _.reduce(obj, (result, v, k) => {
-        _.isPlainObject(v) ? (
-            result[k] = module.exports.nullToUndefined(v)
-            ) : (
-            result[k] = v === null ? undefined : v
-        ) ;
-        return result;
-    }, {})
-
-
 };
 

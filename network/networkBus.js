@@ -1,15 +1,11 @@
 const _ = require('lodash');
-const {nullToUndefined} = require('../autopilot/utils');
+import {nullToUndefined, objToMsg, msgToObj} from "./utils";
 
 const ipc = require('node-ipc');
 
 ipc.config.id = 'boat-systems';
 ipc.config.retry = 1500;
 ipc.config.silent = true;
-
-
-const objToMsg = obj => `$${JSON.stringify(obj, (k, v) => v === undefined ? null : v)}\n`;
-const msgToObj = msg => nullToUndefined(JSON.parse(msg.toString().replace(/^\$/, '')));
 
 
 const listeners = {};
