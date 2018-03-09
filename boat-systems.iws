@@ -9,7 +9,8 @@
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" afterPath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" />
       <change beforePath="$PROJECT_DIR$/boat-systems.iws" afterPath="$PROJECT_DIR$/boat-systems.iws" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/LogPage.js" afterPath="$PROJECT_DIR$/client/src/pages/LogPage.js" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/AutopilotPage.js" afterPath="$PROJECT_DIR$/client/src/pages/AutopilotPage/AutopilotPage.js" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,14 +22,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LogPage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LogPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/pages/LogPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+              <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AutopilotPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/pages/AutopilotPage/AutopilotPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="61" column="10" lean-forward="false" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="98" lean-forward="false" selection-start-line="6" selection-start-column="98" selection-end-line="6" selection-end-column="98" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -37,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/client/src/stores/LogStore.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -47,7 +68,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>this.</find>
       <find>networksocket</find>
       <find>ipc.log</find>
       <find>inclue</find>
@@ -77,17 +97,18 @@
       <find>Compass_Heading</find>
       <find>roll</find>
       <find>undefine</find>
+      <find>log</find>
     </findStrings>
     <replaceStrings>
       <replace>values.get('$1')</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/client/src</dir>
-      <dir>$PROJECT_DIR$/client/src/pages/AutopilotPage</dir>
       <dir>$PROJECT_DIR$/autopilot</dir>
       <dir>$PROJECT_DIR$/hardware/compassAndRudderInterface</dir>
       <dir>$PROJECT_DIR$/network</dir>
       <dir>$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware</dir>
+      <dir>$PROJECT_DIR$/client/src/pages/AutopilotPage</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -109,7 +130,6 @@
         <option value="$PROJECT_DIR$/test/networkTest.js" />
         <option value="$PROJECT_DIR$/network/libs/NetworkReceiver.js" />
         <option value="$PROJECT_DIR$/client/main.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/client/src/components/Home.js" />
         <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/src/pages/HomePage.js" />
@@ -137,7 +157,6 @@
         <option value="$PROJECT_DIR$/autopilot/autopilot.js" />
         <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/ValuesBox.js" />
         <option value="$PROJECT_DIR$/client/src/components/App.js" />
-        <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/AutopilotPage.js" />
         <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/AdjustableValuesBox.js" />
         <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/PresetsSelect.js" />
         <option value="$PROJECT_DIR$/client/src/stores/AutopilotClientStore.js" />
@@ -152,6 +171,8 @@
         <option value="$PROJECT_DIR$/network/networkBridge.js" />
         <option value="$PROJECT_DIR$/network/utils.js" />
         <option value="$PROJECT_DIR$/client/src/pages/LogPage.js" />
+        <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/AutopilotPage.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -201,27 +222,7 @@
             <path>
               <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
               <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="stores" type="462c0819:PsiDirectoryNode" />
+              <item name="autopilot" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -365,7 +366,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520097417998</updated>
-      <workItem from="1520097422142" duration="89265000" />
+      <workItem from="1520097422142" duration="89942000" />
     </task>
     <task id="LOCAL-00001" summary="Added sending compass delay">
       <created>1520141204122</created>
@@ -661,11 +662,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520558772948</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Fix log">
+      <created>1520566067077</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1520566067077</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89265000" />
+    <option name="totallyTimeSpent" value="89942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1152" height="695" extended-state="0" />
@@ -747,7 +755,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="function name change" />
     <MESSAGE value="getting compass info" />
     <MESSAGE value="adding autopilot" />
     <MESSAGE value="Added preset" />
@@ -772,7 +779,8 @@
     <MESSAGE value="Added firmware code" />
     <MESSAGE value="bug fix in network stuff" />
     <MESSAGE value="bug fix again" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix again" />
+    <MESSAGE value="Fix log" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix log" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -789,14 +797,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/pages/AutopilotPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -972,16 +972,6 @@
         <state relative-caret-position="90">
           <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/pages/AutopilotPage/AutopilotPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding>
-            <element signature="e#391#444#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1188,7 +1178,7 @@
     <entry file="file://$PROJECT_DIR$/client/src/stores/LogStore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1196,10 +1186,26 @@
     <entry file="file://$PROJECT_DIR$/client/src/pages/LogPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/pages/AutopilotPage/AutopilotPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="61" column="10" lean-forward="false" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="98" lean-forward="false" selection-start-line="6" selection-start-column="98" selection-end-line="6" selection-end-column="98" />
+          <folding />
         </state>
       </provider>
     </entry>

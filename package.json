@@ -4,7 +4,8 @@
     "client-compile-watch": "cd client; webpack --watch --env.beep",
     "client": "cd client; electron main.js",
     "network-bridge": "cd network; node networkBridge",
-    "autopilot-hardware": "cd hardware/compassAndRudderInterface; node compassAndRudderInterface"
+    "autopilot-hardware": "cd hardware/compassAndRudderInterface; node compassAndRudderInterface",
+    "autopilot": "node autopilot/autopilot"
   },
   "dependencies": {
     "babel": "^6.23.0",

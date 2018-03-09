@@ -61,13 +61,6 @@ keyListener(key) {
                         </Well>
                     </Col>
                 </Row>
-                <Row>
-                    <Col xs={12}>
-                        <Well>
-                            LOG
-                        </Well>
-                    </Col>
-                </Row>
             </Grid>
         );
     }
