@@ -6,7 +6,7 @@ import {getLogMessages} from "../stores/LogStore";
 export class LogPage extends Component {
     render() {
         return getLogMessages().map((msg, idx) => (
-            <div key={idx}>{msg.data.msg}</div>
+            <div key={idx}>{msg.level}: {msg.msg}</div>
         ))
     }
 }
