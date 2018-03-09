@@ -2,7 +2,7 @@ const _ = require('lodash');
 
 const dgram = require('dgram');
 const {PORT, IP_ADDRESS, myID} = require('./networkSettings');
-import {msgToObj, objToMsg} from "./utils";
+const {msgToObj, objToMsg} = require("./utils");
 
 
 const networkSocket = dgram.createSocket('udp4');

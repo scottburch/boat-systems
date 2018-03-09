@@ -9,7 +9,9 @@
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" afterPath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" />
       <change beforePath="$PROJECT_DIR$/boat-systems.iws" afterPath="$PROJECT_DIR$/boat-systems.iws" />
-      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" afterPath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
+      <change beforePath="$PROJECT_DIR$/network/networkBridge.js" afterPath="$PROJECT_DIR$/network/networkBridge.js" />
+      <change beforePath="$PROJECT_DIR$/network/networkBus.js" afterPath="$PROJECT_DIR$/network/networkBus.js" />
+      <change beforePath="$PROJECT_DIR$/network/utils.js" afterPath="$PROJECT_DIR$/network/utils.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,21 +23,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="compassAndRudderInterface.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
+      <file leaf-file-name="Compass.ino" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/Compass.ino">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+            <state relative-caret-position="450">
+              <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autopilotStore.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autopilot/autopilotStore.js">
+      <file leaf-file-name="MinIMU9AHRS.ino" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/MinIMU9AHRS.ino">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="20" column="69" lean-forward="false" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+            <state relative-caret-position="328">
+              <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autopilot.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/autopilot.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="119" column="10" lean-forward="false" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autopilot.ino" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/autopilot.ino">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autopilot.ino" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../autopilot-old/firmware/autopilot/autopilot.ino">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compassAndRudderInterface.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="networkBus.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/networkBus.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="networkBridge.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/network/networkBridge.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autopilot.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../autopilot-old/firmware/autopilot/autopilot.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -45,8 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>values</find>
-      <find>utils</find>
       <find>this.</find>
       <find>networksocket</find>
       <find>ipc.log</find>
@@ -55,7 +135,6 @@
       <find>ipclisteners</find>
       <find>hops</find>
       <find>myID</find>
-      <find>objtomsg</find>
       <find>preset</find>
       <find>values.get</find>
       <find>values.set</find>
@@ -71,7 +150,13 @@
       <find>sendheading</find>
       <find>compasssender</find>
       <find>maybe</find>
+      <find>nulltoundef</find>
+      <find>nulltoundefined</find>
+      <find>objtomsg</find>
       <find>sendcompassdelay</find>
+      <find>Compass_Heading</find>
+      <find>roll</find>
+      <find>undefine</find>
     </findStrings>
     <replaceStrings>
       <replace>values.get('$1')</replace>
@@ -80,7 +165,9 @@
       <dir>$PROJECT_DIR$/client/src</dir>
       <dir>$PROJECT_DIR$/client/src/pages/AutopilotPage</dir>
       <dir>$PROJECT_DIR$/autopilot</dir>
+      <dir>$PROJECT_DIR$/hardware/compassAndRudderInterface</dir>
       <dir>$PROJECT_DIR$/network</dir>
+      <dir>$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -94,8 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/compass/compass.js" />
-        <option value="$PROJECT_DIR$/compass/CompassSender.js" />
         <option value="$PROJECT_DIR$/compass/compassSender.js" />
         <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface.js" />
         <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/package.json" />
@@ -133,9 +218,6 @@
         <option value="$PROJECT_DIR$/autopilot/autopilot.js" />
         <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/ValuesBox.js" />
         <option value="$PROJECT_DIR$/client/src/components/App.js" />
-        <option value="$PROJECT_DIR$/autopilot/utils.js" />
-        <option value="$PROJECT_DIR$/network/networkBridge.js" />
-        <option value="$PROJECT_DIR$/network/networkBus.js" />
         <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/AutopilotPage.js" />
         <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/AdjustableValuesBox.js" />
         <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/PresetsSelect.js" />
@@ -145,6 +227,11 @@
         <option value="$PROJECT_DIR$/network/compassSender/compassSender.js" />
         <option value="$PROJECT_DIR$/autopilot/autopilotStore.js" />
         <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
+        <option value="$PROJECT_DIR$/autopilot/utils.js" />
+        <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/build.sh" />
+        <option value="$PROJECT_DIR$/network/utils.js" />
+        <option value="$PROJECT_DIR$/network/networkBus.js" />
+        <option value="$PROJECT_DIR$/network/networkBridge.js" />
       </list>
     </option>
   </component>
@@ -194,44 +281,6 @@
             <path>
               <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
               <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="autopilot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="AutopilotPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="stores" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
               <item name="hardware" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -239,6 +288,21 @@
               <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
               <item name="hardware" type="462c0819:PsiDirectoryNode" />
               <item name="compassAndRudderInterface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
+              <item name="compassAndRudderInterface" type="462c0819:PsiDirectoryNode" />
+              <item name="firmware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
+              <item name="compassAndRudderInterface" type="462c0819:PsiDirectoryNode" />
+              <item name="firmware" type="462c0819:PsiDirectoryNode" />
+              <item name="autopilot" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
@@ -266,16 +330,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hardware/compassAndRudderInterface" />
       <recent name="$PROJECT_DIR$/client/src/pages/AutopilotPage" />
       <recent name="$PROJECT_DIR$/autopilot" />
       <recent name="$PROJECT_DIR$/network" />
-      <recent name="$PROJECT_DIR$/hardware/compassAndRudderInterface" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot" />
+      <recent name="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware" />
       <recent name="$PROJECT_DIR$/client/src/stores" />
       <recent name="$PROJECT_DIR$/network" />
       <recent name="$PROJECT_DIR$/client/src/pages" />
-      <recent name="$PROJECT_DIR$/hardware/compassAndRudderInterface" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -386,7 +451,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520097417998</updated>
-      <workItem from="1520097422142" duration="83521000" />
+      <workItem from="1520097422142" duration="88234000" />
     </task>
     <task id="LOCAL-00001" summary="Added sending compass delay">
       <created>1520141204122</created>
@@ -640,11 +705,32 @@
       <option name="project" value="LOCAL" />
       <updated>1520542872077</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Remove console.log - Autopilot should be fully working now">
+      <created>1520543079135</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1520543079135</updated>
+    </task>
+    <task id="LOCAL-00038" summary="centralized duplicate code">
+      <created>1520549662406</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1520549662406</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Added firmware code">
+      <created>1520556714406</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1520556714407</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83521000" />
+    <option name="totallyTimeSpent" value="88234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1152" height="695" extended-state="0" />
@@ -658,10 +744,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39514732" sideWeight="0.4963964" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28942809" sideWeight="0.4963964" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954955" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -708,6 +794,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.h" />
+  </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
       <list>
@@ -723,9 +812,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Commit before adding networkBridge" />
-    <MESSAGE value="ipc buss working" />
-    <MESSAGE value="working but not right yet" />
     <MESSAGE value="ipc test with client working" />
     <MESSAGE value="name of function change" />
     <MESSAGE value="function name change" />
@@ -748,7 +834,10 @@
     <MESSAGE value="Adding rudder control back to autopilot" />
     <MESSAGE value="add console.log" />
     <MESSAGE value="fixed bug in rudder control code - left out separator." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug in rudder control code - left out separator." />
+    <MESSAGE value="Remove console.log - Autopilot should be fully working now" />
+    <MESSAGE value="centralized duplicate code" />
+    <MESSAGE value="Added firmware code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added firmware code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -765,122 +854,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/pages/HomePage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/libs/NetworkReceiver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/libs/NetworkSender.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/networkTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/LogReceiver.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/networkSettings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/temp1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/temp2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="60" lean-forward="false" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/logSender.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stores/LogStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/pages/LogPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/SidebarMenu.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1075,36 +1048,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/networkBridge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autopilot/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/networkBus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/pages/AutopilotPage/AutopilotPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
           <folding>
-            <element signature="e#391#444#0" expanded="true" />
+            <element signature="e#391#444#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1141,16 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stores/AutopilotClientStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/network/compassSender/compassSender.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1159,26 +1098,170 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/network/networkSettings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autopilot/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stores/LogStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stores/AutopilotClientStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/blinking_led.ino/blinking_led.ino.ino">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-657">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/networkTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/build.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/autopilot/autopilot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="267">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autopilot/autopilotStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="20" column="69" lean-forward="false" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/MinIMU9AHRS.ino">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/autopilot.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="119" column="10" lean-forward="false" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/Compass.ino">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autopilot-old/firmware/autopilot/Compass.ino">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-267">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/autopilot.ino">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autopilot-old/firmware/autopilot/autopilot.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autopilot-old/firmware/autopilot/autopilot.ino">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+        <state relative-caret-position="219">
+          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/networkBus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/networkBridge.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
           <folding />
         </state>
       </provider>

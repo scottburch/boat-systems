@@ -7,7 +7,7 @@ const nullToUndefined =  obj => _.reduce(obj, (result, v, k) => {
     return result;
 }, {});
 
-export const objToMsg = obj => `$${JSON.stringify(obj, (k, v) => v === undefined ? null : v)}\n`;
+module.exports.objToMsg = obj => `$${JSON.stringify(obj, (k, v) => v === undefined ? null : v)}\n`;
 
-export const msgToObj = msg => nullToUndefined(JSON.parse(msg.toString().replace(/^\$/, '')));
+module.exports.msgToObj = msg => nullToUndefined(JSON.parse(msg.toString().replace(/^\$/, '')));
 
