@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 const nullToUndefined =  obj => _.reduce(obj, (result, v, k) => {
     _.isPlainObject(v) ? (
         result[k] = module.exports.nullToUndefined(v)
