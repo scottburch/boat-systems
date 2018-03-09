@@ -104,8 +104,8 @@
       <file leaf-file-name="utils.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/network/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+            <state relative-caret-position="60">
+              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -423,7 +423,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520097417998</updated>
-      <workItem from="1520097422142" duration="88457000" />
+      <workItem from="1520097422142" duration="88530000" />
     </task>
     <task id="LOCAL-00001" summary="Added sending compass delay">
       <created>1520141204122</created>
@@ -705,11 +705,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520558485945</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="bug fix again">
+      <created>1520558697892</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1520558697892</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88457000" />
+    <option name="totallyTimeSpent" value="88530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1152" height="695" extended-state="0" />
@@ -791,7 +798,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="name of function change" />
     <MESSAGE value="function name change" />
     <MESSAGE value="getting compass info" />
     <MESSAGE value="adding autopilot" />
@@ -816,7 +822,8 @@
     <MESSAGE value="centralized duplicate code" />
     <MESSAGE value="Added firmware code" />
     <MESSAGE value="bug fix in network stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix in network stuff" />
+    <MESSAGE value="bug fix again" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1239,8 +1246,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/network/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+        <state relative-caret-position="60">
+          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding />
         </state>
       </provider>
