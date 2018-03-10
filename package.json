@@ -5,7 +5,8 @@
     "client": "cd client; electron main.js",
     "network-bridge": "cd network; node networkBridge",
     "autopilot-hardware": "cd hardware/compassAndRudderInterface; node compassAndRudderInterface",
-    "autopilot": "node autopilot/autopilot"
+    "autopilot": "node autopilot/autopilot",
+    "nema-bridge": "cd network; node nemaBridge"
   },
   "dependencies": {
     "babel": "^6.23.0",

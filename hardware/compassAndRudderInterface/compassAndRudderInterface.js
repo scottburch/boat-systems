@@ -13,15 +13,6 @@ const _ = require('lodash');
 let port;
 const SerialPort = require('serialport');
 
-// TODO: fake in order to absorb values.set() below until they can all be updated
-const values = {
-    set: () => {
-    },
-    onChangeValue: () => {
-    }
-};
-
-
 start();
 
 function start() {
