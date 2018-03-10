@@ -6,7 +6,8 @@
     "network-bridge": "cd network; node networkBridge",
     "autopilot-hardware": "cd hardware/compassAndRudderInterface; node compassAndRudderInterface",
     "autopilot": "node autopilot/autopilot",
-    "nema-bridge": "cd network; node nemaBridge"
+    "nema-bridge": "cd network; node nemaBridge",
+    "ais-interface": "cd hardware; node aisInterface"
   },
   "dependencies": {
     "babel": "^6.23.0",
