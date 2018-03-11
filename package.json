@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "client-compile": "cd client; webpack",
+    "start": "./scripts/start-client.sh",
+    "start-pi": "./scripts/start-pi.sh",
+    "client-compile": "cd client; webpack; cd ..",
     "client-compile-watch": "cd client; webpack --watch --env.beep",
     "client": "cd client; electron main.js",
     "network-bridge": "cd network; node networkBridge",
