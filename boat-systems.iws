@@ -8,10 +8,8 @@
       <change beforePath="$PROJECT_DIR$/../autopilot-old/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../autopilot-old/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" afterPath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" />
-      <change beforePath="$PROJECT_DIR$/autopilot/autopilotStore.js" afterPath="$PROJECT_DIR$/autopilot/autopilotStore.js" />
       <change beforePath="$PROJECT_DIR$/boat-systems.iws" afterPath="$PROJECT_DIR$/boat-systems.iws" />
       <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" afterPath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
-      <change beforePath="$PROJECT_DIR$/network/networkBridge.js" afterPath="$PROJECT_DIR$/network/networkBridge.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,21 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="presets.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="compassAndRudderInterface.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="82" column="93" lean-forward="false" selection-start-line="82" selection-start-column="93" selection-end-line="82" selection-end-column="93" />
+            <state relative-caret-position="214">
+              <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -230,8 +218,8 @@
         <option value="$PROJECT_DIR$/scripts/start-pi.sh" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/network/networkBridge.js" />
-        <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
         <option value="$PROJECT_DIR$/autopilot/autopilotStore.js" />
+        <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
       </list>
     </option>
   </component>
@@ -439,7 +427,7 @@
       <updated>1520097417998</updated>
       <workItem from="1520097422142" duration="91086000" />
       <workItem from="1520617350992" duration="7704000" />
-      <workItem from="1520801631468" duration="3007000" />
+      <workItem from="1520801631468" duration="3237000" />
     </task>
     <task id="LOCAL-00001" summary="Added sending compass delay">
       <created>1520141204122</created>
@@ -777,11 +765,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520740582672</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Changed compass delay to go through the whole chain from arduino to autopilot code.&#10;Changed network code to be async">
+      <created>1520905446479</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1520905446479</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101797000" />
+    <option name="totallyTimeSpent" value="102027000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1152" height="695" extended-state="0" />
@@ -798,7 +793,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27902946" sideWeight="0.4963964" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25765765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25765765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -863,7 +858,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="getting stuff in client view to work" />
     <MESSAGE value="more work on autopilot" />
     <MESSAGE value="converted autopilot to use observable.map" />
     <MESSAGE value="converted over to use observable.map" />
@@ -888,7 +882,8 @@
     <MESSAGE value="Added ais interface" />
     <MESSAGE value="ais interface yarn script" />
     <MESSAGE value="created pi startup script" />
-    <option name="LAST_COMMIT_MESSAGE" value="created pi startup script" />
+    <MESSAGE value="Changed compass delay to go through the whole chain from arduino to autopilot code.&#10;Changed network code to be async" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed compass delay to go through the whole chain from arduino to autopilot code.&#10;Changed network code to be async" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1134,14 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hardware/aisInterface.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1229,10 +1216,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="82" column="93" lean-forward="false" selection-start-line="82" selection-start-column="93" selection-end-line="82" selection-end-column="93" />
+        <state relative-caret-position="214">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding />
         </state>
       </provider>
