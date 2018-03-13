@@ -16,10 +16,10 @@ const SerialPort = require('serialport');
 start();
 
 function start() {
-//    const dev = '/dev/tty.usbserial-A4007c47';
+    const dev = '/dev/tty.usbserial-A4007c47';
 //    var dev = '/dev/cu.usbmodem1421'
 //    var dev = '/dev/ttyACM0';
-    var dev = '/dev/ttyUSB0';
+//    var dev = '/dev/ttyUSB0';
     const parser = new SerialPort.parsers.Readline();
     port = new SerialPort(dev, {
         baudRate: 115200,
@@ -45,7 +45,6 @@ function start() {
                 switch (prefix) {
                     case 'AHRS':
                         compass(data);
-                        pong(data);
                         break;
                     case 'D':
                         try {
@@ -81,25 +80,23 @@ function start() {
         });
 
         onBusMessage('RUDDER', v => port.write(`R:${v.rudder}!`));
+        onBusMessage('COMPASS_PONG', v => console.log(v) || (v && port.write(`P:${v.time}!`)));
     });
 
 
     const headingSmoother = new Smoother(10);
 
-    const pong = data => {
-        const [roll, pitch, yaw, time] = data.split(',');
-        port.write(`P:${time}!`);
-    };
 
     function compass(data) {
-        const [roll, pitch, yaw] = data.split(',');
+        const [roll, pitch, yaw, time] = data.split(',');
         const heading = parseFloat(yaw, 10) + 180;
         sendMessage('AHRS', {
             rawHeading: heading,
             heading: utils.fixed(headingSmoother.smooth(heading), 0),
             roll: parseFloat(roll, 10),
-            pitch: parseFloat(pitch, 10)
-        })
+            pitch: parseFloat(pitch, 10),
+            compassTime: time
+        });
     }
 
 }

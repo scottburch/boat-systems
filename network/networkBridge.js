@@ -29,8 +29,8 @@ ipc.serve(
             'message',
             (msg, socket) => {
                 const obj = msgToObj(msg);
-                    sendToNetwork(obj);
-                    clients.forEach(s => s !== socket && ipc.server.emit(s, 'message', objToMsg({...obj, source: 'ipc'})));
+                    setTimeout(() => sendToNetwork(obj));
+                    clients.forEach(s => s !== socket && setTimeout(() => ipc.server.emit(s, 'message', objToMsg({...obj, source: 'ipc'}))));
             }
         );
         ipc.server.on(
@@ -48,14 +48,18 @@ ipc.server.start();
 const startNetworkListener = () => {
     networkSocket.on('message', msg => {
         const obj = msgToObj(msg.toString());
-        _.includes(obj.hops, myID) || sendToIpcClients(obj);
+        _.includes(obj.hops, myID) || setTimeout(() => sendToIpcClients(obj));
 
+        const sendToIpcClients = (obj) => {
+            clients.forEach(s => setTimeout(() => ipc.server.emit(s, 'message', objToMsg({...obj, source: 'udp'}))));
+        };
     });
-    const sendToIpcClients = (obj) => {
-        clients.forEach(s => ipc.server.emit(s, 'message', objToMsg({...obj, source: 'udp'})));
-    };
-
 };
+
+
+
+
+
 
 const sendToNetwork = (obj) => {
     obj.hops = (obj.hops || []).concat([myID]);
