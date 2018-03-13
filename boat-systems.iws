@@ -9,7 +9,7 @@
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" afterPath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" />
       <change beforePath="$PROJECT_DIR$/boat-systems.iws" afterPath="$PROJECT_DIR$/boat-systems.iws" />
-      <change beforePath="$PROJECT_DIR$/hardware/aisInterface.js" afterPath="$PROJECT_DIR$/hardware/aisInterface.js" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" afterPath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="compassAndRudderInterface.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="compassAndRudderInterface.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+            <state relative-caret-position="117">
+              <caret line="83" column="74" lean-forward="false" selection-start-line="83" selection-start-column="74" selection-end-line="83" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -71,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aisInterface.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aisInterface.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hardware/aisInterface.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="314">
+              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -139,7 +139,6 @@
       <find>'./en</find>
       <find>values.([a-zA-Z]*)</find>
       <find>values.</find>
-      <find>console.log</find>
       <find>sendheading</find>
       <find>compasssender</find>
       <find>maybe</find>
@@ -155,6 +154,7 @@
       <find>onChangeValue</find>
       <find>AHRS</find>
       <find>pong</find>
+      <find>console.log</find>
     </findStrings>
     <replaceStrings>
       <replace>values.get('$1')</replace>
@@ -228,8 +228,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/network/networkBridge.js" />
         <option value="$PROJECT_DIR$/autopilot/autopilotStore.js" />
-        <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
         <option value="$PROJECT_DIR$/hardware/aisInterface.js" />
+        <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
       </list>
     </option>
   </component>
@@ -437,14 +437,7 @@
       <updated>1520097417998</updated>
       <workItem from="1520097422142" duration="91086000" />
       <workItem from="1520617350992" duration="7704000" />
-      <workItem from="1520801631468" duration="3339000" />
-    </task>
-    <task id="LOCAL-00002" summary="changed network receiver to parse JSON">
-      <created>1520142047359</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1520142047359</updated>
+      <workItem from="1520801631468" duration="3916000" />
     </task>
     <task id="LOCAL-00003" summary="Added logging">
       <created>1520160364177</created>
@@ -782,11 +775,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520905654186</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Changed port for ais interface">
+      <created>1520905763954</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1520905763954</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102129000" />
+    <option name="totallyTimeSpent" value="102706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1152" height="695" extended-state="0" />
@@ -868,7 +868,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="converted autopilot to use observable.map" />
     <MESSAGE value="converted over to use observable.map" />
     <MESSAGE value="fixed course on and off" />
     <MESSAGE value="Centralized sending data to the autopilot" />
@@ -893,7 +892,8 @@
     <MESSAGE value="created pi startup script" />
     <MESSAGE value="Changed compass delay to go through the whole chain from arduino to autopilot code.&#10;Changed network code to be async" />
     <MESSAGE value="changed usb port to be the port for the pi board" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed usb port to be the port for the pi board" />
+    <MESSAGE value="Changed port for ais interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed port for ais interface" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1226,18 +1226,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
+    <entry file="file://$PROJECT_DIR$/hardware/aisInterface.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="314">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/aisInterface.js">
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state relative-caret-position="117">
+          <caret line="83" column="74" lean-forward="false" selection-start-line="83" selection-start-column="74" selection-end-line="83" selection-end-column="74" />
           <folding />
         </state>
       </provider>

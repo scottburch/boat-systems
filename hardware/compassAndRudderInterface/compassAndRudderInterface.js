@@ -81,7 +81,7 @@ function start() {
         });
 
         onBusMessage('RUDDER', v => port.write(`R:${v.rudder}!`));
-        onBusMessage('COMPASS_PONG', v => console.log(v) || (v && port.write(`P:${v.time}!`)));
+        onBusMessage('COMPASS_PONG', v => v && port.write(`P:${v.time}!`));
     });
 
 
