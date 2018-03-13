@@ -13,8 +13,9 @@ function start() {
 //    const dev = '/dev/tty.usbserial-A4007c47';
 //    var dev = '/dev/cu.usbmodem1421'
 //    var dev = '/dev/ttyACM0';
-    var dev = '/dev/cu.usbserial-A5003vQ2';
+//    var dev = '/dev/cu.usbserial-A5003vQ2';
 //    var dev = '/dev/ttyUSB0';
+    const dev = '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A5003vQ2-if00-port0';
     const parser = new SerialPort.parsers.Readline();
     port = new SerialPort(dev, {
         baudRate: 38400,
