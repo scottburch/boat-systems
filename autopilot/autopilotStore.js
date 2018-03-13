@@ -25,5 +25,9 @@ autorun(() => {
     values.merge(presets[values.get('preset')].values);
 });
 
-autorun(() => sendMessage('AUTOPILOT', toJS(values)));
+
+const sendAutopilotValues = _.debounce(() => sendMessage('AUTOPILOT', toJS(values)), 50);
+
+autorun(() => sendAutopilotValues(toJS(values)));
+
 autorun(() => sendMessage('RUDDER', {rudder: values.get('rudder')}));

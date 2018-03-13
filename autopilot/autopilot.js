@@ -21,7 +21,8 @@ autorun(() => {
         pidController = undefined;
         values.set('rudder', 0);
     }
-    values.set('error', 0);
+    // I don't think this is neccessary TODO: remove if true
+//    values.set('error', 0);
 });
 
 const stateIdle = {
