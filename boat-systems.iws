@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/../autopilot-old/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../autopilot-old/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" afterPath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" />
-      <change beforePath="$PROJECT_DIR$/autopilot/autopilot.js" afterPath="$PROJECT_DIR$/autopilot/autopilot.js" />
       <change beforePath="$PROJECT_DIR$/autopilot/autopilotStore.js" afterPath="$PROJECT_DIR$/autopilot/autopilotStore.js" />
       <change beforePath="$PROJECT_DIR$/boat-systems.iws" afterPath="$PROJECT_DIR$/boat-systems.iws" />
     </list>
@@ -22,21 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="autopilotStore.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="autopilotStore.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/autopilot/autopilotStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="278">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autopilot.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="autopilot.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autopilot/autopilot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="60" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+            <state relative-caret-position="275">
+              <caret line="121" column="47" lean-forward="false" selection-start-line="121" selection-start-column="47" selection-end-line="121" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -353,14 +352,7 @@
       <updated>1520097417998</updated>
       <workItem from="1520097422142" duration="91086000" />
       <workItem from="1520617350992" duration="7704000" />
-      <workItem from="1520801631468" duration="5934000" />
-    </task>
-    <task id="LOCAL-00004" summary="Added client">
-      <created>1520165255310</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1520165255311</updated>
+      <workItem from="1520801631468" duration="7285000" />
     </task>
     <task id="LOCAL-00005" summary="Added log messages to client">
       <created>1520170430091</created>
@@ -698,11 +690,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520906364929</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="removed unnecessary code to drop error to 0 when changing course and cut autopilot sending variables by 1/4.">
+      <created>1520984851759</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1520984851759</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104724000" />
+    <option name="totallyTimeSpent" value="106075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1152" height="695" extended-state="0" />
@@ -716,10 +715,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4714038" sideWeight="0.4963964" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2305026" sideWeight="0.4963964" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25765765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25765765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -784,7 +783,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="fixed course on and off" />
     <MESSAGE value="Centralized sending data to the autopilot" />
     <MESSAGE value="fixed autopilot presets - added diagram" />
     <MESSAGE value="Added compass delay" />
@@ -809,7 +807,8 @@
     <MESSAGE value="changed usb port to be the port for the pi board" />
     <MESSAGE value="Changed port for ais interface" />
     <MESSAGE value="remove extra console.log" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove extra console.log" />
+    <MESSAGE value="removed unnecessary code to drop error to 0 when changing course and cut autopilot sending variables by 1/4." />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unnecessary code to drop error to 0 when changing course and cut autopilot sending variables by 1/4." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1151,18 +1150,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autopilot/autopilotStore.js">
+    <entry file="file://$PROJECT_DIR$/autopilot/autopilot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="275">
+          <caret line="121" column="47" lean-forward="false" selection-start-line="121" selection-start-column="47" selection-end-line="121" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autopilot/autopilot.js">
+    <entry file="file://$PROJECT_DIR$/autopilot/autopilotStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="60" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+        <state relative-caret-position="278">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -26,8 +26,22 @@ autorun(() => {
 });
 
 
-const sendAutopilotValues = _.debounce(() => sendMessage('AUTOPILOT', toJS(values)), 50);
+const sendAutopilotValues = (() => {
+    let values = {};
 
-autorun(() => sendAutopilotValues(toJS(values)));
+    const scheduleSendValues = _.debounce(() => {
+        sendMessage('AUTOPILOT', values);
+        values = {};
+    }, 50);
+
+    return change => {
+        values[change.name] = change.newValue;
+        scheduleSendValues();
+    }
+})();
+
+values.observe(sendAutopilotValues);
+
+setInterval(() => sendMessage('AUTOPILOT', toJS(values)), 5000);
 
 autorun(() => sendMessage('RUDDER', {rudder: values.get('rudder')}));
