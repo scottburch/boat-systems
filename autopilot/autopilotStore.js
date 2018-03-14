@@ -2,6 +2,7 @@ const  {observable, autorun, toJS, runInAction}  = require('mobx');
 const {onBusMessage, sendMessage} = require('../network/networkBus');
 const _ = require('lodash');
 const {Maybe} = require('simple-monads');
+const {observableChangeScheduler} = require('../utils/observableChangeScheduler');
 
 const presets = require('./presets');
 
@@ -26,22 +27,9 @@ autorun(() => {
 });
 
 
-const sendAutopilotValues = (() => {
-    let values = {};
-
-    const scheduleSendValues = _.debounce(() => {
-        sendMessage('AUTOPILOT', values);
-        values = {};
-    }, 50);
-
-    return change => {
-        values[change.name] = change.newValue;
-        scheduleSendValues();
-    }
-})();
-
-values.observe(sendAutopilotValues);
-
 setInterval(() => sendMessage('AUTOPILOT', toJS(values)), 5000);
 
 autorun(() => sendMessage('RUDDER', {rudder: values.get('rudder')}));
+
+
+observableChangeScheduler(values, 'AUTOPILOT', 50, ['compassTime']);

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e4a8581-ad2e-4c05-b0e5-f073204d9c85" name="Default" comment="Commit before adding networkBridge">
+      <change beforePath="" afterPath="$PROJECT_DIR$/utils/observableChangeScheduler.js" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/.idea/autopilot.iml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/.idea/misc.xml" afterPath="$PROJECT_DIR$/../autopilot-old/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/.idea/modules.xml" afterPath="$PROJECT_DIR$/../autopilot-old/.idea/modules.xml" />
@@ -10,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" afterPath="$PROJECT_DIR$/../autopilot-old/autopilot/src/presets.js" />
       <change beforePath="$PROJECT_DIR$/autopilot/autopilotStore.js" afterPath="$PROJECT_DIR$/autopilot/autopilotStore.js" />
       <change beforePath="$PROJECT_DIR$/boat-systems.iws" afterPath="$PROJECT_DIR$/boat-systems.iws" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" afterPath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="autopilotStore.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="autopilotStore.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autopilot/autopilotStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="69">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="observableChangeScheduler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/observableChangeScheduler.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -34,8 +46,18 @@
       <file leaf-file-name="autopilot.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autopilot/autopilot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="121" column="47" lean-forward="false" selection-start-line="121" selection-start-column="47" selection-end-line="121" selection-end-column="47" />
+            <state relative-caret-position="111">
+              <caret line="108" column="9" lean-forward="false" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compassAndRudderInterface.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-269">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -45,7 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hops</find>
       <find>myID</find>
       <find>preset</find>
       <find>values.get</find>
@@ -75,6 +96,7 @@
       <find>values.set('error'</find>
       <find>AHRS</find>
       <find>sendmessage</find>
+      <find>compassPong</find>
     </findStrings>
     <replaceStrings>
       <replace>values.get('$1')</replace>
@@ -86,6 +108,7 @@
       <dir>$PROJECT_DIR$/client/src/pages/AutopilotPage</dir>
       <dir>$PROJECT_DIR$/client/src</dir>
       <dir>$PROJECT_DIR$/autopilot</dir>
+      <dir>$PROJECT_DIR$</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -99,7 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/networkTest.js" />
         <option value="$PROJECT_DIR$/network/libs/NetworkReceiver.js" />
         <option value="$PROJECT_DIR$/client/main.js" />
         <option value="$PROJECT_DIR$/client/src/components/Home.js" />
@@ -146,10 +168,11 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/network/networkBridge.js" />
         <option value="$PROJECT_DIR$/hardware/aisInterface.js" />
-        <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
         <option value="$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js" />
         <option value="$PROJECT_DIR$/autopilot/autopilot.js" />
         <option value="$PROJECT_DIR$/autopilot/autopilotStore.js" />
+        <option value="$PROJECT_DIR$/utils/observableChangeScheduler.js" />
+        <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
       </list>
     </option>
   </component>
@@ -203,12 +226,7 @@
             <path>
               <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
               <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="autopilot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -352,14 +370,7 @@
       <updated>1520097417998</updated>
       <workItem from="1520097422142" duration="91086000" />
       <workItem from="1520617350992" duration="7704000" />
-      <workItem from="1520801631468" duration="7285000" />
-    </task>
-    <task id="LOCAL-00005" summary="Added log messages to client">
-      <created>1520170430091</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1520170430091</updated>
+      <workItem from="1520801631468" duration="10803000" />
     </task>
     <task id="LOCAL-00006" summary="changed compass to use new NetworkBus - oh and added NetworkBus">
       <created>1520190531656</created>
@@ -697,11 +708,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520984851759</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Cut down on how much data is included in the AUTOPILOT event updates">
+      <created>1520994258194</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1520994258194</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106075000" />
+    <option name="totallyTimeSpent" value="109593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1152" height="695" extended-state="0" />
@@ -715,7 +733,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2305026" sideWeight="0.4963964" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29116118" sideWeight="0.4963964" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25765765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -783,7 +801,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Centralized sending data to the autopilot" />
     <MESSAGE value="fixed autopilot presets - added diagram" />
     <MESSAGE value="Added compass delay" />
     <MESSAGE value="Adding the rest of the AHRS info to the hardware reader" />
@@ -808,7 +825,8 @@
     <MESSAGE value="Changed port for ais interface" />
     <MESSAGE value="remove extra console.log" />
     <MESSAGE value="removed unnecessary code to drop error to 0 when changing course and cut autopilot sending variables by 1/4." />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unnecessary code to drop error to 0 when changing course and cut autopilot sending variables by 1/4." />
+    <MESSAGE value="Cut down on how much data is included in the AUTOPILOT event updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cut down on how much data is included in the AUTOPILOT event updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -817,14 +835,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/dist/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-442607">
-          <caret line="380" column="66" lean-forward="true" selection-start-line="380" selection-start-column="66" selection-end-line="380" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -976,6 +986,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,14 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="83" column="74" lean-forward="false" selection-start-line="83" selection-start-column="74" selection-end-line="83" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/stores/AutopilotClientStore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1152,16 +1155,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/autopilot/autopilot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="121" column="47" lean-forward="false" selection-start-line="121" selection-start-column="47" selection-end-line="121" selection-end-column="47" />
+        <state relative-caret-position="111">
+          <caret line="108" column="9" lean-forward="false" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/observableChangeScheduler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autopilot/autopilotStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="69">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-269">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>

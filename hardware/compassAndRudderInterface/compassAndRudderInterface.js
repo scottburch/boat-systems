@@ -2,7 +2,7 @@ const utils = require('./utils');
 const Smoother = require('./Smoother');
 const {sendError, sendInfo} = require('../../network/logSender');
 const {sendMessage, onBusMessage} = require('../../network/networkBus');
-
+const {changeScheduler} = require('../../utils/observableChangeScheduler');
 
 //process.on('uncaughtException', err => sendError(`${process.argv[1]}: ${err.toString()}`));
 //process.on('unhandledRejection', (err) => sendError(`${process.argv[1]}: ${err.toString()}`));
@@ -14,6 +14,8 @@ let port;
 const SerialPort = require('serialport');
 
 start();
+
+const myChangeScheduler = changeScheduler('AHRS');
 
 function start() {
 //    const dev = '/dev/tty.usbserial-A4007c47';
@@ -40,9 +42,7 @@ function start() {
         parser.on('data', function (string) {
             string = _.trim(string);
             if (/[A-Z0-9]+\:/.test(string)) {
-                var parts = string.split(':');
-                var prefix = parts[0];
-                var data = parts[1];
+                const [prefix, data] = string.split(':');
                 switch (prefix) {
                     case 'AHRS':
                         compass(data);
@@ -54,20 +54,22 @@ function start() {
                         }
                         break;
                     case 'HZ':
-                        sendMessage('AHRS', {hz: data});
+                        myChangeScheduler('hz', data);
                         break;
                     case 'B' :
-                        sendMessage('AHRS', {prevBase: data});
+                        myChangeScheduler('prevBase', data);
                         break;
                     case 'T':
-                        sendMessage('AHRS', {prevTach: data});
+                        myChangeScheduler('prevTach', data);
                         break;
                     case 'S':
-                        sendMessage('AHRS', {prevSpeed: data});
+                        myChangeScheduler('prevSpeed', data);
                         break;
                     case 'V':
                         const [volts, minVolts, maxVolts] = data.split(',');
-                        sendMessage('AHRS', {volts, minVolts, maxVolts});
+                        myChangeScheduler('volts', volts);
+                        myChangeScheduler('minVolts', minVolts);
+                        myChangeScheduler('maxVolts', maxVolts);
                         break;
                     case 'L':
                         console.log('Log:', data);
