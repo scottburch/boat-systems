@@ -2,7 +2,7 @@ const utils = require('./utils');
 const Smoother = require('./Smoother');
 const {sendError, sendInfo} = require('../../network/logSender');
 const {sendMessage, onBusMessage} = require('../../network/networkBus');
-const {changeScheduler} = require('../../utils/observableChangeScheduler');
+const {changeScheduler} = require('../../utils/changeScheduler');
 
 //process.on('uncaughtException', err => sendError(`${process.argv[1]}: ${err.toString()}`));
 //process.on('unhandledRejection', (err) => sendError(`${process.argv[1]}: ${err.toString()}`));
