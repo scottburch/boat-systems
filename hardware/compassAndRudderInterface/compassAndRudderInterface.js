@@ -3,10 +3,7 @@ const Smoother = require('./Smoother');
 const {sendError, sendInfo} = require('../../network/logSender');
 const {sendMessage, onBusMessage} = require('../../network/networkBus');
 const {changeScheduler} = require('../../utils/changeScheduler');
-
-//process.on('uncaughtException', err => sendError(`${process.argv[1]}: ${err.toString()}`));
-//process.on('unhandledRejection', (err) => sendError(`${process.argv[1]}: ${err.toString()}`));
-
+const fse = require('fs-extra');
 
 const _ = require('lodash');
 
@@ -17,12 +14,13 @@ start();
 
 const myChangeScheduler = changeScheduler('AHRS');
 
+function findPort() {
+    return ['/dev/tty.usbserial-A4007c47', '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A4007c47-if00-port0']
+        .find(file => fse.existsSync(file));
+}
+
 function start() {
-//    const dev = '/dev/tty.usbserial-A4007c47';
-//    var dev = '/dev/cu.usbmodem1421'
-//    var dev = '/dev/ttyACM0';
-//    var dev = '/dev/ttyUSB0';
-    const dev = '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A4007c47-if00-port0';
+    const dev = findPort();
     const parser = new SerialPort.parsers.Readline();
     port = new SerialPort(dev, {
         baudRate: 115200,
@@ -82,8 +80,10 @@ function start() {
             }
         });
 
-        onBusMessage('RUDDER', v => port.write(`R:${v.rudder}!`));
-        onBusMessage('COMPASS_PONG', v => v && port.write(`P:${v.time}!`));
+        onBusMessage('RUDDER', v => {
+            port.write(`R:${v.rudder}!`);
+            port.write(`P:${v.time}!`);
+        });
     });
 
 
