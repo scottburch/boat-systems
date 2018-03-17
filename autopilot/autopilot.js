@@ -1,4 +1,4 @@
-const {autorun} = require('mobx');
+const {autorun, reaction} = require('mobx');
 
 "use strict";
 const PID = require('node-pid-controller');
@@ -20,6 +20,7 @@ autorun(() => {
     if (values.get('course') === undefined) {
         pidController = undefined;
         values.set('rudder', 0);
+        values.set('error', 0);
     }
     // I don't think this is neccessary TODO: remove if true
 //    values.set('error', 0);
@@ -28,10 +29,8 @@ autorun(() => {
 const stateIdle = {
     name: 'IDLE',
     execute() {
-//        calcYawSpeed();
         if (values.get('course')) {
             calcCourseError();
-            calcRudder();
             changeState(stateTurning);
         } else {
             setTimeout(stateIdle.execute, 50);
@@ -61,21 +60,9 @@ function changeState(state) {
     state.execute();
 }
 
-const calcYawSpeed = (function () {
-    var lastError = 0;
-    var lastCalcTime;
-
-    return function () {
-        lastCalcTime = lastCalcTime || utils.now();
-        values.set('yawSpeed', (values.get('error') - lastError) * (1000 / (utils.now() - lastCalcTime)));
-        lastError = values.get('error');
-        lastCalcTime = utils.now();
-    }
-}());
-
 function calcCourseError() {
     kalmanFilter = kalmanFilter || initKalmanFilter();
-    var error = values.get('course') === undefined ? undefined : utils.fixed(utils.getDirectionalDiff(values.get('course'), values.get('heading')));
+    const error = values.get('course') === undefined ? undefined : utils.fixed(utils.getDirectionalDiff(values.get('course'), values.get('heading')));
     values.set('rawError', error);
     values.set('error', kalmanFilter.filter(error));
 }
@@ -107,17 +94,18 @@ function createPIDController() {
         k_d: values.get('kD')
     });
     pidController.setTarget(0);
-//    pidController.last = 0;
 }
+
+
 
 const calcRudder = (function () {
     let last = 0;
-    return () => {
+    return (error) => {
         values.get('course') === undefined ? noRudder() : handleError();
 
         function handleError() {
             pidController || createPIDController();
-            let result = pidController.update(values.get('error'));
+            let result = pidController.update(error);
             let newRudder = utils.fixed((result - last) * values.get('rudderMult'), 0);
             values.set('rudder', newRudder < 0 ? Math.max(-1023, newRudder) : Math.min(1023, newRudder));
             last = result;
@@ -129,4 +117,6 @@ const calcRudder = (function () {
         }
     }
 }());
+
+reaction(() => values.get('error'), error => error && calcRudder(error));
 
