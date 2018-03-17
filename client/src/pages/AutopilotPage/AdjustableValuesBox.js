@@ -18,7 +18,7 @@ const eventToString = require('key-event-to-string')({
 const adjustableValues = [
     {key: 'rudderTime', text: 'RudderTime', inc: 10},
     {key: 'rudderWait', text: 'Rudder Wait', inc: 10},
-    {key: 'rudderMult', text: 'Rudder mult', inc: 0.5},
+    {key: 'rudderMult', text: 'Rudder mult', inc: 5},
     {key: 'smoothing', text: 'Smoothing', inc: 10},
     {key: 'kP', text: 'P', inc: 0.05},
     {key: 'kI', text: 'I', inc: 0.01},
