@@ -12,9 +12,16 @@ class ExtraBox extends Component {
     constructor(props) {
         super(props);
         values.get('voltage') || values.set('voltage', 1023);
-        setInterval(() => this.minHz = 999999, 5000);
+
         this.maxDly = 0;
+        this.maxMaxDly = 0;
         this.minHz = 999999;
+
+        setInterval(() => this.minHz = 999999, 5000);
+        setInterval(() => {
+            this.maxMaxDly = Math.max(this.maxMaxDly, this.maxDly);
+            this.maxDly = 0;
+        }, 1000 * 60 * 5);
     }
 
     convertToVolts(num) {
@@ -37,7 +44,7 @@ class ExtraBox extends Component {
                 <ValueField label="Tach">{values.get('prevTach')}</ValueField>
                 <ValueField label="Speed">{values.get('prevSpeed')}</ValueField>
                 <ValueField label="Cmps Dly">{values.get('compassDelay')}</ValueField>
-                <ValueField label="Max Dly">{this.maxDly}</ValueField>
+                <ValueField label="Max Dly">{this.maxDly} ({this.maxMaxDly})</ValueField>
                 <ValueField label="Voltage">{this.convertToVolts(values.get('volts'))} ({this.convertToVolts(values.get('minVolts'))}-{this.convertToVolts(values.get('maxVolts'))})</ValueField>
             </div>
         )

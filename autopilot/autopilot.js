@@ -6,9 +6,7 @@ const PID = require('node-pid-controller');
 const {values} = require('./autopilotStore');
 const utils = require('./utils');
 let pidController;
-let kalmanFilter;
 
-const KalmanFilter = require('kalmanjs').default;
 
 values.merge({
     heading: 180,
@@ -20,10 +18,8 @@ autorun(() => {
     if (values.get('course') === undefined) {
         pidController = undefined;
         values.set('rudder', 0);
-        values.set('error', 0);
+//        values.set('error', 0);
     }
-    // I don't think this is neccessary TODO: remove if true
-//    values.set('error', 0);
 });
 
 const stateIdle = {
@@ -61,30 +57,16 @@ function changeState(state) {
 }
 
 function calcCourseError() {
-    kalmanFilter = kalmanFilter || initKalmanFilter();
     const error = values.get('course') === undefined ? undefined : utils.fixed(utils.getDirectionalDiff(values.get('course'), values.get('heading')));
-    values.set('rawError', error);
-    values.set('error', kalmanFilter.filter(error));
+    values.set('error', error);
 }
 
 autorun(() => {
-    const pid = pidController;
-    if(pid) {
-        pid.k_p = values.get('kP');
-        pid.k_i = values.get('kI');
-        pid.k_d = values.get('kD');
-    }
+    createPIDController();
+    pidController.k_p = values.get('kP');
+    pidController.k_i = values.get('kI');
+    pidController.k_d = values.get('kD');
 });
-
-autorun(() => {
-    values.get('kfR');
-    values.get('kfQ');
-    initKalmanFilter();
-});
-
-function initKalmanFilter() {
-    return kalmanFilter = new KalmanFilter({R: values.get('kfR'), Q: values.get('kfQ')});
-}
 
 
 function createPIDController() {
@@ -95,7 +77,6 @@ function createPIDController() {
     });
     pidController.setTarget(0);
 }
-
 
 
 const calcRudder = (function () {
