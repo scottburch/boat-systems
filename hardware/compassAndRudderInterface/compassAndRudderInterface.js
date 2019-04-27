@@ -1,5 +1,4 @@
 const utils = require('./utils');
-const Smoother = require('./Smoother');
 const {sendError, sendInfo} = require('../../network/logSender');
 const {sendMessage, onBusMessage} = require('../../network/networkBus');
 const {changeScheduler} = require('../../utils/changeScheduler');
@@ -87,15 +86,10 @@ function start() {
     });
 
 
-    const headingSmoother = new Smoother(10);
-
-
     function compass(data) {
         const [roll, pitch, yaw, time] = data.split(',');
-        const heading = parseFloat(yaw, 10) + 180;
         sendMessage('AHRS', {
-            rawHeading: heading,
-            heading: utils.fixed(headingSmoother.smooth(heading), 0),
+            heading: utils.fixed(parseFloat(yaw, 10) + 180, 1),
             roll: parseFloat(roll, 10),
             pitch: parseFloat(pitch, 10),
             compassTime: time
