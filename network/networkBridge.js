@@ -4,7 +4,6 @@ const dgram = require('dgram');
 const {PORT, IP_ADDRESS, myID} = require('./networkSettings');
 const {msgToObj, objToMsg} = require("./utils");
 
-
 const networkSocket = dgram.createSocket('udp4');
 networkSocket.bind(PORT, () =>
     networkSocket.addMembership(IP_ADDRESS)
@@ -21,7 +20,7 @@ ipc.config.silent = true;
 
 ipc.serve(
     () => {
-        ipc.server.on('start', startNetworkListener);
+        startNetworkListener();
 
         ipc.server.on('connect', (socket) => clients.push(socket));
 

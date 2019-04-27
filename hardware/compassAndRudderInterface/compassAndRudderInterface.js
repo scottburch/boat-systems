@@ -14,7 +14,7 @@ start();
 const myChangeScheduler = changeScheduler('AHRS');
 
 function findPort() {
-    return ['/dev/tty.usbserial-A4007c47', '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A4007c47-if00-port0']
+    return ['/dev/tty.usbserial-A4007c47', '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A4007c47-if00-port0', '/dev/serial1']
         .find(file => fse.existsSync(file));
 }
 
