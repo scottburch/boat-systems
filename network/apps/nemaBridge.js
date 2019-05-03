@@ -1,6 +1,6 @@
-const {onBusMessage} = require('./networkBus');
+const {onBusMessage} = require('../networkBus');
 const dgram = require('dgram');
-const {NEMA_PORT, IP_ADDRESS, myID} = require('./networkSettings');
+const {NEMA_PORT, IP_ADDRESS, myID} = require('../networkSettings');
 const {Maybe} = require('simple-monads');
 
 
