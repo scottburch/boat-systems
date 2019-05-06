@@ -2,38 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e4a8581-ad2e-4c05-b0e5-f073204d9c85" name="Default" comment="onverted">
-      <change afterPath="$PROJECT_DIR$/network/websocketGateway.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../autopilot-old/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js" beforeDir="false" afterPath="$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autopilot/autopilotStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/autopilot/autopilotStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boat-systems.iws" beforeDir="false" afterPath="$PROJECT_DIR$/boat-systems.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Component.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/components/Component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SidebarMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/components/SidebarMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/AdjustableValuesBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/AdjustableValuesBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/AutopilotPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/AutopilotPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/Color.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/Color.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/ExtraBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/ExtraBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/Label.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/Label.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/PresetsSelect.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/PresetsSelect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/PureComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/PureComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/Value.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/Value.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/ValueField.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/ValueField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/ValuesBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/ValuesBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutopilotPage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/AutopilotPage/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/LogPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/pages/LogPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stores/AutopilotClientStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/stores/AutopilotClientStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stores/LogStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/stores/LogStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/nemaBridge.js" beforeDir="false" afterPath="$PROJECT_DIR$/network/apps/nemaBridge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/networkBridge.js" beforeDir="false" afterPath="$PROJECT_DIR$/network/apps/networkBridge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/networkBus.js" beforeDir="false" afterPath="$PROJECT_DIR$/network/networkBus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/websocketGateway.js" beforeDir="false" afterPath="$PROJECT_DIR$/network/apps/websocketGateway.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,98 +16,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop/webpack.config.js">
+        <entry file="file://$PROJECT_DIR$/network/apps/websocketGateway.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop/src/stores/AutopilotClientStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop/src/pages/AutopilotPage/ValuesBox.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+            <state relative-caret-position="60">
+              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/network/networkBus.js">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/desktop/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#47#79#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autopilot/autopilotStore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/apps/networkBridge.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/websocketGateway.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network/apps/nemaBridge.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+            <state relative-caret-position="15">
+              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -197,8 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/network/NetworkBus.js" />
-        <option value="$PROJECT_DIR$/client/src/LogStore.js" />
         <option value="$PROJECT_DIR$/network/temp1.js" />
         <option value="$PROJECT_DIR$/network/temp2.js" />
         <option value="$PROJECT_DIR$/network/logSender.js" />
@@ -248,6 +145,8 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/autopilot/autopilotStore.js" />
         <option value="$PROJECT_DIR$/network/networkBus.js" />
+        <option value="$PROJECT_DIR$/network/apps/websocketGateway.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -263,7 +162,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1181" />
     <option name="height" value="716" />
@@ -273,6 +172,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -281,16 +181,10 @@
               <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
               <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,14 +288,8 @@
       <workItem from="1520801631468" duration="11662000" />
       <workItem from="1521822215763" duration="2011000" />
       <workItem from="1522713158750" duration="554000" />
-      <workItem from="1555945891096" duration="18906000" />
-    </task>
-    <task id="LOCAL-00015" summary="ipc test with client working">
-      <created>1520375855055</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1520375855055</updated>
+      <workItem from="1555945891096" duration="20888000" />
+      <workItem from="1557160158822" duration="35000" />
     </task>
     <task id="LOCAL-00016" summary="name of function change">
       <created>1520376150657</created>
@@ -739,26 +627,30 @@
       <option name="project" value="LOCAL" />
       <updated>1556375399525</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Moved desktop to 'client' and moved network apps to /network/apps">
+      <created>1556855995909</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1556855995911</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139733000" />
+    <option name="totallyTimeSpent" value="141750000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1181" height="716" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27041265" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25282714" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32928944" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32890365" />
@@ -766,11 +658,13 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4963964" visible="true" weight="0.28951746" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4963964" visible="true" weight="0.24611032" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5036036" side_tool="true" weight="0.24783362" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32928944" />
       <window_info anchor="bottom" id="GraphQL" order="10" weight="0.32890365" />
-      <window_info anchor="right" id="Maven" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -780,6 +674,7 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32972974" />
+      <window_info anchor="right" id="Maven" order="9" />
     </layout>
     <layout-to-restore>
       <window_info id="Capture Tool" order="0" />
@@ -828,7 +723,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="centralized duplicate code" />
     <MESSAGE value="Added firmware code" />
     <MESSAGE value="bug fix in network stuff" />
     <MESSAGE value="bug fix again" />
@@ -853,12 +747,10 @@
     <MESSAGE value="Remove unused values in the client interface" />
     <MESSAGE value="Updated packages" />
     <MESSAGE value="Fixed network-bridge UDP and added serial device for PI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed network-bridge UDP and added serial device for PI" />
+    <MESSAGE value="Moved desktop to 'client' and moved network apps to /network/apps" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved desktop to 'client' and moved network apps to /network/apps" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../autopilot-old/firmware/autopilot/autopilot.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../autopilot-old/firmware/autopilot/autopilot.ino">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -908,13 +800,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autopilot-old/temp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../autopilot-old/temp.js" />
     <entry file="file://$PROJECT_DIR$/../autopilot-old/autopilot/src/data.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1080,26 +966,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.js" />
+    <entry file="file://$PROJECT_DIR$/client/src/index.js" />
     <entry file="file://$PROJECT_DIR$/desktop/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1127,9 +995,6 @@
           <caret line="95" column="11" lean-forward="true" selection-start-line="95" selection-start-column="11" selection-end-line="95" selection-end-column="11" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/websocketGateway.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/network/apps/nemaBridge.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1178,8 +1043,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/network/networkBus.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="210">
+          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/apps/websocketGateway.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
         </state>
       </provider>
     </entry>
