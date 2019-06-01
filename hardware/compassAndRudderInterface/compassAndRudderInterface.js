@@ -14,12 +14,21 @@ start();
 const myChangeScheduler = changeScheduler('AHRS');
 
 function findPort() {
-    return ['/dev/tty.usbserial-A4007c47', '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A4007c47-if00-port0', '/dev/serial1']
-        .find(file => fse.existsSync(file));
+    return SerialPort
+        .list()
+        .then(portList =>
+            portList.find(portInfo => `${portInfo.vendorId}:${portInfo.productId}` === '0403:6001'))
+        .then(portInfo => portInfo.comName);
+
+
+
+    // return ['/dev/tty.usbserial-A4007c47', '/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_A4007c47-if00-port0', '/dev/serial1']
+    //     .find(file => fse.existsSync(file));
 }
 
-function start() {
-    const dev = findPort();
+async function start() {
+    const dev = await findPort();
+    console.log(`Opening port: ${dev}`);
     const parser = new SerialPort.parsers.Readline();
     port = new SerialPort(dev, {
         baudRate: 115200,
@@ -28,13 +37,14 @@ function start() {
 
 
     port.on('error', (err) => {
+        console.log(`Error opening port: ${err.toString()}`);
         sendError(`${process.argv[1]}: ${err.toString()}`);
         setTimeout(start, 5000);
     });
 
 
     port.on("open", function () {
-        console.log('port open');
+        console.log(`port open: ${dev}`);
 
         parser.on('data', function (string) {
             string = _.trim(string);
