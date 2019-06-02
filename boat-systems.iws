@@ -31,8 +31,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+            <state relative-caret-position="-12">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network/logSender.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -189,6 +198,11 @@
               <item name="hardware" type="462c0819:PsiDirectoryNode" />
               <item name="compassAndRudderInterface" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
+              <item name="network" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -297,14 +311,7 @@
       <workItem from="1521822215763" duration="2011000" />
       <workItem from="1522713158750" duration="554000" />
       <workItem from="1555945891096" duration="11511000" />
-      <workItem from="1559254045944" duration="2521000" />
-    </task>
-    <task id="LOCAL-00014" summary="working but not right yet">
-      <created>1520375090053</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1520375090053</updated>
+      <workItem from="1559254045944" duration="3537000" />
     </task>
     <task id="LOCAL-00015" summary="ipc test with client working">
       <created>1520375855055</created>
@@ -642,11 +649,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556368958105</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Changed how serial ports are found - look at ports and find the plugged in device you want">
+      <created>1559413262903</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1559413262905</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135117000" />
+    <option name="totallyTimeSpent" value="136133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1181" height="716" extended-state="0" />
@@ -730,7 +744,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Remove console.log - Autopilot should be fully working now" />
     <MESSAGE value="centralized duplicate code" />
     <MESSAGE value="Added firmware code" />
     <MESSAGE value="bug fix in network stuff" />
@@ -755,7 +768,8 @@
     <MESSAGE value="Autopilot working.  Save before removing smoother and various displays" />
     <MESSAGE value="Remove unused values in the client interface" />
     <MESSAGE value="Updated packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated packages" />
+    <MESSAGE value="Changed how serial ports are found - look at ports and find the plugged in device you want" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed how serial ports are found - look at ports and find the plugged in device you want" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/blinking_led.ino/blinking_led.ino.ino" />
@@ -851,9 +865,6 @@
           <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network/logSender.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/network/networkBus.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1053,10 +1064,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/network/logSender.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        <state relative-caret-position="-12">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
