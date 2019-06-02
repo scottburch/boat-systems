@@ -6,4 +6,4 @@ const log = observable.array([]);
 export const getLogMessages = () => log;
 
 
-onBusMessage('LOG', msg => log.push(msg));
+onBusMessage('LOG', msg => console.log('LOG!!!!', msg) || log.push(msg));
