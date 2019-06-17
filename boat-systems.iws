@@ -5,6 +5,9 @@
       <change beforePath="$PROJECT_DIR$/../autopilot-old/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../autopilot-old/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js" beforeDir="false" afterPath="$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boat-systems.iws" beforeDir="false" afterPath="$PROJECT_DIR$/boat-systems.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compass/compass.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/compass/compass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,19 +22,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="100" column="11" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="100" selection-end-column="11" />
+            <state relative-caret-position="-647">
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -39,10 +33,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hardware/compass/compass.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="27" selection-start-line="24" selection-end-line="27" />
+            <state relative-caret-position="273">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/utils.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -99,7 +107,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>undefine</find>
       <find>log</find>
       <find>onChangeValue</find>
       <find>pong</find>
@@ -129,6 +136,7 @@
       <find>sendinfo</find>
       <find>testing</find>
       <find>sendmessage</find>
+      <find>compass</find>
     </findStrings>
     <replaceStrings>
       <replace>values.get('$1')</replace>
@@ -184,7 +192,6 @@
         <option value="$PROJECT_DIR$/network/networkSettings.js" />
         <option value="$PROJECT_DIR$/scripts/start-client.sh" />
         <option value="$PROJECT_DIR$/scripts/start-pi.sh" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/hardware/aisInterface.js" />
         <option value="$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js" />
         <option value="$PROJECT_DIR$/utils/observableChangeScheduler.js" />
@@ -197,10 +204,11 @@
         <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/AdjustableValuesBox.js" />
         <option value="$PROJECT_DIR$/client/src/pages/AutopilotPage/ValuesBox.js" />
         <option value="$PROJECT_DIR$/network/networkBridge.js" />
-        <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
         <option value="$PROJECT_DIR$/network/logSender.js" />
         <option value="$PROJECT_DIR$/client/main.js" />
         <option value="$PROJECT_DIR$/client/src/stores/LogStore.js" />
+        <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/hardware/compass/compass.js" />
       </list>
     </option>
@@ -243,12 +251,6 @@
               <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
               <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
               <item name="hardware" type="462c0819:PsiDirectoryNode" />
-              <item name="compass" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
-              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="hardware" type="462c0819:PsiDirectoryNode" />
               <item name="compassAndRudderInterface" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -265,6 +267,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/boat-systems.ipr" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -362,14 +365,7 @@
       <workItem from="1522713158750" duration="554000" />
       <workItem from="1555945891096" duration="11511000" />
       <workItem from="1559254045944" duration="6112000" />
-      <workItem from="1560737573466" duration="486000" />
-    </task>
-    <task id="LOCAL-00017" summary="function name change">
-      <created>1520376215263</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1520376215263</updated>
+      <workItem from="1560737573466" duration="5402000" />
     </task>
     <task id="LOCAL-00018" summary="getting compass info">
       <created>1520387098255</created>
@@ -707,17 +703,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559443214053</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="added compass code">
+      <created>1560738155955</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1560738155957</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139194000" />
+    <option name="totallyTimeSpent" value="144110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1181" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -731,7 +734,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4963964" visible="true" weight="0.50083196" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4963964" visible="true" weight="0.2795341" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5036036" side_tool="true" weight="0.24783362" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32928944" />
       <window_info anchor="bottom" id="GraphQL" order="10" weight="0.32890365" />
@@ -796,7 +799,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="bug fix in network stuff" />
     <MESSAGE value="bug fix again" />
     <MESSAGE value="Fix log" />
     <MESSAGE value="Added autopilot script command" />
@@ -821,16 +823,10 @@
     <MESSAGE value="Changed how serial ports are found - look at ports and find the plugged in device you want" />
     <MESSAGE value="Send log info on port to arduino" />
     <MESSAGE value="log now also sends a console.log for troubleshooting" />
-    <option name="LAST_COMMIT_MESSAGE" value="log now also sends a console.log for troubleshooting" />
+    <MESSAGE value="added compass code" />
+    <option name="LAST_COMMIT_MESSAGE" value="added compass code" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/build.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/MinIMU9AHRS.ino">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
@@ -1058,13 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/network/networkBridge.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1124,17 +1113,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/utils.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="100" column="11" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="100" selection-end-column="11" />
+        <state relative-caret-position="-647">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hardware/compass/compass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="27" selection-start-line="24" selection-end-line="27" />
+        <state relative-caret-position="273">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>

@@ -92,13 +92,13 @@ async function start() {
 
 
     function compass(data) {
-        const [roll, pitch, yaw, time] = data.split(',');
-        sendMessage('AHRS', {
-            heading: utils.fixed(parseFloat(yaw, 10) + 180, 1),
-            roll: parseFloat(roll, 10),
-            pitch: parseFloat(pitch, 10),
-            compassTime: time
-        });
+        // const [roll, pitch, yaw, time] = data.split(',');
+        // sendMessage('AHRS', {
+        //     heading: utils.fixed(parseFloat(yaw, 10) + 180, 1),
+        //     roll: parseFloat(roll, 10),
+        //     pitch: parseFloat(pitch, 10),
+        //     compassTime: time
+        // });
     }
 
 }

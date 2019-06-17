@@ -9,7 +9,8 @@
     "autopilot-hardware": "cd hardware/compassAndRudderInterface; node compassAndRudderInterface",
     "autopilot": "node autopilot/autopilot",
     "nema-bridge": "cd network; node nemaBridge",
-    "ais-interface": "cd hardware; node aisInterface"
+    "ais-interface": "cd hardware; node aisInterface",
+    "compass": "cd hardware/compass; node compass"
   },
   "dependencies": {
     "babel": "^6.23.0",
