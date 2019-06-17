@@ -6,7 +6,7 @@
     "client-compile-watch": "cd client; webpack --watch --env.beep",
     "client": "cd client; electron main.js",
     "network-bridge": "cd network; node networkBridge",
-    "autopilot-hardware": "cd hardware/compassAndRudderInterface; node compassAndRudderInterface",
+    "rudder": "cd hardware/rudderInterface; node rudderInterface",
     "autopilot": "node autopilot/autopilot",
     "nema-bridge": "cd network; node nemaBridge",
     "ais-interface": "cd hardware; node aisInterface",

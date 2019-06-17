@@ -47,7 +47,7 @@ async function start() {
                 const [prefix, data] = string.split(':');
                 switch (prefix) {
                     case 'AHRS':
-                        compass(data);
+                        // compass(data);
                         break;
                     case 'D':
                         try {

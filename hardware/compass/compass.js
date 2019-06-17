@@ -1,7 +1,7 @@
 const i2c = require('i2c-bus');
 const {sendError, sendInfo} = require('../../network/logSender');
 const {sendMessage} = require('../../network/networkBus');
-const utils = require('../compassAndRudderInterface/utils');
+const utils = require('../rudderInterface/utils');
 
 const CMPS14_ADDR = 0x60;
 const BEARING = 0x02;

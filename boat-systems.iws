@@ -6,7 +6,36 @@
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js" beforeDir="false" afterPath="$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boat-systems.iws" beforeDir="false" afterPath="$PROJECT_DIR$/boat-systems.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hardware/compass/compass.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/compass/compass.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/rudderInterface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/Compass.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/Compass.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/DCM.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/DCM.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/I2C.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/I2C.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/MinIMU9AHRS.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/MinIMU9AHRS.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/MinIMU9AHRS.ino.back" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/MinIMU9AHRS.ino.back" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/Output.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/Output.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/Vector.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/Vector.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/autopilot.h" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/autopilot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/autopilot.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/autopilot.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/L3G/L3G.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/L3G/L3G.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/L3G/L3G.h" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/L3G/L3G.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/L3G/examples/Serial/Serial.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/L3G/examples/Serial/Serial.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/L3G/keywords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/L3G/keywords.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LIS3MDL/LIS3MDL.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LIS3MDL/LIS3MDL.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LIS3MDL/LIS3MDL.h" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LIS3MDL/LIS3MDL.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LIS3MDL/examples/calibrate/calibrate.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LIS3MDL/examples/calibrate/calibrate.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LSM303/LSM303.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LSM303/LSM303.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LSM303/LSM303.h" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LSM303/LSM303.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LSM303/examples/Calibrate/Calibrate.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LSM303/examples/Calibrate/Calibrate.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LSM303/examples/Heading/Heading.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LSM303/examples/Heading/Heading.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LSM303/examples/Serial/Serial.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LSM303/examples/Serial/Serial.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LSM303/keywords.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LSM303/keywords.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LSM6/LSM6.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LSM6/LSM6.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/LSM6/LSM6.h" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/LSM6/LSM6.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/libraries/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/libraries/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/matrix.ino" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/matrix.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hardware/compassAndRudderInterface/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/hardware/rudderInterface/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,34 +51,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
+        <entry file="file://$PROJECT_DIR$/hardware/rudderInterface/rudderInterface.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-647">
-              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+            <state relative-caret-position="-581">
+              <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hardware/compass/compass.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="32" lean-forward="true" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hardware/compass/compass.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+            <state relative-caret-position="102">
+              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/utils.js">
+        <entry file="file://$PROJECT_DIR$/hardware/rudderInterface/utils.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -208,8 +237,8 @@
         <option value="$PROJECT_DIR$/client/main.js" />
         <option value="$PROJECT_DIR$/client/src/stores/LogStore.js" />
         <option value="$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/hardware/compass/compass.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -251,7 +280,13 @@
               <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
               <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
               <item name="hardware" type="462c0819:PsiDirectoryNode" />
-              <item name="compassAndRudderInterface" type="462c0819:PsiDirectoryNode" />
+              <item name="compass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
+              <item name="rudderInterface" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -365,14 +400,7 @@
       <workItem from="1522713158750" duration="554000" />
       <workItem from="1555945891096" duration="11511000" />
       <workItem from="1559254045944" duration="6112000" />
-      <workItem from="1560737573466" duration="5402000" />
-    </task>
-    <task id="LOCAL-00018" summary="getting compass info">
-      <created>1520387098255</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1520387098255</updated>
+      <workItem from="1560737573466" duration="5778000" />
     </task>
     <task id="LOCAL-00019" summary="adding autopilot">
       <created>1520394702600</created>
@@ -710,17 +738,24 @@
       <option name="project" value="LOCAL" />
       <updated>1560738155957</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="compass working - removed compass being transmitted by compassAndRudderInterface - need to rename that one">
+      <created>1560789528738</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1560789528738</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144110000" />
+    <option name="totallyTimeSpent" value="144486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1181" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -734,7 +769,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4963964" visible="true" weight="0.2795341" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4963964" visible="true" weight="0.2795341" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5036036" side_tool="true" weight="0.24783362" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32928944" />
       <window_info anchor="bottom" id="GraphQL" order="10" weight="0.32890365" />
@@ -799,7 +834,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="bug fix again" />
     <MESSAGE value="Fix log" />
     <MESSAGE value="Added autopilot script command" />
     <MESSAGE value="Added diagram" />
@@ -824,24 +858,25 @@
     <MESSAGE value="Send log info on port to arduino" />
     <MESSAGE value="log now also sends a console.log for troubleshooting" />
     <MESSAGE value="added compass code" />
-    <option name="LAST_COMMIT_MESSAGE" value="added compass code" />
+    <MESSAGE value="compass working - removed compass being transmitted by compassAndRudderInterface - need to rename that one" />
+    <option name="LAST_COMMIT_MESSAGE" value="compass working - removed compass being transmitted by compassAndRudderInterface - need to rename that one" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/MinIMU9AHRS.ino">
+    <entry file="file://$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/MinIMU9AHRS.ino">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/autopilot.h">
+    <entry file="file://$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/autopilot.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
           <caret line="119" column="10" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/Compass.ino">
+    <entry file="file://$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/Compass.ino">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
@@ -877,7 +912,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/autopilot.ino">
+    <entry file="file://$PROJECT_DIR$/hardware/rudderInterface/firmware/autopilot/autopilot.ino">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="903">
           <caret line="91" column="47" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="47" />
@@ -1113,27 +1148,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/utils.js">
+    <entry file="file://$PROJECT_DIR$/hardware/rudderInterface/utils.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-647">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hardware/compass/compass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="15">
+          <caret line="1" column="32" lean-forward="true" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/rudderInterface/rudderInterface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-581">
+          <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
         </state>
       </provider>
     </entry>
