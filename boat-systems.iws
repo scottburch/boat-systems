@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/../autopilot-old/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../autopilot-old/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js" beforeDir="false" afterPath="$PROJECT_DIR$/../autopilot-old/autopilot/src/autopilot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boat-systems.iws" beforeDir="false" afterPath="$PROJECT_DIR$/boat-systems.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/stores/LogStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/stores/LogStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/network/logSender.js" beforeDir="false" afterPath="$PROJECT_DIR$/network/logSender.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,17 +30,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+            <state relative-caret-position="156">
+              <caret line="100" column="11" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="100" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hardware/compass/compass.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="27" selection-start-line="24" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/logSender.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="60">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -51,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
+            <state relative-caret-position="330">
               <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
             </state>
           </provider>
@@ -66,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/client/src/pages/LogPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -83,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/network/networkBus.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-169">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="465">
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -93,7 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>roll</find>
       <find>undefine</find>
       <find>log</find>
       <find>onChangeValue</find>
@@ -101,7 +106,6 @@
       <find>values.set</find>
       <find>values.set('error'</find>
       <find>AHRS</find>
-      <find>sendmessage</find>
       <find>compassPong</find>
       <find>ahrs</find>
       <find>console.log</find>
@@ -123,6 +127,8 @@
       <find>rawHeading</find>
       <find>rawerror</find>
       <find>sendinfo</find>
+      <find>testing</find>
+      <find>sendmessage</find>
     </findStrings>
     <replaceStrings>
       <replace>values.get('$1')</replace>
@@ -145,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/network/LogReceiver.js" />
         <option value="$PROJECT_DIR$/network/libs/NetworkBus.js" />
         <option value="$PROJECT_DIR$/network/NetworkBus.js" />
         <option value="$PROJECT_DIR$/client/src/LogStore.js" />
@@ -196,6 +201,7 @@
         <option value="$PROJECT_DIR$/network/logSender.js" />
         <option value="$PROJECT_DIR$/client/main.js" />
         <option value="$PROJECT_DIR$/client/src/stores/LogStore.js" />
+        <option value="$PROJECT_DIR$/hardware/compass/compass.js" />
       </list>
     </option>
   </component>
@@ -221,8 +227,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,25 +237,26 @@
             <path>
               <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
               <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
               <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
+              <item name="compass" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="boat-systems" type="b2602c69:ProjectViewProjectNode" />
               <item name="boat-systems" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
+              <item name="compassAndRudderInterface" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,14 +361,8 @@
       <workItem from="1521822215763" duration="2011000" />
       <workItem from="1522713158750" duration="554000" />
       <workItem from="1555945891096" duration="11511000" />
-      <workItem from="1559254045944" duration="5027000" />
-    </task>
-    <task id="LOCAL-00016" summary="name of function change">
-      <created>1520376150657</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1520376150657</updated>
+      <workItem from="1559254045944" duration="6112000" />
+      <workItem from="1560737573466" duration="486000" />
     </task>
     <task id="LOCAL-00017" summary="function name change">
       <created>1520376215263</created>
@@ -701,16 +700,24 @@
       <option name="project" value="LOCAL" />
       <updated>1559440877186</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="log now also sends a console.log for troubleshooting">
+      <created>1559443214053</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1559443214053</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137623000" />
+    <option name="totallyTimeSpent" value="139194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1181" height="716" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27919227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -789,7 +796,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Added firmware code" />
     <MESSAGE value="bug fix in network stuff" />
     <MESSAGE value="bug fix again" />
     <MESSAGE value="Fix log" />
@@ -814,10 +820,10 @@
     <MESSAGE value="Updated packages" />
     <MESSAGE value="Changed how serial ports are found - look at ports and find the plugged in device you want" />
     <MESSAGE value="Send log info on port to arduino" />
-    <option name="LAST_COMMIT_MESSAGE" value="Send log info on port to arduino" />
+    <MESSAGE value="log now also sends a console.log for troubleshooting" />
+    <option name="LAST_COMMIT_MESSAGE" value="log now also sends a console.log for troubleshooting" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/networkTest.js" />
     <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/firmware/autopilot/build.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -997,13 +1003,6 @@
     <entry file="file://$PROJECT_DIR$/client/src/pages/AutopilotPage/Color.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/stores/AutopilotClientStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hardware/aisInterface.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -1073,6 +1072,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/stores/AutopilotClientStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1080,16 +1086,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
+        <state relative-caret-position="330">
           <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
         </state>
       </provider>
@@ -1097,17 +1096,10 @@
     <entry file="file://$PROJECT_DIR$/client/src/pages/HomePage.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/network/networkBus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/pages/LogPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1118,10 +1110,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/network/networkBus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/network/logSender.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="60">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compassAndRudderInterface/compassAndRudderInterface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="100" column="11" lean-forward="true" selection-start-line="95" selection-start-column="8" selection-end-line="100" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hardware/compass/compass.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="27" selection-start-line="24" selection-end-line="27" />
         </state>
       </provider>
     </entry>
