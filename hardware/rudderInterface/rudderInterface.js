@@ -50,10 +50,10 @@ async function start() {
                         // compass(data);
                         break;
                     case 'D':
-                        try {
-                            sendMessage('COMPASS_DELAY', {delay: parseInt(data)});
-                        } catch (e) {
-                        }
+                        // try {
+                        //     sendMessage('COMPASS_DELAY', {delay: parseInt(data)});
+                        // } catch (e) {
+                        // }
                         break;
                     case 'HZ':
                         myChangeScheduler('hz', data);
@@ -68,13 +68,13 @@ async function start() {
                         myChangeScheduler('prevSpeed', data);
                         break;
                     case 'V':
-                        const [volts, minVolts, maxVolts] = data.split(',');
-                        myChangeScheduler('volts', volts);
-                        myChangeScheduler('minVolts', minVolts);
-                        myChangeScheduler('maxVolts', maxVolts);
+                        // const [volts, minVolts, maxVolts] = data.split(',');
+                        // myChangeScheduler('volts', volts);
+                        // myChangeScheduler('minVolts', minVolts);
+                        // myChangeScheduler('maxVolts', maxVolts);
                         break;
                     case 'L':
-                        console.log('Log:', data);
+                        // console.log('Log:', data);
                         break;
                     default:
                         sendInfo(`UNKNOWN: ${string}`);

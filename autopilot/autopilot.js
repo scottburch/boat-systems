@@ -18,7 +18,6 @@ autorun(() => {
     if (values.get('course') === undefined) {
         pidController = undefined;
         values.set('rudder', 0);
-//        values.set('error', 0);
     }
 });
 
@@ -99,5 +98,17 @@ const calcRudder = (function () {
     }
 }());
 
-reaction(() => values.get('error'), error => error && calcRudder(error));
+let lastCalcRudder = Date.now();
+reaction(() => values.get('error'), error => {
+    error && calcRudder(error);
+    lastCalcRudder = Date.now();
+});
+
+// This is here to handle a situation where there is error, but it is not changing due to the heading not changing so the rudder does not get updated
+(function loop(){
+    const waitTime = values.get('rudderTime') + values.get('rudderWait') + 200;
+    Date.now() - lastCalcRudder > waitTime && calcRudder(values.get('error'));
+    setTimeout(loop, waitTime);
+}());
+
 

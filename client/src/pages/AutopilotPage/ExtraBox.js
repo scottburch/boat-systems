@@ -34,7 +34,6 @@ class ExtraBox extends Component {
         this.minHz = Math.min(values.get('hz'), this.minHz);
         return (
             <div>
-                <ValueField label="Yaw Speed"><Color>{values.get('yawSpeed')}</Color></ValueField>
                 <ValueField label="Roll"><Color>{values.get('roll')}</Color></ValueField>
                 <ValueField label="Pitch"><Color>{values.get('pitch')}</Color> </ValueField>
                 <ValueField label="HZ">{values.get('hz')}</ValueField>
@@ -45,7 +44,6 @@ class ExtraBox extends Component {
                 <ValueField label="Speed">{values.get('prevSpeed')}</ValueField>
                 <ValueField label="Cmps Dly">{values.get('compassDelay')}</ValueField>
                 <ValueField label="Max Dly">{this.maxDly} ({this.maxMaxDly})</ValueField>
-                <ValueField label="Voltage">{this.convertToVolts(values.get('volts'))} ({this.convertToVolts(values.get('minVolts'))}-{this.convertToVolts(values.get('maxVolts'))})</ValueField>
             </div>
         )
     }
