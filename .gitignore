@@ -2,6 +2,7 @@ node_modules
 client/dist
 .DS_Store
 desktop
+boat-systems.iws
 
 node_modules.bak
 yarn.lock.bak
