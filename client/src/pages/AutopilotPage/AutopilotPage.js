@@ -1,15 +1,12 @@
-const Col = require('react-bootstrap/lib/Col');
-const Row = require('react-bootstrap/lib/Row');
-const Grid = require('react-bootstrap/lib/Grid');
-const Well = require('react-bootstrap/lib/Well');
-
-const ValuesBox = require('./ValuesBox');
-const ExtraBox = require('./ExtraBox');
-const AdjustableValuesBox = require('./AdjustableValuesBox');
-const PresetsSelect = require('./PresetsSelect');
+import React from 'react'
+import {Col, Row, Grid, Well} from 'react-bootstrap';
 import {Component} from "../../components/Component";
 import {Maybe, Either} from 'simple-monads'
 import {values, sendToAutopilot} from "../../stores/AutopilotClientStore";
+import {PresetsSelect} from './PresetsSelect'
+import {ValuesBox} from "./ValuesBox";
+import {AdjustableValuesBox} from "./AdjustableValuesBox";
+import {ExtraBox} from "./ExtraBox";
 
 export class AutopilotPage extends Component {
 
@@ -20,22 +17,29 @@ export class AutopilotPage extends Component {
 
 
 keyListener(key) {
-        key.code === 'KeyC' &&
-        Either.of(values.get('course'))
-            .cata(
-                () => sendToAutopilot({course: values.get('heading')}),
-                () => sendToAutopilot({course: undefined})
+        if(key.shiftKey === false) {
+            key.code === 'KeyC' &&
+            Either.of(values.get('course'))
+                .cata(
+                    () => sendToAutopilot({course: values.get('heading')}),
+                    () => sendToAutopilot({course: null})
+                );
+
+            key.code === 'ArrowRight' && (
+                Maybe.of(values.get('course'))
+                    .map(course => course === 359 ? 0 : course + 1)
+                    .map(course => {
+                        values.set('course', course);
+                        return course;
+                    })
+                    .map(course => sendToAutopilot({course}))
             );
 
-        key.code === 'ArrowRight' && (
-            Maybe.of(values.get('course'))
-                .map(course => sendToAutopilot({course: course + 1}))
-        );
-
-        key.code === 'ArrowLeft' && (
-            Maybe.of(values.get('course'))
-                .map(course => sendToAutopilot({course: course - 1}))
-        );
+            key.code === 'ArrowLeft' && (
+                Maybe.of(values.get('course'))
+                    .map(course => sendToAutopilot({course: course ? course - 1 : 359}))
+            );
+        }
     }
 
     componentWillUnmount() {

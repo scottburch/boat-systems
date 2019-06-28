@@ -1,1 +1,6 @@
-{"main": "compassAndRudderInterface.js"}
+{
+  "main": "compassAndRudderInterface.js",
+  "dependencies": {
+    "i2c-bus": "^4.0.10"
+  }
+}

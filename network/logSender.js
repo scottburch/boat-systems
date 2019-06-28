@@ -1,4 +1,4 @@
-const {sendMessage} = require('./networkBus');
+const {sendMessage} = require('./networkBus/network-bus');
 
 module.exports.sendError = (error) => {
     console.log(`ERROR: ${error}`);

@@ -1,7 +1,8 @@
+import {isEqual} from 'lodash'
 import {Component} from "../../components/Component";
 
-module.exports = class PureComponent extends Component {
+export const PureComponent = class PureComponent extends Component {
     shouldComponentUpdate(newProps, newState) {
-        return _.isEqual(newProps, this.props) && _.isEqual(newState, this.state);
+        return isEqual(newProps, this.props) && isEqual(newState, this.state);
     }
 };

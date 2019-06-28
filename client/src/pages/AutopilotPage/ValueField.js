@@ -1,8 +1,9 @@
-const Label = require('./Label');
-const Value = require('./Value');
-const Row = require('react-bootstrap/lib/Row');
+import React from 'react'
+import {Label} from "./Label"
+import {Value} from "./Value"
+import {Row} from 'react-bootstrap'
 
-module.exports = ({label, children}) => (
+export const ValueField =  ({label, children}) => (
     <Row>
         <Label>{label}</Label>
         <Value>{children === undefined  ? 'undefined' : typeof children === 'object' ? children : children.toString()}</Value>

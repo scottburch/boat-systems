@@ -1,6 +1,6 @@
 const i2c = require('i2c-bus');
 const {sendError, sendInfo} = require('../../network/logSender');
-const {sendMessage} = require('../../network/networkBus');
+const {sendMessage} = require('../../network/networkBus/network-bus');
 
 const AUTO_CALIBRATION = [0x98, 0x95, 0x99, 0x93];
 const CMPS14_ADDR = 0x60;
@@ -38,7 +38,7 @@ const loop = () => {
 const readWord = (register) => {
     const high = i2c1.readByteSync(CMPS14_ADDR, register);
     const low = i2c1.readByteSync(CMPS14_ADDR, register + 1);
-    return (((high << 8) | low)/10).toFixed(1);
+    return ((high << 8) | low)/10;
 };
 
 const readSigned = (register) =>
