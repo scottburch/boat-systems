@@ -11,6 +11,7 @@ module.exports.changeScheduler = (event, delay = 10) => {
     }, delay);
 
     return (name, value) => {
+        value === undefined ? value = null : value;
         values[name] = value;
         scheduleSendValues();
     }
@@ -21,6 +22,6 @@ module.exports.observableChangeScheduler = (observable, event, delay = 50, exclu
     const changeScheduler = module.exports.changeScheduler(event, delay);
 
     observable.observe(change =>
-        excludes.includes(change.name) || changeScheduler(change.name, change.newValue)
+        excludes.includes(change.name) || changeScheduler(change.name, change.newValue === undefined ? null : change.newValue)
     );
 };

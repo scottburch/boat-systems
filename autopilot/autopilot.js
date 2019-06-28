@@ -1,4 +1,5 @@
 const {autorun, reaction} = require('mobx');
+const {isNil} = require('lodash');
 
 "use strict";
 const PID = require('node-pid-controller');
@@ -15,7 +16,7 @@ values.merge({
 
 
 autorun(() => {
-    if (values.get('course') === undefined) {
+    if (isNil(values.get('course'))) {
         pidController = undefined;
         values.set('rudder', 0);
     }

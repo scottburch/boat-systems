@@ -21,7 +21,7 @@ keyListener(key) {
         Either.of(values.get('course'))
             .cata(
                 () => sendToAutopilot({course: values.get('heading')}),
-                () => sendToAutopilot({course: undefined})
+                () => sendToAutopilot({course: null})
             );
 
         key.code === 'ArrowRight' && (

@@ -13,8 +13,7 @@ app.ws('/ws', function (ws, req) {
     ws.on('message', msg => {
         if (connOpen) {
             msg = JSON.parse(msg);
-            console.log('message', msg);
-            COMMANDS[msg.cmd](ws, msg);
+            COMMANDS[msg.cmd](ws, msg.data);
         } else {
             sendLogMessage('HTTP-BRIDGE: cannot send message to closed client');
         }
@@ -33,12 +32,15 @@ const COMMANDS = {
                     ws.send(JSON.stringify({
                         event: event,
                         data: obj
-                    }));
+                    }, (k, v) => v === undefined ? null : v));
                 } catch (e) {
                     sendLogMessage(`HTTP-BRIDGE:ERROR: ${e.toString()}`)
                 }
             }
         );
 
+    },
+    send:  (ws, {event, data}) => {
+        sendMessage(event, data);
     }
 };
