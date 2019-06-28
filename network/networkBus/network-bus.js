@@ -32,13 +32,10 @@ module.exports.onBusMessage = (event, listener) => {
 module.exports.sendMessage = (event, data) =>
     ipc.of['boat-systems'].emit('message', objToMsg({event: event, data: data}));
 
+module.exports.sendLogMessage = data =>
+    module.exports.sendMessage('LOG', data);
 
 
 
 
-
-//setTimeout(() => module.exports.send('LOG', {msg: 'here is the log message'}), 5000);
-
-//setTimeout(() => module.exports.send('MY_EVENT', {foo: 1}), 5000);
-//setTimeout(() => networkSocket.send(JSON.stringify({event: 'MY_EVENT', foo: 2}), PORT,  IP_ADDRESS), 5000);
 
