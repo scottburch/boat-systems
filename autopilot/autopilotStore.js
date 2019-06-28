@@ -1,5 +1,5 @@
 const {observable, autorun, reaction, toJS, runInAction} = require('mobx');
-const {onBusMessage, sendMessage} = require('../network/networkBus');
+const {onBusMessage, sendMessage} = require('../network/networkBus/network-bus');
 const _ = require('lodash');
 const {Maybe} = require('simple-monads');
 const {observableChangeScheduler} = require('../utils/changeScheduler');

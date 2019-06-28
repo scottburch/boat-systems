@@ -1,5 +1,9 @@
 import {observable} from 'mobx'
 //import {onBusMessage, sendMessage} from '../../../network/networkBus';
+import '../services/communicationService'
+
+
+
 
 const onBusMessage = () => {};
 const sendMessage = () => {};

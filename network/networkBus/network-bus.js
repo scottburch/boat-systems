@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const {objToMsg, msgToObj} = require("./utils");
+const {objToMsg, msgToObj} = require("../utils");
 
 const ipc = require('node-ipc');
 
