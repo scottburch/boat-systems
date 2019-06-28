@@ -17,22 +17,24 @@ export class AutopilotPage extends Component {
 
 
 keyListener(key) {
-        key.code === 'KeyC' &&
-        Either.of(values.get('course'))
-            .cata(
-                () => sendToAutopilot({course: values.get('heading')}),
-                () => sendToAutopilot({course: null})
+        if(key.shiftKey === false) {
+            key.code === 'KeyC' &&
+            Either.of(values.get('course'))
+                .cata(
+                    () => sendToAutopilot({course: values.get('heading')}),
+                    () => sendToAutopilot({course: null})
+                );
+
+            key.code === 'ArrowRight' && (
+                Maybe.of(values.get('course'))
+                    .map(course => sendToAutopilot({course: course + 1}))
             );
 
-        key.code === 'ArrowRight' && (
-            Maybe.of(values.get('course'))
-                .map(course => sendToAutopilot({course: course + 1}))
-        );
-
-        key.code === 'ArrowLeft' && (
-            Maybe.of(values.get('course'))
-                .map(course => sendToAutopilot({course: course - 1}))
-        );
+            key.code === 'ArrowLeft' && (
+                Maybe.of(values.get('course'))
+                    .map(course => sendToAutopilot({course: course - 1}))
+            );
+        }
     }
 
     componentWillUnmount() {
