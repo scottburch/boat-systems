@@ -1,2 +1,7 @@
 node_modules
 client/dist
+.DS_Store
+desktop
+
+node_modules.bak
+yarn.lock.bak
