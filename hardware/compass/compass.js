@@ -38,7 +38,7 @@ const loop = () => {
 const readWord = (register) => {
     const high = i2c1.readByteSync(CMPS14_ADDR, register);
     const low = i2c1.readByteSync(CMPS14_ADDR, register + 1);
-    return (((high << 8) | low)/10).toFixed(1);
+    return ((high << 8) | low)/10;
 };
 
 const readSigned = (register) =>
