@@ -6,7 +6,6 @@ const listeners = {};
 
 ws.onmessage = (msg) => {
     const messageObj = JSON.parse(msg.data);
-
     messageObj.event === 'AUTOPILOT' && values.merge(messageObj.data)
 };
 

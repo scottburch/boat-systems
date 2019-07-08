@@ -29,6 +29,10 @@ module.exports.onBusMessage = (event, listener) => {
     listeners[event].push(listener)
 };
 
+module.exports.offBusMessage = (event, listener) => {
+    _.pull(listeners[event], listener);
+};
+
 module.exports.sendMessage = (event, data) =>
     ipc.of['boat-systems'].emit('message', objToMsg({event: event, data: data}));
 
