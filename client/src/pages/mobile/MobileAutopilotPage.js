@@ -5,7 +5,7 @@ import {sendMessage} from "../../services/communicationService";
 
 export const MobileAutopilotPage = observer(() => {
     return (
-        <>
+        <div style={{fontSize: 30, paddingLeft: 50, paddingTop: 50}}>
             <p>
                 <button onClick={toggleAutopilot}>
                     {values.get('course') ? 'On' : 'Off'}
@@ -13,12 +13,12 @@ export const MobileAutopilotPage = observer(() => {
                 </p>
             <p>Course: {values.get('course')}</p>
             <p>Heading: {values.get('heading')}</p>
-            <p>Error: {values.get('error')}</p>
+            <p>Error: <span  style={{color: values.get('error') < 0 ? 'red': 'green'}}>{values.get('error')}</span></p>
             <p>
                 <button onClick={() => move(-1)}>{'<--'}</button>
                 <button onClick={() => move(1)}>{'-->'}</button>
             </p>
-        </>
+        </div>
     )
 });
 
