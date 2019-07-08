@@ -1,12 +1,14 @@
+import React from 'react'
 import {Link} from 'react-router-dom'
+import {ListGroup, ListGroupItem} from 'react-bootstrap'
 
 export const SidebarMenu = () => (
-    <BS.ListGroup>
-        <BS.ListGroupItem>
+    <ListGroup>
+        <ListGroupItem>
             <Link to="/log">Log</Link>
-        </BS.ListGroupItem>
-        <BS.ListGroupItem>
+        </ListGroupItem>
+        <ListGroupItem>
             <Link to="/autopilot">Autopilot</Link>
-        </BS.ListGroupItem>
-    </BS.ListGroup>
+        </ListGroupItem>
+    </ListGroup>
 );

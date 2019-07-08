@@ -1,13 +1,13 @@
-import React from 'react'
+const ValueField = require('./ValueField');
+const Color = require('./Color');
+const utils = require('../../../../autopilot/utils');
 import {Component} from "../../components/Component";
 import {values} from "../../stores/AutopilotClientStore";
 import {observer} from 'mobx-react'
-import {ValueField} from "./ValueField";
-import {Color} from "./Color";
+import {Maybe} from 'simple-monads'
 
-const utils = require('../../autopilot-utils');
-
-export const ExtraBox = observer(class ExtraBox extends Component {
+@observer
+class ExtraBox extends Component {
 
     constructor(props) {
         super(props);
@@ -47,7 +47,8 @@ export const ExtraBox = observer(class ExtraBox extends Component {
             </div>
         )
     }
-});
+};
 
+module.exports = ExtraBox;
 
 

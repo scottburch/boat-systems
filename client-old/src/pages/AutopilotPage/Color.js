@@ -1,8 +1,6 @@
-import React from 'react'
-import {isNumber} from 'lodash'
-const utils = require('../../autopilot-utils');
+const utils = require('../../../../autopilot/utils');
 
-export const Color = ({children}) => isNumber(children) ? colorIt(children) : 'N/A';
+module.exports = ({children}) => _.isNumber(children) ? colorIt(children) : 'N/A';
 
 const colorIt = (num) => {
     const value = utils.fixed(num, 3);

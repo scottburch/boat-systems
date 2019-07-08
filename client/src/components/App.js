@@ -1,4 +1,5 @@
-import {HashRouter, Switch, Route} from 'react-router-dom'
+import React from 'react'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import {ReflexContainer, ReflexElement, ReflexSplitter} from 'react-reflex'
 import 'react-reflex/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -10,7 +11,7 @@ import {AutopilotPage} from "../pages/AutopilotPage";
 
 
 export const App = () => (
-    <HashRouter>
+    <BrowserRouter>
         <ReflexContainer orientation="vertical">
             <ReflexElement flex={.2}>
                 <SidebarMenu />
@@ -24,5 +25,5 @@ export const App = () => (
                 </Switch>
             </ReflexElement>
         </ReflexContainer>
-    </HashRouter>
+    </BrowserRouter>
 );

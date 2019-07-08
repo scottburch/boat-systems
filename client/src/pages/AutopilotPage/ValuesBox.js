@@ -1,15 +1,17 @@
-const ValueField = require('./ValueField');
-const Color = require('./Color');
+import React from 'react'
 import {Component} from "../../components/Component";
 import {observer} from 'mobx-react'
 import {values} from "../../stores/AutopilotClientStore";
+import {ValueField} from "./ValueField";
+import {Color} from "./Color";
+import {isNil} from 'lodash'
 
-@observer
-class ValuesBox extends Component {
+
+export const ValuesBox = observer(class extends Component {
     render() {
         return (
             <div>
-                <ValueField label="Course">{values.get('course') !== undefined ? values.get('course') : 'N/A'}</ValueField>
+                <ValueField label="Course">{isNil(values.get('course')) ? '---': values.get('course') }</ValueField>
                 <ValueField label="Heading">{values.get('heading')}</ValueField>
 
                 <ValueField label="Error"><Color>{values.get('error')}</Color></ValueField>
@@ -17,6 +19,5 @@ class ValuesBox extends Component {
             </div>
         )
     }
-};
+});
 
-module.exports = ValuesBox;
