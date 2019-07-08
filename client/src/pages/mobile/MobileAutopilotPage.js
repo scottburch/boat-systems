@@ -16,7 +16,7 @@ export const MobileAutopilotPage = observer(() => {
             <p>Error: <span  style={{color: values.get('error') < 0 ? 'red': 'green'}}>{values.get('error')}</span></p>
             <p>
                 <button onClick={() => move(-1)}>{'<--'}</button>
-                <button onClick={() => move(1)}>{'-->'}</button>
+                <button style={{marginLeft: 50}} onClick={() => move(1)}>{'-->'}</button>
             </p>
         </div>
     )
