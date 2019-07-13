@@ -22,7 +22,7 @@ export const MobileAutopilotPage = observer(() => {
     )
 });
 
-const move = (way) => values.get('course') && sendToAutopilot({course: values.get('course') + way});
+const move = (direction) => values.get('course') && sendToAutopilot({course: values.get('course') + direction});
 
 const toggleAutopilot = () => values.get('course') ?
     sendToAutopilot({course: null}) :
