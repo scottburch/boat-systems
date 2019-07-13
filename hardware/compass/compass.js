@@ -1,6 +1,6 @@
 const i2c = require('i2c-bus');
 const {sendError, sendInfo} = require('../../network/logSender');
-const {sendMessage} = require('../../network/networkBus');
+const {sendMessage} = require('../../network/networkBus/network-bus');
 
 const AUTO_CALIBRATION = [0x98, 0x95, 0x99, 0x93];
 const CMPS14_ADDR = 0x60;

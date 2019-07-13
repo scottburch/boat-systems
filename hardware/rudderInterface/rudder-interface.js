@@ -9,8 +9,8 @@ const myChangeScheduler = changeScheduler('AHRS');
 const SET_RUDDER_CMD = 0x00;
 const RUDDER_CONTROLLER = 0x04;
 
-onBusMessage('RUDDER', v => {
-    arduinoRequest(RUDDER_CONTROLLER, SET_RUDDER_CMD, numToByteArray(v));
+onBusMessage('RUDDER', ({rudder}) => {
+    arduinoRequest(RUDDER_CONTROLLER, SET_RUDDER_CMD, numToByteArray(rudder));
 });
 
 
