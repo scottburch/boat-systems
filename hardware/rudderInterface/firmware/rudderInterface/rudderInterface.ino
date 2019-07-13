@@ -56,7 +56,6 @@ void receiveData(int byteCount){
 
 void setRudder(int s) {
     speed = s;
-    Serial.print("Rudder: ");
     Serial.println(speed);
     digitalWrite(MOTOR_DIRECTION_PIN, speed > 0 ? LOW : HIGH);
     if(speed == 0) {
