@@ -99,17 +99,17 @@ const calcRudder = (function () {
     }
 }());
 
-let lastCalcRudder = Date.now();
+//let lastCalcRudder = Date.now();
 reaction(() => values.get('error'), error => {
     error && calcRudder(error);
-    lastCalcRudder = Date.now();
+//    lastCalcRudder = Date.now();
 });
 
 // This is here to handle a situation where there is error, but it is not changing due to the heading not changing so the rudder does not get updated
-(function loop(){
-    const waitTime = values.get('rudderTime') + values.get('rudderWait') + 200;
-    Date.now() - lastCalcRudder > waitTime && calcRudder(values.get('error'));
-    setTimeout(loop, waitTime);
-}());
+// (function loop(){
+//     const waitTime = values.get('rudderTime') + values.get('rudderWait') + 200;
+//     Date.now() - lastCalcRudder > waitTime && calcRudder(values.get('error'));
+//     setTimeout(loop, waitTime);
+// }());
 
 
