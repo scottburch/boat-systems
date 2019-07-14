@@ -1,5 +1,6 @@
 #include <Wire.h>
 
+#define TEST_MODE false
 
 // Digitial pins
 int MOTOR_DIRECTION_PIN = 10;
@@ -100,13 +101,13 @@ void loop() {
 void motorDriveLoop() {
     if(speed != 0) {
         if(abs(analogRead(MOTOR_TACH_PIN) - tachRef) < abs(speed)) {
-            base = base + 5;
-            base = base > 255 ? 255 : base;
+            base = min(base + 5, 255);
         }  else {
-            base = base - 5;
-            base = base < 0 ? 0 : base;
+            base = max(base - 5, 0);
         }
-        analogWrite(MOTOR_SPEED_PIN, base);
+        if (!TEST_MODE) {
+            analogWrite(MOTOR_SPEED_PIN, base);
+        }
     } else {
         tachRef = analogRead(MOTOR_TACH_PIN);
     }
