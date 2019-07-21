@@ -4,7 +4,9 @@ require('express-ws')(app);
 const path = require('path');
 const {sendMessage, onBusMessage, sendLogMessage, offBusMessage} = require('../networkBus/network-bus');
 
-app.use(express.static(path.normalize('../../client/build')));
+const appDir = '../../client/build';
+
+app.use(express.static(path.normalize(appDir)));
 
 app.ws('/ws', function (ws, req) {
     ws.on('message', msg => {
@@ -12,6 +14,10 @@ app.ws('/ws', function (ws, req) {
             COMMANDS[msg.cmd](ws, msg.data);
     });
 });
+
+app.get( "*", function( req, res ) {
+    res.sendfile( path.resolve( appDir, "index.html" ) );
+} );
 
 app.listen(3001);
 
