@@ -1,11 +1,10 @@
 const express = require('express');
 const app = express();
 require('express-ws')(app);
+const path = require('path');
 const {sendMessage, onBusMessage, sendLogMessage, offBusMessage} = require('../networkBus/network-bus');
 
-app.get('/', function (req, res, next) {
-    res.end("hello world");
-});
+app.use(express.static(path.normalize('../../client/build')));
 
 app.ws('/ws', function (ws, req) {
     ws.on('message', msg => {
