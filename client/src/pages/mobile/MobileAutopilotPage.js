@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {values} from "../../stores/AutopilotClientStore";
 import {observer} from "mobx-react";
 import {sendMessage} from "../../services/communicationService";
+import {isNumber} from 'lodash'
 
 export const MobileAutopilotPage = observer(() => {
     return (
@@ -22,7 +23,13 @@ export const MobileAutopilotPage = observer(() => {
     )
 });
 
-const move = (direction) => values.get('course') && sendToAutopilot({course: values.get('course') + direction});
+const move = direction => {
+    let course = values.get('course');
+    course += direction;
+    course > 359 && (course = 0);
+    course < 0 && (course = 359);
+    sendToAutopilot({course});
+};
 
 const toggleAutopilot = () => values.get('course') ?
     sendToAutopilot({course: null}) :

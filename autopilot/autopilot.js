@@ -10,7 +10,7 @@ let pidController;
 
 
 values.merge({
-    heading: 180,
+    heading: 0,
     rudder: 0
 });
 
