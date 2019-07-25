@@ -4,9 +4,9 @@ require('express-ws')(app);
 const path = require('path');
 const {sendMessage, onBusMessage, sendLogMessage, offBusMessage} = require('../networkBus/network-bus');
 
-const appDir = '../../client/build';
+const APP_DIR = '../../client/build';
 
-app.use(express.static(path.normalize(appDir)));
+app.use(express.static(path.normalize(APP_DIR)));
 
 app.ws('/ws', function (ws, req) {
     ws.on('message', msg => {
@@ -16,7 +16,7 @@ app.ws('/ws', function (ws, req) {
 });
 
 app.get( "*", function( req, res ) {
-    res.sendfile( path.resolve( appDir, "index.html" ) );
+    res.sendfile( path.resolve( APP_DIR, "index.html" ) );
 } );
 
 app.listen(3001);
