@@ -29,6 +29,7 @@ const move = direction => {
     course > 359 && (course = 0);
     course < 0 && (course = 359);
     sendToAutopilot({course});
+    values.set('course', course);
 };
 
 const toggleAutopilot = () => values.get('course') ?

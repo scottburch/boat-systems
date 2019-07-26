@@ -27,7 +27,12 @@ keyListener(key) {
 
             key.code === 'ArrowRight' && (
                 Maybe.of(values.get('course'))
-                    .map(course => sendToAutopilot({course: course === 359 ? 0 : course + 1}))
+                    .map(course => course === 359 ? 0 : course + 1)
+                    .map(course => {
+                        values.set('course', course);
+                        return course;
+                    })
+                    .map(course => sendToAutopilot({course}))
             );
 
             key.code === 'ArrowLeft' && (
