@@ -57,9 +57,12 @@ function changeState(state) {
 }
 
 function calcCourseError() {
-    const error = values.get('course') === undefined ? undefined : utils.fixed(utils.getDirectionalDiff(values.get('course'), values.get('heading')));
+    const error = values.get('course') === undefined ? undefined : toFixed(utils.getDirectionalDiff(values.get('course'), values.get('heading')));
     values.set('error', error);
 }
+
+const toFixed =  (n, places) => parseFloat(parseFloat(n, 10).toFixed(places));
+
 
 autorun(() => {
     createPIDController();
@@ -87,6 +90,7 @@ const calcRudder = (function () {
         function handleError() {
             pidController || createPIDController();
             let result = pidController.update(error);
+            console.log(result);
             let newRudder = Math.trunc(result - last);
             values.set('rudder', newRudder < 0 ? Math.max(-1023, newRudder) : Math.min(1023, newRudder));
             last = result;
