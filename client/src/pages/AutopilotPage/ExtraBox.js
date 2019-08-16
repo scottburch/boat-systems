@@ -24,11 +24,6 @@ export const ExtraBox = observer(class ExtraBox extends Component {
         }, 1000 * 60 * 5);
     }
 
-    convertToVolts(num) {
-        return utils.fixed((num * .0049) * (1000 + 220) / 220);
-    }
-
-
     render() {
         this.maxDly = isNaN(this.maxDly) ? 0 : Math.max(values.get('compassDelay'), this.maxDly);
         this.minHz = Math.min(values.get('hz'), this.minHz);

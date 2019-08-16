@@ -4,10 +4,9 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            kP: .5,
-            kI: 0.04,
-            kD: 0.02,
-            rudderMult: 100
+            kP: 50,
+            kI: 4,
+            kD: 2,
         }
     },
     'sail-light': {
@@ -15,10 +14,9 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            kP: 0.6,
-            kI: 0.06,
-            kD: 0.02,
-            rudderMult: 65
+            kP: 60,
+            kI: 6,
+            kD: 2,
         }
     },
     'sail-light-med-downhill': {
@@ -26,10 +24,9 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            kP: 1,
-            kI: 0.04,
-            kD: 0.02,
-            rudderMult: 100
+            kP: 100,
+            kI: 4,
+            kD: 2,
         }
     },
     'sail-med-heavy-downhill': {
@@ -37,10 +34,9 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 400,
-            rudderMult: 100,
-            kP: 3,
-            kI: .04,
-            kD: .03,
+            kP: 300,
+            kI: 4,
+            kD: 3,
         }
     }
 };
