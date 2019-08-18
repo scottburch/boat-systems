@@ -57,7 +57,7 @@ function changeState(state) {
 }
 
 function calcCourseError() {
-    const error = values.get('course') === undefined ? undefined : toFixed(utils.getDirectionalDiff(values.get('course'), values.get('heading')));
+    const error = values.get('course') === undefined ? undefined : toFixed(utils.getDirectionalDiff(values.get('course'), values.get('heading')),1);
     values.set('error', error);
 }
 

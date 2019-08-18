@@ -6,9 +6,14 @@ export const ToggleSwitch = ({children, system, withPasscode}) => {
     useEffect(() => {
         setTimeout(() => setOn(true), 5000);
     });
+
+    const toggle = () => {
+
+    };
+
     return (
         <>
-            <Button variant="primary" active={isOn}>{children}</Button>
+            <Button variant="primary" onClick={toggle} active={isOn}>{children}</Button>
         </>
     )
 };
