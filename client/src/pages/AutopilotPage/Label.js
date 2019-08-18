@@ -1,5 +1,5 @@
 import React from 'react'
-const Col = require('react-bootstrap/lib/Col');
+import {Col} from 'react-bootstrap'
 
 export const Label = ({children}) => (
     <Col xs={4}><label>{children}:</label></Col>

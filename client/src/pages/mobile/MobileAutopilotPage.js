@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import {values} from "../../stores/AutopilotClientStore";
 import {observer} from "mobx-react";
 import {sendMessage} from "../../services/communicationService";
-import {isNumber} from 'lodash'
 
 export const MobileAutopilotPage = observer(() => {
     return (

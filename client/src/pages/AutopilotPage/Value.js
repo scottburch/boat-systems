@@ -1,4 +1,4 @@
 import React from 'react'
-const Col = require('react-bootstrap/lib/Col');
+import {Col} from 'react-bootstrap'
 
 export const Value = ({children}) => <Col xs={8}>{children}</Col>;

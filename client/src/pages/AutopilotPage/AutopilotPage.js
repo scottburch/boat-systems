@@ -1,5 +1,5 @@
 import React from 'react'
-import {Col, Row, Grid, Well} from 'react-bootstrap';
+import {Col, Row, Container, Alert} from 'react-bootstrap';
 import {Component} from "../../components/Component";
 import {Maybe, Either} from 'simple-monads'
 import {values, sendToAutopilot} from "../../stores/AutopilotClientStore";
@@ -48,24 +48,24 @@ keyListener(key) {
 
     render() {
         return (
-            <Grid fluid>
+            <Container fluid>
                 <Row>
                     <Col style={{paddingBottom: 5}}><PresetsSelect/></Col>
                 </Row>
                 <Row>
                     <Col xs={6}>
-                        <Well>
+                        <Alert>
                             <ValuesBox/>
                             <AdjustableValuesBox/>
-                        </Well>
+                        </Alert>
                     </Col>
                     <Col xs={6}>
-                        <Well>
+                        <Alert>
                             <ExtraBox/>
-                        </Well>
+                        </Alert>
                     </Col>
                 </Row>
-            </Grid>
+            </Container>
         );
     }
 }

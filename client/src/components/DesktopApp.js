@@ -6,6 +6,7 @@ import {SidebarMenu} from "./SidebarMenu";
 import {HomePage} from "../pages/HomePage";
 import {LogPage} from "../pages/LogPage";
 import {AutopilotPage} from "../pages/AutopilotPage";
+import {SystemsPage} from "../pages/SystemsPage";
 
 
 export const DesktopApp = () => (
@@ -18,6 +19,7 @@ export const DesktopApp = () => (
             <Switch>
                 <Route path="/log" component={LogPage}/>
                 <Route path="/autopilot" component={AutopilotPage}/>
+                <Route path="/systems" component={SystemsPage} />
                 <Route component={HomePage}/>
             </Switch>
         </ReflexElement>
