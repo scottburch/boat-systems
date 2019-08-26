@@ -14,15 +14,20 @@ const i2c1 = i2c.openSync(1);
 
 sendInfo('CMPS-14 compass running');
 
-sendInfo(`Magnetometer calibration ${i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 3}`);
-sendInfo(`Accelerometer calibration ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0x0c) >> 2}`);
-sendInfo(`Gyro calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0x30) >> 4}`);
-sendInfo(`Compass calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0xc0) >> 6}`);
+
+const sendCalibration = () => {
+    sendInfo(`Magnetometer calibration ${i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 3}`);
+    sendInfo(`Accelerometer calibration ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0x0c) >> 2}`);
+    sendInfo(`Gyro calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0x30) >> 4}`);
+    sendInfo(`Compass calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0xc0) >> 6}`);
+};
+
+setInterval(sendCalibration, 30 * 1000);
 
 
 const writeCommand = (bytes) => {
-        i2c1.writeByteSync(CMPS14_ADDR, 0x00, bytes.shift());
-        bytes.length && setTimeout(() => writeCommand(bytes), 20);
+    i2c1.writeByteSync(CMPS14_ADDR, 0x00, bytes.shift());
+    bytes.length && setTimeout(() => writeCommand(bytes), 20);
 };
 
 const loop = () => {
@@ -46,5 +51,8 @@ const readSigned = (register) =>
 
 
 loop();
-writeCommand(AUTO_CALIBRATION);
+//writeCommand(AUTO_CALIBRATION);
 
+
+// erase the stored profile
+writeCommand([0xe0, 0xe5, 0xe2]);
