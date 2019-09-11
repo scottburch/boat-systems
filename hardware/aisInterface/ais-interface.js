@@ -1,5 +1,5 @@
-const {sendError, sendInfo} = require('../network/logSender');
-const {sendMessage, onBusMessage} = require('../network/networkBus');
+const {sendError, sendInfo} = require('../../network/logSender');
+const {sendMessage, onBusMessage} = require('../../network/networkBus');
 
 
 let port;
