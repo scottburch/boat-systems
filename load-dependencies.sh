@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-list=`find . -name package.json | grep -v node_modules`
+list=`find . -name yarn.lock | grep -v node_modules`
 here=`pwd`
 
 for item in $list
