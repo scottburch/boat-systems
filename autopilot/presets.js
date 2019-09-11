@@ -4,8 +4,8 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            kP: 50,
-            kI: 4,
+            kP: 35,
+            kI: 2,
             kD: 2,
         }
     },

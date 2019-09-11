@@ -2,7 +2,14 @@ const i2c = require('i2c-bus');
 const {sendError, sendInfo} = require('../../network/logSender');
 const {sendMessage} = require('../../network/networkBus/network-bus');
 
-const AUTO_CALIBRATION = [0x98, 0x95, 0x99, 0x93];
+
+const PERIODIC_AUTOSAVE = 0x10;
+const GYRO_CAL_ENABLE = 0x04;
+const ACCEL_CAL_ENABLE = 0x02;
+const MAG_CAL_ENABLE = 0x01;
+
+const AUTO_CALIBRATION = [0x98, 0x95, 0x99, 0x80 | PERIODIC_AUTOSAVE | ACCEL_CAL_ENABLE | MAG_CAL_ENABLE];
+const ERASE_STORED_PROFILE = [0xe0, 0xe5, 0xe2];
 const CMPS14_ADDR = 0x60;
 const BEARING = 0x02;
 const ROLL = 0x05;
@@ -22,11 +29,12 @@ const sendCalibration = () => {
     sendInfo(`Compass calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0xc0) >> 6}`);
 };
 
-setInterval(sendCalibration, 30 * 1000);
+setInterval(sendCalibration, 300 * 1000);
 
 
 const writeCommand = (bytes) => {
-    i2c1.writeByteSync(CMPS14_ADDR, 0x00, bytes.shift());
+
+    const response = i2c1.writeByteSync(CMPS14_ADDR, 0x00, bytes.shift());
     bytes.length && setTimeout(() => writeCommand(bytes), 20);
 };
 
@@ -51,8 +59,9 @@ const readSigned = (register) =>
 
 
 loop();
+// This did not work, so I wrote Arduino code to turn on calibration.
 //writeCommand(AUTO_CALIBRATION);
 
 
 // erase the stored profile
-writeCommand([0xe0, 0xe5, 0xe2]);
+//writeCommand(ERASE_STORED_PROFILE);
