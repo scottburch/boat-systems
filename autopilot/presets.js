@@ -4,9 +4,9 @@ module.exports = {
         values: {
             rudderTime: 200,
             rudderWait: 200,
-            kP: 35,
-            kI: 2,
-            kD: 2,
+            kP: 15,
+            kI: 1,
+            kD: 1,
         }
     },
     'sail-light': {
