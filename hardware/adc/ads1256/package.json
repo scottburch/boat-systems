@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@types/node": "^13.7.0",
+    "lodash": "^4.17.15",
+    "onoff": "^5.0.1",
+    "spi-device": "^3.0.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
+}
