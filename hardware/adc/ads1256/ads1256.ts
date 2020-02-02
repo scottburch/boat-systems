@@ -17,7 +17,7 @@ const hardReset = async () => {
     ADS_RST_PIN.writeSync(0);
     await delay();
     ADS_RST_PIN.writeSync(1);
-    waitForDataReady()
+    waitForDataReady();
     console.log('done', `${(Date.now() - start)/1000}sec`)
 };
 
@@ -30,7 +30,7 @@ export const initADS = async () => {
 
     setRegister(Registers.AD_DATA_RATE,  0x13); // lower sample rate
 
-    calibrate();
+//    calibrate();
 
 
 };
@@ -45,7 +45,7 @@ const calibrate = () => {
     console.log('Calibration complete:', `${(Date.now() - start) / 1000}sec`)
 };
 
-const waitForDataReady = () => {
+export const waitForDataReady = () => {
     while (ADS_RDY_PIN.readSync()) {}
 };
 
@@ -66,7 +66,7 @@ interface SpiSendProps {
 }
 
 
-const spiSend = (parts: SpiSendProps[]): Buffer => {
+export const spiSend = (parts: SpiSendProps[]): Buffer => {
     waitForDataReady();
     const message: MessagePart[] = parts.map(({bytes, delay = 0}) => ({
         sendBuffer: Buffer.from(bytes),
@@ -90,7 +90,9 @@ export enum Commands {
     SYNC = 0xFC,
     WAKEUP = 0x00,
     SHIFT_BYTE = 0x00,
-    SELFCAL = 0xF0
+    SELFCAL = 0xF0,
+    SYSOCAL = 0xF3,
+    SYSGCAL = 0xF4
 }
 
 export enum Registers {
