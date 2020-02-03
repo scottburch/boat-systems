@@ -7,7 +7,7 @@ const ADS_RDY_PIN = new Gpio(17, 'in', 'both');
 const ADS_RST_PIN = new Gpio(18, 'out');
 const ADS_CS_PIN = new Gpio(22, 'out');
 const DA_CS_PIN = new Gpio(23, 'out');
-
+const CAL_PIN = new Gpio(4, 'out');
 
 const hardReset = async () => {
     console.log('Resetting ADC...');
@@ -36,10 +36,16 @@ export const initADS = async () => {
 
 
 const systemCalibration = async () => {
-    await pressAnyKey('Apply max voltage:');
+    console.log('System calibration');
+    console.log('Applying max voltage');
+    CAL_PIN.writeSync(0); // apply 3 volts to AD0 input
+    await delay(500);
     spiSend([{bytes: [Commands.SYSGCAL]}]);
     waitForDataReady();
-    await pressAnyKey('Apply min voltage:');
+
+    console.log('Applying min voltage');
+    CAL_PIN.writeSync(1);
+    await delay(500);
     spiSend([{bytes: [Commands.SYSOCAL]}]);
     waitForDataReady();
 };

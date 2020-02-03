@@ -44,6 +44,7 @@ var ADS_RDY_PIN = new Gpio(17, 'in', 'both');
 var ADS_RST_PIN = new Gpio(18, 'out');
 var ADS_CS_PIN = new Gpio(22, 'out');
 var DA_CS_PIN = new Gpio(23, 'out');
+var CAL_PIN = new Gpio(4, 'out');
 var hardReset = function () { return __awaiter(void 0, void 0, void 0, function () {
     var start;
     return __generator(this, function (_a) {
@@ -86,12 +87,18 @@ exports.initADS = function () { return __awaiter(void 0, void 0, void 0, functio
 var systemCalibration = function () { return __awaiter(void 0, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, pressAnyKey('Apply max voltage:')];
+            case 0:
+                console.log('System calibration');
+                console.log('Applying max voltage');
+                CAL_PIN.writeSync(0); // apply 3 volts to AD0 input
+                return [4 /*yield*/, delay(500)];
             case 1:
                 _a.sent();
                 exports.spiSend([{ bytes: [Commands.SYSGCAL] }]);
                 exports.waitForDataReady();
-                return [4 /*yield*/, pressAnyKey('Apply min voltage:')];
+                console.log('Applying min voltage');
+                CAL_PIN.writeSync(1);
+                return [4 /*yield*/, delay(500)];
             case 2:
                 _a.sent();
                 exports.spiSend([{ bytes: [Commands.SYSOCAL] }]);
