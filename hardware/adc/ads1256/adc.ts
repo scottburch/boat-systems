@@ -8,7 +8,9 @@ initADS().then(async () => {
     setInterval(() => {
         const buf = readData(3);
 
-        const perVolt = Math.pow(2, 21) / 2.5;
+        const MAX_VOLTS = 3;
+        const perVolt = Math.pow(2, 23) / MAX_VOLTS;
+
 
         console.log(buf, buf.readIntBE(0, 3)/perVolt);
     }, 500);

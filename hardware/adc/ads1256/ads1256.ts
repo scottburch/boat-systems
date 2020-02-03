@@ -1,14 +1,12 @@
 const spi = require('spi-device');
 const Gpio = require('onoff').Gpio;
 const {times} = require('lodash');
-
+const pressAnyKey = require('press-any-key');
 
 const ADS_RDY_PIN = new Gpio(17, 'in', 'both');
 const ADS_RST_PIN = new Gpio(18, 'out');
 const ADS_CS_PIN = new Gpio(22, 'out');
 const DA_CS_PIN = new Gpio(23, 'out');
-
-
 
 
 const hardReset = async () => {
@@ -18,24 +16,35 @@ const hardReset = async () => {
     await delay();
     ADS_RST_PIN.writeSync(1);
     waitForDataReady();
-    console.log('done', `${(Date.now() - start)/1000}sec`)
+    console.log('done', `${(Date.now() - start) / 1000}sec`)
 };
 
 export const initADS = async () => {
+    console.log("Initializing ADS");
     await hardReset();
     await delay(150);
 
     DA_CS_PIN.writeSync(1);
     ADS_CS_PIN.writeSync(0);
 
-    setRegister(Registers.AD_DATA_RATE,  0x13); // lower sample rate
+    setRegister(Registers.AD_DATA_RATE, 0xC1); // lower sample rate
 
-//    calibrate();
+    await systemCalibration();
 
-
+//    autoCalibrate();
 };
 
-const calibrate = () => {
+
+const systemCalibration = async () => {
+    await pressAnyKey('Apply max voltage:');
+    spiSend([{bytes: [Commands.SYSGCAL]}]);
+    waitForDataReady();
+    await pressAnyKey('Apply min voltage:');
+    spiSend([{bytes: [Commands.SYSOCAL]}]);
+    waitForDataReady();
+};
+
+const autoCalibrate = () => {
     console.log('Starting calibration...');
     const start = Date.now();
     spiSend([{
@@ -46,7 +55,8 @@ const calibrate = () => {
 };
 
 export const waitForDataReady = () => {
-    while (ADS_RDY_PIN.readSync()) {}
+    while (ADS_RDY_PIN.readSync()) {
+    }
 };
 
 const delay = (ms: number = 1): Promise<void> => new Promise(resolve => setTimeout(resolve, ms));

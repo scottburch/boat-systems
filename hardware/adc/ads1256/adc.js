@@ -43,7 +43,9 @@ ads1256_1.initADS().then(function () { return __awaiter(void 0, void 0, void 0, 
         console.log('MUX Register:', ads1256_1.readRegister(ads1256_1.Registers.MUX));
         setInterval(function () {
             var buf = ads1256_1.readData(3);
-            console.log(buf.readIntBE(0, 3));
+            var MAX_VOLTS = 3;
+            var perVolt = Math.pow(2, 23) / MAX_VOLTS;
+            console.log(buf, buf.readIntBE(0, 3) / perVolt);
         }, 500);
         return [2 /*return*/];
     });

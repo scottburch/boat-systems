@@ -39,38 +39,86 @@ exports.__esModule = true;
 var spi = require('spi-device');
 var Gpio = require('onoff').Gpio;
 var times = require('lodash').times;
+var pressAnyKey = require('press-any-key');
 var ADS_RDY_PIN = new Gpio(17, 'in', 'both');
 var ADS_RST_PIN = new Gpio(18, 'out');
 var ADS_CS_PIN = new Gpio(22, 'out');
 var DA_CS_PIN = new Gpio(23, 'out');
-exports.initADS = function () { return __awaiter(void 0, void 0, void 0, function () {
+var hardReset = function () { return __awaiter(void 0, void 0, void 0, function () {
+    var start;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                // Reset the chip
+                console.log('Resetting ADC...');
+                start = Date.now();
                 ADS_RST_PIN.writeSync(0);
                 return [4 /*yield*/, delay()];
             case 1:
                 _a.sent();
                 ADS_RST_PIN.writeSync(1);
+                exports.waitForDataReady();
+                console.log('done', (Date.now() - start) / 1000 + "sec");
+                return [2 /*return*/];
+        }
+    });
+}); };
+exports.initADS = function () { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0:
+                console.log("Initializing ADS");
+                return [4 /*yield*/, hardReset()];
+            case 1:
+                _a.sent();
                 return [4 /*yield*/, delay(150)];
             case 2:
                 _a.sent();
                 DA_CS_PIN.writeSync(1);
                 ADS_CS_PIN.writeSync(0);
+                exports.setRegister(Registers.AD_DATA_RATE, 0xC1); // lower sample rate
+                return [4 /*yield*/, systemCalibration()];
+            case 3:
+                _a.sent();
                 return [2 /*return*/];
         }
     });
 }); };
-var waitForDataReady = function () {
-    while (ADS_RDY_PIN.readSync()) { }
+var systemCalibration = function () { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, pressAnyKey('Apply max voltage:')];
+            case 1:
+                _a.sent();
+                exports.spiSend([{ bytes: [Commands.SYSGCAL] }]);
+                exports.waitForDataReady();
+                return [4 /*yield*/, pressAnyKey('Apply min voltage:')];
+            case 2:
+                _a.sent();
+                exports.spiSend([{ bytes: [Commands.SYSOCAL] }]);
+                exports.waitForDataReady();
+                return [2 /*return*/];
+        }
+    });
+}); };
+var autoCalibrate = function () {
+    console.log('Starting calibration...');
+    var start = Date.now();
+    exports.spiSend([{
+            bytes: [Commands.SELFCAL]
+        }]);
+    exports.waitForDataReady();
+    console.log('Calibration complete:', (Date.now() - start) / 1000 + "sec");
+};
+exports.waitForDataReady = function () {
+    while (ADS_RDY_PIN.readSync()) {
+    }
 };
 var delay = function (ms) {
     if (ms === void 0) { ms = 1; }
     return new Promise(function (resolve) { return setTimeout(resolve, ms); });
 };
-var spiSend = function (parts) {
-    waitForDataReady();
+exports.spiSend = function (parts) {
+    exports.waitForDataReady();
     var message = parts.map(function (_a) {
         var bytes = _a.bytes, _b = _a.delay, delay = _b === void 0 ? 0 : _b;
         return ({
@@ -100,6 +148,9 @@ var Commands;
     Commands[Commands["SYNC"] = 252] = "SYNC";
     Commands[Commands["WAKEUP"] = 0] = "WAKEUP";
     Commands[Commands["SHIFT_BYTE"] = 0] = "SHIFT_BYTE";
+    Commands[Commands["SELFCAL"] = 240] = "SELFCAL";
+    Commands[Commands["SYSOCAL"] = 243] = "SYSOCAL";
+    Commands[Commands["SYSGCAL"] = 244] = "SYSGCAL";
 })(Commands = exports.Commands || (exports.Commands = {}));
 var Registers;
 (function (Registers) {
@@ -110,7 +161,7 @@ var Registers;
     Registers[Registers["GPIO_CONTROL"] = 4] = "GPIO_CONTROL";
 })(Registers = exports.Registers || (exports.Registers = {}));
 exports.setRegister = function (register, value) {
-    return spiSend([{
+    return exports.spiSend([{
             bytes: [Commands.WRITE_REGISTER | register, 0],
             delay: 10
         }, {
@@ -118,11 +169,11 @@ exports.setRegister = function (register, value) {
         }]);
 };
 exports.readRegister = function (register) {
-    spiSend([{
+    exports.spiSend([{
             bytes: [Commands.READ_REGISTER | register, 0],
             delay: 10
         }]);
-    return spiSend([{
+    return exports.spiSend([{
             bytes: [0]
         }]);
 };
@@ -138,5 +189,5 @@ exports.readData = function (bytes) {
             delay: 10
         }];
     times(bytes, function () { return request.push({ bytes: [Commands.SHIFT_BYTE] }); });
-    return spiSend(request).slice(3);
+    return exports.spiSend(request).slice(3);
 };

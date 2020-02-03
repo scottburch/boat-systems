@@ -17,6 +17,9 @@ initADS()
         waitForDataReady();
     })
     .then(() => {
+        [5,6,7,8,9,10].forEach(add => console.log(`register ${add}:`, readRegister(add)))
+    })
+    .then(() => {
         setRegister(Registers.MUX, 0x04);
         console.log('MUX Register:', readRegister(Registers.MUX));
 
