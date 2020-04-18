@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.0",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
     "bootstrap": "^4.3.1",
     "key-event-to-string": "^1.2.0",
     "lodash": "^4.17.11",
@@ -14,7 +18,8 @@
     "react-reflex": "^3.0.15",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "simple-monads": "^2.0.0"
+    "simple-monads": "^2.0.0",
+    "typescript": "^3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
