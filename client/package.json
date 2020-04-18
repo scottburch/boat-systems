@@ -9,7 +9,7 @@
     "@types/react-dom": "^16.9.6",
     "bootstrap": "^4.3.1",
     "key-event-to-string": "^1.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "mobx": "^5.10.1",
     "mobx-react": "^6.1.1",
     "react": "^16.8.6",
