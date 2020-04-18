@@ -37,16 +37,25 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 var ads1256_1 = require("./ads1256");
-ads1256_1.initADS().then(function () { return __awaiter(void 0, void 0, void 0, function () {
-    return __generator(this, function (_a) {
-        ads1256_1.setRegister(ads1256_1.Registers.MUX, 0x04);
-        console.log('MUX Register:', ads1256_1.readRegister(ads1256_1.Registers.MUX));
-        setInterval(function () {
-            var buf = ads1256_1.readData(3);
-            var MAX_VOLTS = 3;
-            var perVolt = Math.pow(2, 23) / MAX_VOLTS;
-            console.log(buf, buf.readIntBE(0, 3) / perVolt);
-        }, 500);
-        return [2 /*return*/];
-    });
-}); });
+var MAX_VOLTS = 5;
+var perVolt = Math.pow(2, 23) / MAX_VOLTS;
+var setMux = function (MUX) { return ads1256_1.setRegister(ads1256_1.Registers.MUX, MUX); };
+var readValue = function () { return ads1256_1.readData(3).readIntBE(0, 3) / perVolt; };
+var valueToAmps = function (value) { return value / (.05 / 500); };
+ads1256_1.initADS().then(function () {
+    var Ain0 = voltageDivider(1200, 200);
+    setInterval(function () { return __awaiter(void 0, void 0, void 0, function () {
+        var amps, volts;
+        return __generator(this, function (_a) {
+            setMux(0x10); // volts mux
+            amps = valueToAmps(readValue());
+            setMux(0x32); // amps mux
+            volts = Ain0(readValue());
+            console.log(volts.toFixed(2), amps.toFixed(2));
+            return [2 /*return*/];
+        });
+    }); }, 500);
+});
+var voltageDivider = function (R1, R2) {
+    return function (value) { return (((value) * (R1 + R2)) / R2); };
+};

@@ -1,17 +1,30 @@
 import {initADS, readData, readRegister, Registers, setRegister} from "./ads1256";
 
-initADS().then(async () => {
-    setRegister(Registers.MUX, 0x04);
-    console.log('MUX Register:', readRegister(Registers.MUX));
+const MAX_VOLTS: number = 5;
+const perVolt: number = Math.pow(2, 23) / MAX_VOLTS;
 
 
-    setInterval(() => {
-        const buf = readData(3);
+const setMux = (MUX: number): Buffer => setRegister(Registers.MUX, MUX);
 
-        const MAX_VOLTS = 3;
-        const perVolt = Math.pow(2, 23) / MAX_VOLTS;
+const readValue = (): number => readData(3).readIntBE(0, 3)/perVolt;
 
+const valueToAmps = (value: number): number => value / (.05/500);
 
-        console.log(buf, buf.readIntBE(0, 3)/perVolt);
+initADS().then(() => {
+    const Ain0 = voltageDivider(1200, 200);
+
+    setInterval(async () => {
+        setMux(0x10); // volts mux
+        const amps = valueToAmps(readValue());
+        setMux(0x32); // amps mux
+        const volts = Ain0(readValue())
+        console.log(volts.toFixed(2), amps.toFixed(2));
     }, 500);
 });
+
+type VoltageDividerFunction = (value: number) => number
+
+const voltageDivider = (R1: number, R2: number): VoltageDividerFunction =>
+    (value: number): number => (((value) * (R1 + R2)) / R2);
+
+

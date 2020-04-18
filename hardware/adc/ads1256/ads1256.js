@@ -76,10 +76,9 @@ exports.initADS = function () { return __awaiter(void 0, void 0, void 0, functio
                 _a.sent();
                 DA_CS_PIN.writeSync(1);
                 ADS_CS_PIN.writeSync(0);
-                exports.setRegister(Registers.AD_DATA_RATE, 0xC1); // lower sample rate
-                return [4 /*yield*/, systemCalibration()];
-            case 3:
-                _a.sent();
+                exports.setRegister(Registers.AD_DATA_RATE, 0x23); // lower sample rate
+                //    await systemCalibration();
+                autoCalibrate();
                 return [2 /*return*/];
         }
     });
@@ -158,6 +157,7 @@ var Commands;
     Commands[Commands["SELFCAL"] = 240] = "SELFCAL";
     Commands[Commands["SYSOCAL"] = 243] = "SYSOCAL";
     Commands[Commands["SYSGCAL"] = 244] = "SYSGCAL";
+    Commands[Commands["STANDBY"] = 253] = "STANDBY";
 })(Commands = exports.Commands || (exports.Commands = {}));
 var Registers;
 (function (Registers) {
@@ -186,14 +186,11 @@ exports.readRegister = function (register) {
 };
 exports.readData = function (bytes) {
     var request = [{
-            bytes: [Commands.SYNC],
-            delay: 10
+            bytes: [Commands.SYNC]
         }, {
-            bytes: [Commands.WAKEUP],
-            delay: 10
+            bytes: [Commands.WAKEUP]
         }, {
-            bytes: [Commands.READ_DATA],
-            delay: 10
+            bytes: [Commands.READ_DATA]
         }];
     times(bytes, function () { return request.push({ bytes: [Commands.SHIFT_BYTE] }); });
     return exports.spiSend(request).slice(3);

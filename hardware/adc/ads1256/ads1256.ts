@@ -27,11 +27,11 @@ export const initADS = async () => {
     DA_CS_PIN.writeSync(1);
     ADS_CS_PIN.writeSync(0);
 
-    setRegister(Registers.AD_DATA_RATE, 0xC1); // lower sample rate
+    setRegister(Registers.AD_DATA_RATE, 0x23); // lower sample rate
 
-    await systemCalibration();
+//    await systemCalibration();
 
-//    autoCalibrate();
+    autoCalibrate();
 };
 
 
@@ -108,7 +108,8 @@ export enum Commands {
     SHIFT_BYTE = 0x00,
     SELFCAL = 0xF0,
     SYSOCAL = 0xF3,
-    SYSGCAL = 0xF4
+    SYSGCAL = 0xF4,
+    STANDBY = 0xFD
 }
 
 export enum Registers {
@@ -143,13 +144,10 @@ export const readRegister = (register: number): Buffer => {
 export const readData = (bytes: number): Buffer => {
     const request: SpiSendProps[] = [{
         bytes: [Commands.SYNC],
-        delay: 10
     }, {
         bytes: [Commands.WAKEUP],
-        delay: 10
     }, {
         bytes: [Commands.READ_DATA],
-        delay: 10
     }];
     times(bytes, () => request.push({bytes: [Commands.SHIFT_BYTE]}));
     return spiSend(request).slice(3);
