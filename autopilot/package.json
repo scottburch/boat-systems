@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "mobx": "^5.10.1",
     "node-pid-controller": "^1.0.1",
     "simple-monads": "^2.0.0"
