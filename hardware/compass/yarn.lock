@@ -9,15 +9,20 @@ bindings@^1.5.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
+delay@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/delay/-/delay-4.3.0.tgz#efeebfb8f545579cb396b3a722443ec96d14c50e"
+  integrity sha512-Lwaf3zVFDMBop1yDuFZ19F9WyGcZcGacsbdlZtWjQmM50tOcMntm1njF/Nb/Vjij3KaSvCF+sEYGKrrjObu2NA==
+
 file-uri-to-path@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz#553a7b8446ff6f684359c445f1e37a05dacc33dd"
   integrity sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
 
-i2c-bus@^4.0.10:
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/i2c-bus/-/i2c-bus-4.0.10.tgz#2febc96b7c0a3a11d50f6fa8741f3af90ab013da"
-  integrity sha512-/Aly83P/sH7DlY5xWKVUUCYG7PryGRnL+iLBNR6/KH1jhSIYyoHEdoKm/Tv+oWvqwTfnBwP4HbMBUlemBAJW7w==
+i2c-bus@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/i2c-bus/-/i2c-bus-5.1.0.tgz#7d667d225c09017cf044f75fc593d5ea3e0f4ea6"
+  integrity sha512-u/q1fuZ5xrG77y3uo1rAANycboXsRNjneN+6jXRNMT2yRNpanVkbAP+IArwgsPRCHaY/zKxw7x5G8Y2fSPNseA==
   dependencies:
     bindings "^1.5.0"
     nan "^2.14.0"

@@ -22,12 +22,6 @@ const i2c1 = i2c.openSync(1);
 sendInfo('CMPS-14 compass running');
 
 
-const sendCalibration = () => {
-    sendInfo(`Magnetometer calibration ${i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 3}`);
-    sendInfo(`Accelerometer calibration ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0x0c) >> 2}`);
-    sendInfo(`Gyro calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0x30) >> 4}`);
-    sendInfo(`Compass calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0xc0) >> 6}`);
-};
 
 setInterval(sendCalibration, 300 * 1000);
 
@@ -38,27 +32,45 @@ const writeCommand = (bytes) => {
     bytes.length && setTimeout(() => writeCommand(bytes), 20);
 };
 
-const loop = () => {
-    sendMessage('AHRS', {
-        heading: readWord(BEARING),
-        roll: readSigned(ROLL),
-        pitch: readSigned(PITCH),
-        compassTime: Date.now()
-    });
-    setTimeout(loop, 100);
+(async () => {
+    while (true) {
+        sendMessage('AHRS', {
+            heading: readWord(BEARING),
+            roll: readSigned(ROLL),
+            pitch: readSigned(PITCH),
+            compassTime: Date.now()
+        });
+        await delay(100);
+    }
+})()
+
+const sendCalibration = () => {
+    sendInfo(`Compass calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0xc0) >> 6}`);
 };
+
+
+const readCalibration = () => {
+    const calibration = i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE);
+    sendMessage('CMP', {
+        magCal: calibration & 3,
+        accCal: (calibration & 0x0c) >> 2,
+        gyroCal: (calibration & 0x30) >> 4,
+        cmpCal: (calibration & 0xc0) >> 6
+    });
+}
+
 
 const readWord = (register) => {
     const high = i2c1.readByteSync(CMPS14_ADDR, register);
     const low = i2c1.readByteSync(CMPS14_ADDR, register + 1);
-    return ((high << 8) | low)/10;
+    return ((high << 8) | low) / 10;
 };
 
 const readSigned = (register) =>
     new Int8Array([i2c1.readByteSync(CMPS14_ADDR, register)])[0];
 
 
-loop();
+readingLoop();
 // This did not work, so I wrote Arduino code to turn on calibration.
 //writeCommand(AUTO_CALIBRATION);
 

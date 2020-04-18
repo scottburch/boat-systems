@@ -11,6 +11,9 @@ export const SidebarMenu = () => (
             <Link to="/autopilot">Autopilot</Link>
         </ListGroupItem>
         <ListGroupItem>
+            <Link to="/compass">Compass</Link>
+        </ListGroupItem>
+        <ListGroupItem>
             <Link to="/systems">Systems</Link>
         </ListGroupItem>
     </ListGroup>
