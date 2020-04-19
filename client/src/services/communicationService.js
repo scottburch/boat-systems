@@ -16,6 +16,7 @@ ws.onopen = () => {
     ws.send(JSON.stringify({cmd: 'register', data: {event: 'LOG'}}))
 }
 
+
 export const sendMessage = (event, data = {}) => ws.send(JSON.stringify({cmd: 'send', data: {event, ...data}}));
 export const onBusMessage = (event, listener) => {
     listeners[event] = listeners[event] || [];

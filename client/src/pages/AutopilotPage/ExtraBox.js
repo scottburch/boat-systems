@@ -5,7 +5,6 @@ import {observer} from 'mobx-react'
 import {ValueField} from "./ValueField";
 import {Color} from "./Color";
 
-const utils = require('../../autopilot-utils');
 
 export const ExtraBox = observer(class ExtraBox extends Component {
 

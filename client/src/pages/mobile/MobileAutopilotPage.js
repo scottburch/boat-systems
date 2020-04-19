@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {values} from "../../stores/AutopilotClientStore";
 import {observer} from "mobx-react";
 import {sendMessage} from "../../services/communicationService";

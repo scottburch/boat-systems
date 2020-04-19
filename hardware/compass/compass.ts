@@ -1,3 +1,6 @@
+import {onBusMessage} from "../../network/networkBus/network-bus";
+import {MessageEvents} from "../../network/networkBus/MessageEvents";
+
 const delay = require('delay');
 const i2c = require('i2c-bus');
 const {sendError, sendInfo} = require('../../network/logSender');
@@ -20,14 +23,6 @@ const i2c1 = i2c.openSync(1);
 
 
 sendInfo('CMPS-14 compass running');
-
-const sendCalibration = () => {
-    sendInfo(`Compass calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0xc0) >> 6}`);
-};
-
-
-setInterval(sendCalibration, 300 * 1000);
-
 
 const writeCommand = (bytes) => {
 
@@ -59,17 +54,15 @@ const loop = async () => {
 }
 
 
-
-const readCalibration = () => {
+onBusMessage(MessageEvents.GET_COMPASS_STATE, () => {
     const calibration = i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE);
-    sendMessage('CMP', {
+    sendMessage(MessageEvents.COMPASS_STATE, {
         magCal: calibration & 3,
         accCal: (calibration & 0x0c) >> 2,
         gyroCal: (calibration & 0x30) >> 4,
         cmpCal: (calibration & 0xc0) >> 6
     });
-}
-
+});
 
 loop();
 

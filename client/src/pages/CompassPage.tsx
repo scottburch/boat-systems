@@ -1,8 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Table} from "react-bootstrap";
+import {onBusMessage, sendMessage} from "../services/communicationService";
+import {MessageEvents} from "../services/MessageEvents";
 
 export const CompassPage = () => {
 //    const [calibrating, setCalibrating] = useState()
+    useEffect(() => {
+        onBusMessage(MessageEvents.COMPASS_STATE, (state: any) => {
+            console.log(state);
+        });
+        sendMessage(MessageEvents.GET_COMPASS_STATE);
+    })
     return (
     <>
         <Table style={{width: 0}}>

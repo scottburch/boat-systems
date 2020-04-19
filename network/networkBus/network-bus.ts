@@ -1,4 +1,5 @@
 import {pull} from 'lodash';
+
 const {objToMsg, msgToObj} = require("../utils");
 const IPC = require('node-ipc/services/IPC');
 const ipc = require('node-ipc');
@@ -38,7 +39,6 @@ export const sendMessage = (event, data) =>
     ipc.of['boat-systems'].emit('message', objToMsg({event: event, data: data}));
 
 export const sendLogMessage = data => sendMessage('LOG', data);
-
 
 
 
