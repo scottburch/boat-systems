@@ -55,11 +55,6 @@ const startNetworkListener = () => {
     });
 };
 
-
-
-
-
-
 const sendToNetwork = (obj) => {
     obj.hops = (obj.hops || []).concat([myID]);
     networkSocket.send(

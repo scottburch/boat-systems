@@ -2,7 +2,7 @@ import React from "react";
 import {Table} from "react-bootstrap";
 
 export const CompassPage = () => {
-    const [calibrating, setCalibrating] = useState()
+//    const [calibrating, setCalibrating] = useState()
     return (
     <>
         <Table style={{width: 0}}>
