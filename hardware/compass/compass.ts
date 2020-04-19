@@ -11,13 +11,16 @@ const GYRO_CAL_ENABLE = 0x04;
 const ACCEL_CAL_ENABLE = 0x02;
 const MAG_CAL_ENABLE = 0x01;
 
-const AUTO_CALIBRATION = [0x98, 0x95, 0x99, 0x80 | PERIODIC_AUTOSAVE | ACCEL_CAL_ENABLE | MAG_CAL_ENABLE];
+const START_CALIBRATION = [0x98, 0x95, 0x99, 0x80 | ACCEL_CAL_ENABLE | MAG_CAL_ENABLE];
+const STOP_CALIBRATION = [0x98, 0x95, 0x99, 0x80];
+const STORE_PROFILE = [0xF0, 0xF5, 0xF6];
 const ERASE_STORED_PROFILE = [0xe0, 0xe5, 0xe2];
 const CMPS14_ADDR = 0x60;
 const BEARING = 0x02;
 const ROLL = 0x05;
 const PITCH = 0x04;
 const CALIBRATION_STATE = 0x1e;
+let isCalibrating = false;
 
 const i2c1 = i2c.openSync(1);
 
@@ -54,23 +57,26 @@ const loop = async () => {
 }
 
 
+onBusMessage(MessageEvents.CALIBRATE_COMPASS, () => {
+    isCalibrating = true;
+     writeCommand(START_CALIBRATION);
+
+     isCalibrating = false;
+
+});
+
 onBusMessage(MessageEvents.GET_COMPASS_STATE, () => {
     const calibration = i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE);
     sendMessage(MessageEvents.COMPASS_STATE, {
         magCal: calibration & 3,
         accCal: (calibration & 0x0c) >> 2,
         gyroCal: (calibration & 0x30) >> 4,
-        cmpCal: (calibration & 0xc0) >> 6
+        cmpCal: (calibration & 0xc0) >> 6,
+        isCal: isCalibrating
     });
 });
 
 loop();
 
 
-// This did not work, so I wrote Arduino code to turn on calibration.
-//writeCommand(AUTO_CALIBRATION);
-
-
-// erase the stored profile
-//writeCommand(ERASE_STORED_PROFILE);
 
