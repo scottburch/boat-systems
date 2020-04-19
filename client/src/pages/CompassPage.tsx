@@ -25,10 +25,9 @@ export const CompassPage = () => {
                 <Value label="Accelerometer Cal">{compassState.accCal}</Value>
                 <Value label="Gyro Cal">{compassState.gyroCal}</Value>
                 <Value label="Compass Cal">{compassState.cmpCal}</Value>
-                <Value label="Is calibrating">{compassState.isCal}</Value>
                 </tbody>
             </Table>
-            <Button onClick={calibrateCompass}>Calibrate</Button>
+            <Button onClick={calibrateCompass}>{compassState.isCal ? 'Calibrating...' : 'Calibrate'}</Button>
         </>
     )
 };

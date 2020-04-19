@@ -27,10 +27,11 @@ const i2c1 = i2c.openSync(1);
 
 sendInfo('CMPS-14 compass running');
 
-const writeCommand = (bytes) => {
-
-    const response = i2c1.writeByteSync(CMPS14_ADDR, 0x00, bytes.shift());
-    bytes.length && setTimeout(() => writeCommand(bytes), 20);
+const writeCommand = async (bytes) => {
+    for(const byte of bytes) {
+        i2c1.writeByteSync(CMPS14_ADDR, 0x00, bytes.shift());
+        delay(20);
+    }
 };
 
 const readWord = (register) => {
@@ -60,9 +61,10 @@ const loop = async () => {
 onBusMessage(MessageEvents.CALIBRATE_COMPASS, () => {
     isCalibrating = true;
      writeCommand(START_CALIBRATION);
-
-     isCalibrating = false;
-
+     setTimeout(() => {
+        writeCommand(STOP_CALIBRATION);
+        isCalibrating = false;
+     }, 8000);
 });
 
 onBusMessage(MessageEvents.GET_COMPASS_STATE, () => {
