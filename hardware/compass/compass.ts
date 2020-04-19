@@ -3,8 +3,6 @@ const i2c = require('i2c-bus');
 const {sendError, sendInfo} = require('../../network/logSender');
 const {sendMessage} = require('../../network/networkBus/network-bus');
 
-
-
 const PERIODIC_AUTOSAVE = 0x10;
 const GYRO_CAL_ENABLE = 0x04;
 const ACCEL_CAL_ENABLE = 0x02;
