@@ -1,6 +1,8 @@
+const delay = require('delay');
 const i2c = require('i2c-bus');
 const {sendError, sendInfo} = require('../../network/logSender');
 const {sendMessage} = require('../../network/networkBus/network-bus');
+
 
 
 const PERIODIC_AUTOSAVE = 0x10;
@@ -21,6 +23,9 @@ const i2c1 = i2c.openSync(1);
 
 sendInfo('CMPS-14 compass running');
 
+const sendCalibration = () => {
+    sendInfo(`Compass calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0xc0) >> 6}`);
+};
 
 
 setInterval(sendCalibration, 300 * 1000);
@@ -32,7 +37,18 @@ const writeCommand = (bytes) => {
     bytes.length && setTimeout(() => writeCommand(bytes), 20);
 };
 
-(async () => {
+const readWord = (register) => {
+    const high = i2c1.readByteSync(CMPS14_ADDR, register);
+    const low = i2c1.readByteSync(CMPS14_ADDR, register + 1);
+    return ((high << 8) | low) / 10;
+};
+
+const readSigned = (register) =>
+    new Int8Array([i2c1.readByteSync(CMPS14_ADDR, register)])[0];
+
+
+
+const loop = async () => {
     while (true) {
         sendMessage('AHRS', {
             heading: readWord(BEARING),
@@ -42,11 +58,8 @@ const writeCommand = (bytes) => {
         });
         await delay(100);
     }
-})()
+}
 
-const sendCalibration = () => {
-    sendInfo(`Compass calibration state ${(i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE) & 0xc0) >> 6}`);
-};
 
 
 const readCalibration = () => {
@@ -60,20 +73,13 @@ const readCalibration = () => {
 }
 
 
-const readWord = (register) => {
-    const high = i2c1.readByteSync(CMPS14_ADDR, register);
-    const low = i2c1.readByteSync(CMPS14_ADDR, register + 1);
-    return ((high << 8) | low) / 10;
-};
-
-const readSigned = (register) =>
-    new Int8Array([i2c1.readByteSync(CMPS14_ADDR, register)])[0];
+loop();
 
 
-readingLoop();
 // This did not work, so I wrote Arduino code to turn on calibration.
 //writeCommand(AUTO_CALIBRATION);
 
 
 // erase the stored profile
 //writeCommand(ERASE_STORED_PROFILE);
+
