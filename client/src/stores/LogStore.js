@@ -7,6 +7,5 @@ export const log = observable.array([]);
 export const getLogMessages = () => log;
 export const clearLogMessages = log.clear.bind(log);
 
-setTimeout(() => {
-    onBusMessage('LOG', (msg) => log.push(msg));
-});
+
+onBusMessage('LOG', (msg) => console.log(msg) || log.push(msg));

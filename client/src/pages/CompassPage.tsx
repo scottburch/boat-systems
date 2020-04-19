@@ -1,24 +1,25 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {Table} from "react-bootstrap";
-import {onBusMessage, sendMessage} from "../services/communicationService";
+import {offBusMessage, onBusMessage, sendMessage} from "../services/communicationService";
 import {MessageEvents} from "../services/MessageEvents";
 
 export const CompassPage = () => {
 //    const [calibrating, setCalibrating] = useState()
+    const [compassState, setCompassState] = useState({} as any)
+
     useEffect(() => {
-        onBusMessage(MessageEvents.COMPASS_STATE, (state: any) => {
-            console.log(state);
-        });
+        onBusMessage(MessageEvents.COMPASS_STATE, setCompassState);
         sendMessage(MessageEvents.GET_COMPASS_STATE);
+        return () => offBusMessage(MessageEvents.COMPASS_STATE, setCompassState);
     })
     return (
     <>
         <Table style={{width: 0}}>
             <tbody>
-            <Value label="Magnetometer Cal">xxx</Value>
-            <Value label="Accelerometer Cal">xxx</Value>
-            <Value label="Gyro Cal">xxx</Value>
-            <Value label="Compass Cal">xxx</Value>
+            <Value label="Magnetometer Cal">{compassState.magCal}</Value>
+            <Value label="Accelerometer Cal">{compassState.accCal}</Value>
+            <Value label="Gyro Cal">{compassState.gyroCal}</Value>
+            <Value label="Compass Cal">{compassState.cmpCal}</Value>
             </tbody>
         </Table>
     </>

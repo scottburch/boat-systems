@@ -1,5 +1,5 @@
-import {values} from "../stores/AutopilotClientStore";
-import {log} from '../stores/LogStore';
+import {MessageEvents} from "./MessageEvents";
+import {pull} from 'lodash'
 
 const ws = new WebSocket(`ws://${window.location.hostname}:3001/ws`);
 
@@ -7,13 +7,13 @@ const listeners = {};
 
 ws.onmessage = (msg) => {
     const messageObj = JSON.parse(msg.data);
-    messageObj.event === 'AUTOPILOT' && values.merge(messageObj.data);
-    messageObj.event === 'LOG' && log.push(messageObj.data);
+    listeners[messageObj.event].forEach((listener) => listener(messageObj.data))
 };
 
 ws.onopen = () => {
     ws.send(JSON.stringify({cmd: 'register', data: {event: 'AUTOPILOT'}}));
     ws.send(JSON.stringify({cmd: 'register', data: {event: 'LOG'}}))
+    ws.send(JSON.stringify({cmd: 'register', data: {event: MessageEvents.COMPASS_STATE}}))
 }
 
 
@@ -22,3 +22,6 @@ export const onBusMessage = (event, listener) => {
     listeners[event] = listeners[event] || [];
     listeners[event].push(listener);
 };
+
+export const offBusMessage = (event, listener) => pull(listeners[event], listener)
+

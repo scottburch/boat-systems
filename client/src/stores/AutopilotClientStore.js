@@ -1,7 +1,9 @@
 import {observable} from 'mobx'
-import '../services/communicationService'
-import {sendMessage} from "../services/communicationService";
+import {sendMessage, onBusMessage} from "../services/communicationService";
 
+onBusMessage('AUTOPILOT', messageObj => {
+    values.merge(messageObj);
+})
 
 
 export const values = observable.map();
