@@ -6,8 +6,8 @@ const ws = new WebSocket(`ws://${window.location.hostname}:3001/ws`);
 const listeners = {} as any;
 
 ws.onmessage = (msg) => {
-    const messageObj = JSON.parse(msg.data);
-    listeners[messageObj.event].forEach((listener: Function) => listener(messageObj.data))
+    const {event, data} = JSON.parse(msg.data);
+    listeners[event].forEach((listener: Function) => listener(data))
 };
 
 ws.onopen = () => {
