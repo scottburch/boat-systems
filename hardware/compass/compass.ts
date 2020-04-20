@@ -29,8 +29,8 @@ sendInfo('CMPS-14 compass running');
 
 const writeCommand = async (bytes) => {
     for(const byte of bytes) {
-        i2c1.writeByteSync(CMPS14_ADDR, 0x00, bytes.shift());
-        delay(20);
+        i2c1.writeByte(CMPS14_ADDR, 0x00, byte, () => {});
+        await delay(20);
     }
 };
 
@@ -61,10 +61,12 @@ const loop = async () => {
 onBusMessage(MessageEvents.CALIBRATE_COMPASS, () => {
     isCalibrating = true;
      writeCommand(START_CALIBRATION);
-     setTimeout(() => {
-        writeCommand(STOP_CALIBRATION);
+     setTimeout(async () => {
+        await writeCommand(STOP_CALIBRATION);
+        await delay(1000);
+        await writeCommand(STORE_PROFILE)
         isCalibrating = false;
-     }, 8000);
+     }, 10000);
 });
 
 onBusMessage(MessageEvents.GET_COMPASS_STATE, () => {
