@@ -1,5 +1,8 @@
 export const MessageEvents = {
     COMPASS_STATE: 'CMP-STATE',
     GET_COMPASS_STATE: 'GET-CMP-STATE',
-    CALIBRATE_COMPASS: 'CMP-CAL'
+    CALIBRATE_COMPASS: 'CMP-CAL',
+    AHRS: 'AHRS',
+    AUTOPILOT: 'AUTOPILOT',
+    LOG: 'LOG'
 }

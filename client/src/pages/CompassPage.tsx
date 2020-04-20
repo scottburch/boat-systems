@@ -5,6 +5,7 @@ import {MessageEvents} from "../services/MessageEvents";
 
 export const CompassPage = () => {
     const [compassState, setCompassState] = useState({} as any)
+    const [ahrs, setAHRS] = useState({} as any);
 
     const calibrateCompass = (): void => sendMessage(MessageEvents.CALIBRATE_COMPASS);
 
@@ -16,7 +17,15 @@ export const CompassPage = () => {
             clearInterval(i);
             offBusMessage(MessageEvents.COMPASS_STATE, setCompassState)
         };
-    })
+    }, [])
+
+    useEffect(() => {
+        onBusMessage(MessageEvents.AHRS, setAHRS);
+        return () => {
+            offBusMessage(MessageEvents.AHRS, setAHRS);
+        }
+    }, []);
+
     return (
         <>
             <Table style={{width: 0}}>
@@ -25,6 +34,7 @@ export const CompassPage = () => {
                 <Value label="Accelerometer Cal">{compassState.accCal}</Value>
                 <Value label="Gyro Cal">{compassState.gyroCal}</Value>
                 <Value label="Compass Cal">{compassState.cmpCal}</Value>
+                <Value label="Heading">{ahrs.heading}</Value>
                 </tbody>
             </Table>
             <Button onClick={calibrateCompass}>{compassState.isCal ? 'Calibrating...' : 'Calibrate'}</Button>
