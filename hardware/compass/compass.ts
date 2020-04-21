@@ -1,5 +1,8 @@
 import {onBusMessage} from "../../network/networkBus/network-bus";
 import {MessageEvents} from "../../network/networkBus/MessageEvents";
+import {AHRSMessage} from "../../network/networkBus/messages/AHRSMessage";
+import {PromisifiedBus} from "i2c-bus";
+import {CompassCalibrationMessage} from "../../network/networkBus/messages/CompassCalibrationMessage";
 
 const delay = require('delay');
 const i2c = require('i2c-bus');
@@ -22,65 +25,82 @@ const PITCH = 0x04;
 const CALIBRATION_STATE = 0x1e;
 let isCalibrating = false;
 
-const i2c1 = i2c.openSync(1);
+
+(async () => {
+    const i2c1:PromisifiedBus = await i2c.openPromisified(1);
+
+    sendInfo('CMPS-14 compass running');
+
+    const writeCommand = async (bytes): Promise<void> => {
+        for (const byte of bytes) {
+//            const start = Date.now();
+            await i2c1.writeByte(CMPS14_ADDR, 0x00, byte);
+            // We want a total delay of 20ms between byte writes;
+//            await delay(20 - (Date.now() - start));
+            await delay(20);
+        }
+    };
+
+    const readWord = async (register): Promise<number> => {
+        const high = await i2c1.readByte(CMPS14_ADDR, register);
+        const low = await i2c1.readByte(CMPS14_ADDR, register + 1);
+        return ((high << 8) | low) / 10;
+    };
+
+    const readSigned = async (register): Promise<number> =>
+        new Int8Array([await i2c1.readByte(CMPS14_ADDR, register)])[0];
 
 
-sendInfo('CMPS-14 compass running');
-
-const writeCommand = async (bytes) => {
-    for(const byte of bytes) {
-        i2c1.writeByte(CMPS14_ADDR, 0x00, byte, () => {});
-        await delay(20);
+    const loop = async () => {
+        while (true) {
+            sendMessage('AHRS', {
+                heading: await readWord(BEARING),
+                roll: await readSigned(ROLL),
+                pitch: await readSigned(PITCH),
+                compassTime: Date.now()
+            } as AHRSMessage);
+            await delay(100);
+        }
     }
-};
-
-const readWord = (register) => {
-    const high = i2c1.readByteSync(CMPS14_ADDR, register);
-    const low = i2c1.readByteSync(CMPS14_ADDR, register + 1);
-    return ((high << 8) | low) / 10;
-};
-
-const readSigned = (register) =>
-    new Int8Array([i2c1.readByteSync(CMPS14_ADDR, register)])[0];
 
 
-
-const loop = async () => {
-    while (true) {
-        sendMessage('AHRS', {
-            heading: readWord(BEARING),
-            roll: readSigned(ROLL),
-            pitch: readSigned(PITCH),
-            compassTime: Date.now()
-        });
-        await delay(100);
-    }
-}
-
-
-onBusMessage(MessageEvents.CALIBRATE_COMPASS, () => {
-    isCalibrating = true;
-     writeCommand(START_CALIBRATION);
-     setTimeout(async () => {
+    onBusMessage(MessageEvents.CALIBRATE_COMPASS, async (): Promise<void> => {
+        isCalibrating = true;
+        await doCalibration();
         await writeCommand(STOP_CALIBRATION);
-        await delay(1000);
-        await writeCommand(STORE_PROFILE)
+        await writeCommand(STORE_PROFILE);
         isCalibrating = false;
-     }, 10000);
-});
-
-onBusMessage(MessageEvents.GET_COMPASS_STATE, () => {
-    const calibration = i2c1.readByteSync(CMPS14_ADDR, CALIBRATION_STATE);
-    sendMessage(MessageEvents.COMPASS_STATE, {
-        magCal: calibration & 3,
-        accCal: (calibration & 0x0c) >> 2,
-        gyroCal: (calibration & 0x30) >> 4,
-        cmpCal: (calibration & 0xc0) >> 6,
-        isCal: isCalibrating
     });
-});
 
-loop();
+    const doCalibration = async (): Promise<void> => {
+        await writeCommand(START_CALIBRATION);
+        do {
+            await delay(500);
+        } while (await isCalibrated() === false)
 
+    }
+
+    const isCalibrated = async ():Promise<boolean> =>
+        await getCalibrationInfo()
+            .then(info => info.magCal === 3);
+
+    onBusMessage(MessageEvents.GET_COMPASS_STATE, async (): Promise<void> => {
+        const calibration = await i2c1.readByte(CMPS14_ADDR, CALIBRATION_STATE);
+        sendMessage(MessageEvents.COMPASS_STATE, getCalibrationInfo());
+    });
+
+    const getCalibrationInfo = async (): Promise<CompassCalibrationMessage> => {
+        const calibration = await i2c1.readByte(CMPS14_ADDR, CALIBRATION_STATE);
+        return {
+            magCal: calibration & 3,
+            accCal: (calibration & 0x0c) >> 2,
+            gyroCal: (calibration & 0x30) >> 4,
+            cmpCal: (calibration & 0xc0) >> 6,
+            isCal: isCalibrating
+        };
+    }
+
+    loop();
+})()
 
 

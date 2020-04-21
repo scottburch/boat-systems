@@ -3,7 +3,7 @@ import {pull, memoize} from 'lodash'
 
 const ws = new WebSocket(`ws://${window.location.hostname}:3001/ws`);
 
-const listeners = {} as any;
+const listeners: any = {}
 
 ws.onmessage = (msg) => {
     const {event, data} = JSON.parse(msg.data);

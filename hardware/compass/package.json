@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@types/i2c-bus": "^5.1.0",
     "@types/node": "^13.13.0",
     "delay": "^4.3.0",
     "i2c-bus": "^5.1.0",

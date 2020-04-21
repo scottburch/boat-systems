@@ -1,4 +1,5 @@
 import {pull} from 'lodash';
+import {AHRSMessage} from "./messages/AHRSMessage";
 
 const {objToMsg, msgToObj} = require("../utils");
 const IPC = require('node-ipc/services/IPC');
@@ -35,7 +36,8 @@ export const offBusMessage = (event, listener) => {
     pull(listeners[event], listener);
 };
 
-export const sendMessage = (event, data) =>
+
+export const sendMessage = (event, data: AHRSMessage) =>
     ipc.of['boat-systems'].emit('message', objToMsg({event: event, data: data}));
 
 export const sendLogMessage = data => sendMessage('LOG', data);
