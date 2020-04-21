@@ -19,12 +19,12 @@ import delay = require("delay");
     });
 
 
-    const numToByteArray = n => {
+    const numToByteArray = (n): number[] => {
         n = n & 0xffff;
         return [n & 0xff, (n >> 8) & 0xff];
     };
 
-    const arduinoRequest = async (addr, cmd, data = []) => {
+    const arduinoRequest = async (addr, cmd, data: number[] = []) => {
         await i2c1.i2cWrite(addr, data.length + 1, Buffer.from([cmd, ...data]));
         delay(1);
         return await i2c1.receiveByte(addr);
