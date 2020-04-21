@@ -82,11 +82,10 @@ let isCalibrating = false;
 
     const isCalibrated = async ():Promise<boolean> =>
         await getCalibrationInfo()
-            .then(info => info.magCal === 3);
+            .then(info => info.magCal === 3 && info.accCal === 3 && info.cmpCal === 3);
 
     onBusMessage(MessageEvents.GET_COMPASS_STATE, async (): Promise<void> => {
-        const calibration = await i2c1.readByte(CMPS14_ADDR, CALIBRATION_STATE);
-        sendMessage(MessageEvents.COMPASS_STATE, getCalibrationInfo());
+        sendMessage(MessageEvents.COMPASS_STATE, await getCalibrationInfo());
     });
 
     const getCalibrationInfo = async (): Promise<CompassCalibrationMessage> => {
