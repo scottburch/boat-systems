@@ -25,7 +25,6 @@ const PITCH = 0x04;
 const CALIBRATION_STATE = 0x1e;
 let isCalibrating = false;
 
-
 (async () => {
     const i2c1:PromisifiedBus = await i2c.openPromisified(1);
 
