@@ -1,4 +1,4 @@
-const {sendMessage} = require('../network/networkBus/network-bus');
+const {sendMessage} = require('../network/networkBus/src/network-bus');
 const _ = require('lodash');
 
 

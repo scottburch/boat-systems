@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2019",
     "lib": [
       "dom",
       "dom.iterable",
@@ -16,9 +16,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+//    "noEmit": true,
+    "outDir": "lib",
     "jsx": "preserve",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "declaration": true,
+    "declarationMap": true
   },
   "include": [
     "src"

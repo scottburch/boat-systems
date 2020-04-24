@@ -1,6 +1,6 @@
 import {PromisifiedBus} from "i2c-bus";
 
-const {sendMessage, onBusMessage} = require('../../network/networkBus/network-bus');
+const {sendMessage, onBusMessage} = require('../../network/networkBus/src/network-bus');
 const {changeScheduler} = require('../../utils/changeScheduler');
 
 import i2c = require('i2c-bus');

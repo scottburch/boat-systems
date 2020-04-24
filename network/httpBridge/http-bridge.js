@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 require('express-ws')(app);
 const path = require('path');
-const {sendMessage, onBusMessage, sendLogMessage, offBusMessage} = require('../networkBus/network-bus');
+const {sendMessage, onBusMessage, sendLogMessage, offBusMessage} = require('../networkBus/src/network-bus');
 
 const APP_DIR = '../../client/build';
 

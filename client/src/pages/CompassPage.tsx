@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from "react";
 import {Button, Table} from "react-bootstrap";
 import {offBusMessage, onBusMessage, sendMessage} from "../services/communicationService";
-import {MessageEvents} from "../services/MessageEvents";
+import {MessageEvents} from "outside-imports/networkBus/MessageEvents";
+import {CompassCalibrationMessage} from 'outside-imports/networkBus/messages/CompassCalibrationMessage'
 
 export const CompassPage = () => {
-    const [compassState, setCompassState] = useState({} as any)
+    const [compassState, setCompassState] = useState<CompassCalibrationMessage>({} as CompassCalibrationMessage)
     const [ahrs, setAHRS] = useState({} as any);
 
     const calibrateCompass = (): void => sendMessage(MessageEvents.CALIBRATE_COMPASS);

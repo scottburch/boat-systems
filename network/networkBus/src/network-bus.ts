@@ -1,7 +1,7 @@
 import {pull} from 'lodash';
 import {AHRSMessage} from "./messages/AHRSMessage";
 
-const {objToMsg, msgToObj} = require("../utils");
+const {objToMsg, msgToObj} = require("../../utils");
 const IPC = require('node-ipc/services/IPC');
 const ipc = require('node-ipc');
 

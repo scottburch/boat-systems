@@ -1,13 +1,13 @@
-import {onBusMessage} from "../../network/networkBus/network-bus";
-import {MessageEvents} from "../../network/networkBus/MessageEvents";
-import {AHRSMessage} from "../../network/networkBus/messages/AHRSMessage";
+import {onBusMessage} from "../../network/networkBus/src/network-bus";
+import {MessageEvents} from "../../network/networkBus/src/MessageEvents";
+import {AHRSMessage} from "../../network/networkBus/src/messages/AHRSMessage";
 import {PromisifiedBus} from "i2c-bus";
-import {CompassCalibrationMessage} from "../../network/networkBus/messages/CompassCalibrationMessage";
+import {CompassCalibrationMessage} from "../../network/networkBus/src/messages/CompassCalibrationMessage";
 
 const delay = require('delay');
 const i2c = require('i2c-bus');
 const {sendError, sendInfo} = require('../../network/logSender');
-const {sendMessage} = require('../../network/networkBus/network-bus');
+const {sendMessage} = require('../../network/networkBus/src/network-bus');
 
 const PERIODIC_AUTOSAVE = 0x10;
 const GYRO_CAL_ENABLE = 0x04;
