@@ -1,14 +1,22 @@
 import React, {useEffect, useState} from "react";
 import {Button, Table} from "react-bootstrap";
-import {offBusMessage, onBusMessage, sendMessage} from "../services/communicationService";
-import {MessageEvents} from "outside-imports/networkBus/MessageEvents";
-import {CompassCalibrationMessage} from 'outside-imports/networkBus/messages/CompassCalibrationMessage'
+import {offBusMessage, onBusMessage, sendMessage} from "../../services/communicationService";
+import {MessageEvents} from "../../../../network/networkBus/src/MessageEvents";
+import {CompassCalibrationMessage} from "../../../../network/networkBus/src/messages/CompassCalibrationMessage";
+import {JitterCalculator} from "./JitterCalculator";
+import {AHRSMessage} from "../../../../network/networkBus/src/messages/AHRSMessage";
+// @ts-ignore
+import {XYPlot, LineSeries, YAxis} from 'react-vis';
+import 'react-vis/dist/style.css';
 
 export const CompassPage = () => {
     const [compassState, setCompassState] = useState<CompassCalibrationMessage>({} as CompassCalibrationMessage)
+    const [jitterData] = useState<number[]>([]);
     const [ahrs, setAHRS] = useState({} as any);
 
+
     const calibrateCompass = (): void => sendMessage(MessageEvents.CALIBRATE_COMPASS);
+    const jitter = new JitterCalculator();
 
 
     useEffect(() => {
@@ -21,11 +29,18 @@ export const CompassPage = () => {
     }, [])
 
     useEffect(() => {
-        onBusMessage(MessageEvents.AHRS, setAHRS);
+        onBusMessage(MessageEvents.AHRS, (ahrs: AHRSMessage) => {
+            JitterCalculator.checkExpire(jitter);
+            JitterCalculator.update(jitter, ahrs.compassTime);
+            jitter.jitter && jitterData.push(jitter.jitter);
+            jitterData.length > 100 && jitterData.shift();
+            setAHRS(ahrs);
+        });
         return () => {
             offBusMessage(MessageEvents.AHRS, setAHRS);
         }
     }, []);
+
 
     return (
         <>
@@ -39,6 +54,10 @@ export const CompassPage = () => {
                 </tbody>
             </Table>
             <Button onClick={calibrateCompass}>{compassState.isCal ? 'Calibrating...' : 'Calibrate'}</Button>
+            <XYPlot height={300} width={300}>
+                <YAxis/>
+                <LineSeries data={jitterData.map((n, idx) => ({x: idx, y: n}))} />
+            </XYPlot>
         </>
     )
 };

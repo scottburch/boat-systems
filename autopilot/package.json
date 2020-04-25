@@ -4,11 +4,13 @@
     "lodash": "^4.17.11",
     "mobx": "^5.10.1",
     "node-pid-controller": "^1.0.1",
+    "nodemon": "^2.0.3",
     "simple-monads": "^2.0.0",
     "ts-node": "^8.8.2",
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "start": "ts-node autopilot"
+    "start": "ts-node autopilot",
+    "start:watch": "nodemon"
   }
 }

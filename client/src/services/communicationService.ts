@@ -1,4 +1,4 @@
-import {MessageEvents} from "outside-imports/networkBus/MessageEvents";
+import {MessageEvents} from "../../../network/networkBus/src/MessageEvents";
 import {pull, memoize} from 'lodash'
 
 const ws = new WebSocket(`ws://${window.location.hostname}:3001/ws`);

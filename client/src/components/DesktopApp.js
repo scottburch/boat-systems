@@ -2,7 +2,7 @@ import React from 'react'
 import {Switch, Route} from 'react-router-dom'
 import {ReflexContainer, ReflexElement, ReflexSplitter} from 'react-reflex'
 
-import {CompassPage} from "../pages/CompassPage";
+import {CompassPage} from "../pages/CompassPage/CompassPage";
 import {SidebarMenu} from "./SidebarMenu";
 import {HomePage} from "../pages/HomePage";
 import {LogPage} from "../pages/LogPage";
