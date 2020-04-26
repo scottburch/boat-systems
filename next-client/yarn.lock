@@ -3103,6 +3103,11 @@ json5@^2.1.0, json5@^2.1.2:
   dependencies:
     minimist "^1.2.5"
 
+key-event-to-string@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/key-event-to-string/-/key-event-to-string-1.2.0.tgz#6cf2ed0d246fe2ae3ff5e7751fd2d66764437bf3"
+  integrity sha512-XtYtvEp/f6WaYgNCOdRUuE/cTqoQXU7TK62rmGsA4ylRGvvFRlBsItkR9f+/MEaVzTAIqBDCU1Zt/67lv7L1iA==
+
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"

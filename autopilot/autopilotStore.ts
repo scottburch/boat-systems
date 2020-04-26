@@ -13,11 +13,11 @@ type AutopilotProperties = 'rudder' | 'preset' | 'compassTime' | 'error' | 'rudd
 export const values = observable.map<AutopilotProperties, any>();
 
 
-onBusMessage('AHRS', v =>
+onBusMessage('AHRS', v => {
     runInAction('merge AHRS values', () => values.merge(v))
-);
+});
 
-onBusMessage('AUTOPILOT', v => values.merge(v));
+onBusMessage('AUTOPILOT', v => {console.log('xxxxx', v);values.merge(v)});
 
 
 autorun(() => runInAction('Presets updates', () => {

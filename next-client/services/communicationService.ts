@@ -1,10 +1,11 @@
 import {MessageEvents} from "./MessageEvents";
 import {pull, memoize} from 'lodash'
 import delay from "delay";
+import {isClient} from "../utils/utils";
 
 let ws;
 
-if(typeof window !== 'undefined') {
+if(isClient()) {
     ws = new window.WebSocket(`ws://${window.location.hostname}:3001/ws`);
     ws.onmessage = (msg) => {
         const {event, data} = JSON.parse(msg.data);
@@ -28,10 +29,9 @@ const registerForMessages = memoize((event: string): void => {
     wsSend({cmd: 'register', data: {event}});
 });
 
-
-
-
-export const sendMessage = (event: MessageEvents, data = {}) => typeof window !== 'undefined' && wsSend({cmd: 'send', data: {event, ...data}});
+export const sendMessage = (event: MessageEvents, data = {}) => {
+    isClient() && wsSend({cmd: 'send', data: {event, data}})
+};
 export const onBusMessage = (event: MessageEvents, listener: Function) => {
     listeners[event] = listeners[event] || [];
     listeners[event].push(listener);

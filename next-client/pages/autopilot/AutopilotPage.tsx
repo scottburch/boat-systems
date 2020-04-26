@@ -1,6 +1,8 @@
 import {Alert, Col, Container, Row} from "react-bootstrap";
 import React from "react";
 import {ValuesBox} from "./ValuesBox";
+import {AdjustableValuesBox} from "./AdjustableValuesBox";
+
 
 export const AutopilotPage = () => {
 
@@ -13,7 +15,7 @@ export const AutopilotPage = () => {
                 <Col xs={6}>
                     <Alert>
                         <ValuesBox/>
-                        {/*<AdjustableValuesBox/>*/}
+                        <AdjustableValuesBox/>
                     </Alert>
                 </Col>
                 <Col xs={6}>
