@@ -12,16 +12,18 @@ export const CompassPage = () => {
     useEffect(() => {
         const i = setInterval(() => sendMessage(MessageEvents.GET_COMPASS_STATE), 2000);
         return () => clearInterval(i);
-    })
+    }, [])
 
     return (
-        <>
+        <table>
+            <tbody>
             <Value label="Magnetometer Cal">{compassState.magCal}</Value>
             <Value label="Accelerometer Cal">{compassState.accCal}</Value>
             <Value label="Gyro Cal">{compassState.gyroCal}</Value>
             <Value label="Compass Cal">{compassState.cmpCal}</Value>
             <Value label="Heading">{ahrs.heading}</Value>
-            </>
+            </tbody>
+        </table>
     )
 }
 

@@ -10,7 +10,6 @@ if(typeof window !== 'undefined') {
         const {event, data} = JSON.parse(msg.data);
         listeners[event].forEach((listener: Function) => listener(data))
     };
-    console.dir(ws);
 }
 
 
