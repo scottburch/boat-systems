@@ -5,4 +5,6 @@ export interface AutopilotMessage {
     compassDelay: number
     course: number
     heading: number
+    error: number
+    rudder: number
 }

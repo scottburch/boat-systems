@@ -39,7 +39,8 @@ const styles = {
         borderRight: '1px solid red'
     } as CSSProperties,
     main: {
-        padding: 10
+        padding: 10,
+        width: '100%'
     } as CSSProperties
 }
 
