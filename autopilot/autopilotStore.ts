@@ -1,12 +1,16 @@
-const {observable, autorun, reaction, toJS, runInAction} = require('mobx');
-const {onBusMessage, sendMessage} = require('../network/networkBus/src/network-bus');
+import {RudderMessage} from "../network/networkBus/src/messages/RudderMessage";
+
+import {observable, autorun, reaction, toJS, runInAction} from 'mobx';
+
+import {onBusMessage, sendMessage} from '../network/networkBus/src/network-bus';
 const _ = require('lodash');
 const {Maybe} = require('simple-monads');
 const {observableChangeScheduler} = require('../utils/changeScheduler');
 
 const presets = require('./presets');
 
-const values = module.exports.values = observable.map();
+type AutopilotProperties = 'rudder' | 'preset' | 'compassTime' | 'error' | 'rudderWait' | 'rudderTime' | 'course' | 'kP' | 'kI' | 'kD' | 'rudderState' | 'heading'
+export const values = observable.map<AutopilotProperties, any>();
 
 
 onBusMessage('AHRS', v =>
@@ -26,7 +30,7 @@ setInterval(() => sendMessage('AUTOPILOT', toJS(values)), 5000);
 
 reaction(
     () => ({rudder: values.get('rudder')}),
-    obj => sendMessage('RUDDER', {...obj, time: values.get('compassTime') || 0})
+    ({rudder}) => sendMessage<RudderMessage>('RUDDER', {rudder, time: Date.now(), compassTime: values.get('compassTime') || 0})
 );
 
 observableChangeScheduler(values, 'AUTOPILOT', 10, ['compassTime']);

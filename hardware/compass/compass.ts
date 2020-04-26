@@ -7,7 +7,7 @@ import {CompassCalibrationMessage} from "../../network/networkBus/src/messages/C
 const delay = require('delay');
 const i2c = require('i2c-bus');
 const {sendError, sendInfo} = require('../../network/logSender');
-const {sendMessage} = require('../../network/networkBus/src/network-bus');
+import {sendMessage} from '../../network/networkBus/src/network-bus';
 
 const PERIODIC_AUTOSAVE = 0x10;
 const GYRO_CAL_ENABLE = 0x04;
@@ -52,7 +52,7 @@ let isCalibrating = false;
 
     const loop = async () => {
         while (true) {
-            sendMessage('AHRS', {
+            sendMessage<AHRSMessage>('AHRS', {
                 heading: await readWord(BEARING),
                 roll: await readSigned(ROLL),
                 pitch: await readSigned(PITCH),

@@ -4,7 +4,7 @@ const {isNil} = require('lodash');
 "use strict";
 const PID = require('node-pid-controller');
 
-const {values} = require('./autopilotStore');
+import {values} from './autopilotStore';
 const utils = require('./utils');
 let pidController;
 
@@ -61,7 +61,7 @@ function calcCourseError() {
     values.set('error', error);
 }
 
-const toFixed =  (n, places) => parseFloat(parseFloat(n, 10).toFixed(places));
+const toFixed =  (n, places) => parseFloat(parseFloat(n).toFixed(places));
 
 
 autorun(() => {

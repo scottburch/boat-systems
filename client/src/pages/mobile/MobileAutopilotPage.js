@@ -1,7 +1,9 @@
 import React from 'react'
-import {values} from "../../stores/AutopilotClientStore";
+//import {values} from "../../stores/AutopilotClientStore";
 import {observer} from "mobx-react";
 import {sendMessage} from "../../services/communicationService";
+
+const values = {};
 
 export const MobileAutopilotPage = observer(() => {
     return (

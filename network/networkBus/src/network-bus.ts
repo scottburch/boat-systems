@@ -37,7 +37,7 @@ export const offBusMessage = (event, listener) => {
 };
 
 
-export const sendMessage = (event, data: AHRSMessage) =>
+export const sendMessage = <T>(event, data: T) =>
     ipc.of['boat-systems'].emit('message', objToMsg({event: event, data: data}));
 
 export const sendLogMessage = data => sendMessage('LOG', data);

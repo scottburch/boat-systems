@@ -5,3 +5,5 @@ boat-systems.iws
 
 node_modules.bak
 yarn.lock.bak
+
+.next

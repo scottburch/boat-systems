@@ -6,7 +6,7 @@ import {CompassPage} from "../pages/CompassPage/CompassPage";
 import {SidebarMenu} from "./SidebarMenu";
 import {HomePage} from "../pages/HomePage";
 import {LogPage} from "../pages/LogPage";
-import {AutopilotPage} from "../pages/AutopilotPage";
+import {AutopilotPage} from "../pages/AutopilotPage/AutopilotPage";
 import {SystemsPage} from "../pages/SystemsPage";
 
 

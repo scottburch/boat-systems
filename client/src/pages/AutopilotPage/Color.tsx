@@ -1,9 +1,9 @@
 import React from 'react'
 import {isNumber} from 'lodash'
 
-export const Color = ({children}) => isNumber(children) ? colorIt(children) : 'N/A';
+export const Color:React.FC<{children: number}> = ({children}) => isNumber(children) ? colorIt(children) : <span>N/A</span>;
 
-const colorIt = (num) => {
+const colorIt = (num: number) => {
     const value = toFixed(num, 3);
     let color = 'black';
     num > 0 && (color = 'green');
@@ -12,4 +12,4 @@ const colorIt = (num) => {
     return <span style={{color: color}}>{value}</span>
 };
 
-const toFixed =  (n, places) => parseFloat(parseFloat(n, 10).toFixed(places));
+const toFixed =  (n: number, places: number) => parseFloat(n.toFixed(places));
