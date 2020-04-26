@@ -3,12 +3,14 @@ import React from "react";
 import {ValuesBox} from "./ValuesBox";
 import {AdjustableValuesBox} from "./AdjustableValuesBox";
 import {ExtraBox} from "./ExtraBox";
+import {GlobalKeyListener} from "./GlobalKeyListener";
 
 
 export const AutopilotPage = () => {
 
     return (
         <Container fluid>
+            <GlobalKeyListener/>
             <Row>
                 {/*<Col style={{paddingBottom: 5}}><PresetsSelect/></Col>*/}
             </Row>
