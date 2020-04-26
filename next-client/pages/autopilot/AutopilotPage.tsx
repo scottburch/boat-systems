@@ -2,6 +2,7 @@ import {Alert, Col, Container, Row} from "react-bootstrap";
 import React from "react";
 import {ValuesBox} from "./ValuesBox";
 import {AdjustableValuesBox} from "./AdjustableValuesBox";
+import {ExtraBox} from "./ExtraBox";
 
 
 export const AutopilotPage = () => {
@@ -20,7 +21,7 @@ export const AutopilotPage = () => {
                 </Col>
                 <Col xs={6}>
                     <Alert>
-                        {/*<ExtraBox/>*/}
+                        <ExtraBox/>
                     </Alert>
                 </Col>
             </Row>
