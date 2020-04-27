@@ -10,9 +10,9 @@ const sendToAutopilot = (value) => {
 
 
 export const GlobalKeyListener = () => {
-    const [values] = useMessageListener<AutopilotMessage>(MessageEvents.AUTOPILOT);
+    const [values, setValues] = useMessageListener<AutopilotMessage>(MessageEvents.AUTOPILOT);
     const myKeyListener = (key: KeyboardEvent) => {
-        keyListener(key, values);
+        keyListener(key, values, setValues);
     }
 
     useEffect(() => {
@@ -23,18 +23,21 @@ export const GlobalKeyListener = () => {
     return null;
 }
 
-const keyListener = (key: KeyboardEvent, values: AutopilotMessage) => {
+const keyListener = (key: KeyboardEvent, values: AutopilotMessage, setValues) => {
     if (key.shiftKey === false) {
         key.code === 'KeyC' &&
             sendToAutopilot({course: values.course ? null : values.heading});
 
         if(key.code === 'ArrowRight' && typeof values.course === 'number') {
             const newCourse = values.course === 359 ? 0 : values.course + 1;
+            setValues({...values, course: newCourse});
             sendToAutopilot({course: newCourse});
         }
 
         if(key.code === 'ArrowLeft' &&  typeof values.course === 'number') {
-            sendToAutopilot({course: values.course ? values.course - 1 : 359});
+            const newCourse = values.course ? values.course - 1 : 359;
+            setValues({...values, course: newCourse});
+            sendToAutopilot({course: newCourse});
         }
     }
 }
