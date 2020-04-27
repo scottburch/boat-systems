@@ -11,6 +11,7 @@ export default ({Component, pageProps}) => {
             <div style={styles.sidebar}>
                 <MyLink router={router} href="/autopilot">Autopilot</MyLink>
                 <MyLink router={router} href="/compass">Compass</MyLink>
+                <MyLink router={router} href="/logs">Logs</MyLink>
             </div>
             <div style={styles.main}>
                 <Component {...pageProps} />
