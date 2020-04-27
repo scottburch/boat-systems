@@ -4,6 +4,7 @@ import {MessageEvents} from "../../../services/MessageEvents";
 import {useEffect} from "react";
 import {sendMessage} from "../../../services/communicationService";
 import {AHRSMessage} from "../../../../network/networkBus/src/messages/AHRSMessage";
+import {CompassJitterChart} from "./CompassJitterChart";
 
 export const CompassPage = () => {
     const [compassState] = useMessageListener<CompassCalibrationMessage>(MessageEvents.COMPASS_STATE);
@@ -15,6 +16,7 @@ export const CompassPage = () => {
     }, [])
 
     return (
+        <>
         <table>
             <tbody>
             <Value label="Magnetometer Cal">{compassState.magCal}</Value>
@@ -24,6 +26,8 @@ export const CompassPage = () => {
             <Value label="Heading">{ahrs.heading}</Value>
             </tbody>
         </table>
+            <CompassJitterChart/>
+            </>
     )
 }
 

@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css'
+import 'react-vis/dist/style.css';
 import {useRouter} from "next/router";
 import React, {CSSProperties} from "react";
 import Link from "next/link";
