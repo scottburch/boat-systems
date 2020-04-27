@@ -1,9 +1,9 @@
-import {useMessageListener} from "../../components/custom-hooks/useBusListener";
-import {CompassCalibrationMessage} from "../../../network/networkBus/src/messages/CompassCalibrationMessage";
-import {MessageEvents} from "../../services/MessageEvents";
+import {useMessageListener} from "../../custom-hooks/useBusListener";
+import {CompassCalibrationMessage} from "../../../../network/networkBus/src/messages/CompassCalibrationMessage";
+import {MessageEvents} from "../../../services/MessageEvents";
 import {useEffect} from "react";
-import {sendMessage} from "../../services/communicationService";
-import {AHRSMessage} from "../../../network/networkBus/src/messages/AHRSMessage";
+import {sendMessage} from "../../../services/communicationService";
+import {AHRSMessage} from "../../../../network/networkBus/src/messages/AHRSMessage";
 
 export const CompassPage = () => {
     const [compassState] = useMessageListener<CompassCalibrationMessage>(MessageEvents.COMPASS_STATE);

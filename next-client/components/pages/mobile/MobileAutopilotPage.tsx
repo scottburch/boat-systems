@@ -1,8 +1,8 @@
 import React from 'react'
-import {sendMessage} from "../../services/communicationService";
-import {AutopilotMessage} from "../../../network/networkBus/src/messages/AutopilotMessage";
-import {useMessageListener} from "../../components/custom-hooks/useBusListener";
-import {MessageEvents} from "../../services/MessageEvents";
+import {sendMessage} from "../../../services/communicationService";
+import {AutopilotMessage} from "../../../../network/networkBus/src/messages/AutopilotMessage";
+import {useMessageListener} from "../../custom-hooks/useBusListener";
+import {MessageEvents} from "../../../services/MessageEvents";
 
 export const MobileAutopilotPage = () => {
     const [values, setValues] = useMessageListener<AutopilotMessage>(MessageEvents.AUTOPILOT);

@@ -1,7 +1,7 @@
 import React from 'react'
-import {MessageEvents} from "../../services/MessageEvents";
-import {useMessageListener} from "../../components/custom-hooks/useBusListener";
-import {LogMessage} from "../../../network/networkBus/src/messages/LogMessage";
+import {MessageEvents} from "../../../services/MessageEvents";
+import {useMessageListener} from "../../custom-hooks/useBusListener";
+import {LogMessage} from "../../../../network/networkBus/src/messages/LogMessage";
 
 let logs = [];
 

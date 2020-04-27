@@ -1,8 +1,8 @@
-import {AutopilotMessage} from "../../../network/networkBus/src/messages/AutopilotMessage";
+import {AutopilotMessage} from "../../../../network/networkBus/src/messages/AutopilotMessage";
 import {useEffect} from "react";
-import {sendMessage} from "../../services/communicationService";
-import {MessageEvents} from "../../services/MessageEvents";
-import {useMessageListener} from "../../components/custom-hooks/useBusListener";
+import {sendMessage} from "../../../services/communicationService";
+import {MessageEvents} from "../../../services/MessageEvents";
+import {useMessageListener} from "../../custom-hooks/useBusListener";
 
 const sendToAutopilot = (value) => {
     sendMessage(MessageEvents.AUTOPILOT, value);

@@ -2,10 +2,9 @@ import React from 'react'
 import {ValueField} from "./ValueField";
 import {Color} from "./Color";
 import {isNil} from 'lodash'
-import {useMessageListener} from "../../components/custom-hooks/useBusListener";
-import {AutopilotMessage} from "../../../network/networkBus/src/messages/AutopilotMessage";
-import {MessageEvents} from "../../services/MessageEvents";
-
+import {useMessageListener} from "../../custom-hooks/useBusListener";
+import {AutopilotMessage} from "../../../../network/networkBus/src/messages/AutopilotMessage";
+import {MessageEvents} from "../../../services/MessageEvents";
 
 export const ValuesBox = () => {
     const [values] = useMessageListener<AutopilotMessage>(MessageEvents.AUTOPILOT);

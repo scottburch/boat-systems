@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import {ValueField} from "./ValueField";
-import {sendMessage} from "../../services/communicationService";
-import {MessageEvents} from "../../services/MessageEvents";
-import {useMessageListener} from "../../components/custom-hooks/useBusListener";
-import {AutopilotMessage} from "../../../network/networkBus/src/messages/AutopilotMessage";
+import {sendMessage} from "../../../services/communicationService";
+import {MessageEvents} from "../../../services/MessageEvents";
+import {useMessageListener} from "../../custom-hooks/useBusListener";
+import {AutopilotMessage} from "../../../../network/networkBus/src/messages/AutopilotMessage";
 
 const sendToAutopilot = (value) => {
     sendMessage(MessageEvents.AUTOPILOT, value);

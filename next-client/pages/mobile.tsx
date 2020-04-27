@@ -1,0 +1,1 @@
+export {MobileAutopilotPage as default} from '../components/pages/mobile/MobileAutopilotPage'

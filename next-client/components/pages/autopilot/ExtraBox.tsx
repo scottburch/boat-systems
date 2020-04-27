@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import {ValueField} from "./ValueField";
 import {Color} from "./Color";
-import {MessageEvents} from "../../services/MessageEvents";
-import {AutopilotMessage} from "../../../network/networkBus/src/messages/AutopilotMessage";
-import {useMessageListener} from "../../components/custom-hooks/useBusListener";
+import {MessageEvents} from "../../../services/MessageEvents";
+import {AutopilotMessage} from "../../../../network/networkBus/src/messages/AutopilotMessage";
+import {useMessageListener} from "../../custom-hooks/useBusListener";
 
 export const ExtraBox = () => {
     const [values] = useMessageListener<AutopilotMessage>(MessageEvents.AUTOPILOT);
