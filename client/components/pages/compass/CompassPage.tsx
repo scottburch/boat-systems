@@ -5,6 +5,8 @@ import {useEffect} from "react";
 import {sendMessage} from "../../../services/communicationService";
 import {AHRSMessage} from "../../../../network/networkBus/src/messages/AHRSMessage";
 import {CompassJitterChart} from "./CompassJitterChart";
+import {CompassCalibrationButton} from "./CompassCalibrationButton";
+import {CompassArrow} from "./CompassArrow";
 
 export const CompassPage = () => {
     const [compassState] = useMessageListener<CompassCalibrationMessage>(MessageEvents.COMPASS_STATE);
@@ -26,6 +28,8 @@ export const CompassPage = () => {
             <Value label="Heading">{ahrs.heading}</Value>
             </tbody>
         </table>
+            <CompassCalibrationButton />
+            <CompassArrow />
             <CompassJitterChart/>
             </>
     )

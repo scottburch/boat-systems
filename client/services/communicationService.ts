@@ -2,6 +2,7 @@ import {MessageEvents} from "./MessageEvents";
 import {pull, memoize} from 'lodash'
 import delay from "delay";
 import {isClient} from "../utils/utils";
+import {AHRSMessage} from "../../network/networkBus/src/messages/AHRSMessage";
 
 let ws;
 
@@ -32,7 +33,8 @@ const registerForMessages = memoize((event: string): void => {
 export const sendMessage = (event: MessageEvents, data = {}) => {
     isClient() && wsSend({cmd: 'send', data: {event, data}})
 };
-export const onBusMessage = (event: MessageEvents, listener: Function) => {
+
+export const onBusMessage = <T>(event: MessageEvents, listener: (T) => void) => {
     listeners[event] = listeners[event] || [];
     listeners[event].push(listener);
     registerForMessages(event);
