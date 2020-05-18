@@ -46,14 +46,9 @@ RUN yarn
 WORKDIR $APP_DIR/hardware/rudderInterface
 RUN yarn
 
-
-
-CMD pm2 start --name network-bridge 'yarn start'
-CMD pm2 start --name http-bridge 'yarn start'
-CMD pm2 start --name autopilot 'yarn start'
-CMD pm2 start --name client 'yarn start'
-CMD pm2 start --name client 'yarn start'
-CMD pm2 start --name rudder 'yarn start'
+WORKDIR /opt
+COPY ecosystem.config.js .
+ENTRYPOINT ['pm2', 'start', 'ecosystem.config.js']
 
 
 
