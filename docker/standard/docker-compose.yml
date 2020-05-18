@@ -1,0 +1,12 @@
+version: '2.0'
+services:
+  boat-systems:
+    build:
+      context: .
+    ports:
+      - "5000:5000/udp"
+      - "3000:3000"
+      - "3001:3001"
+    devices:
+      - /dev/i2c-1
+    entrypoint: sleep 99999999999
