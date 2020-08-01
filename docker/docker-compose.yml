@@ -1,0 +1,52 @@
+version: '3.8'
+services:
+  boat-systems-base:
+    image: boat-systems-base
+    build:
+      context: base
+
+  network-bridge:
+    container_name: network-bridge
+    image: network-bridge
+    build:
+      context: ../network/networkBridge
+    expose:
+      - "5000/udp"
+    depends_on:
+      - boat-systems-base
+
+  client:
+    container_name: client
+    image: client
+    build:
+      context: ../client
+    ports:
+    - "3000:3000"
+    depends_on:
+      - boat-systems-base
+
+  http-bridge:
+    container_name: http-bridge
+    image: http-bridge
+    build:
+      context: ../network/httpBridge
+    expose:
+      - "5000/udp"
+    ports:
+      - "3001:3001"
+    depends_on:
+      - boat-systems-base
+
+  compass:
+    container_name: compass
+    image: compass
+    build:
+      context: ../hardware/compass
+    expose:
+    - "5000/udp"
+    devices:
+      - /dev/i2c-1
+    depends_on:
+      - boat-systems-base
+
+

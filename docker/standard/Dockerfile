@@ -1,9 +1,5 @@
 FROM arm32v7/node:14.2.0
 
-EXPOSE 5000/udp
-EXPOSE 3000
-EXPOSE 3001
-
 RUN apt update
 RUN apt install net-tools
 
