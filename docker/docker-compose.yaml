@@ -25,7 +25,8 @@ services:
     ports:
     - "3000:3000"
     depends_on:
-      - boat-systems-base
+      - compass
+      - autopilot
 
   http-bridge:
     container_name: http-bridge
@@ -37,7 +38,8 @@ services:
     volumes:
       - /tmp:/tmp
     depends_on:
-      - boat-systems-base
+      - compass
+      - autopilot
 
   compass:
     container_name: compass
@@ -51,4 +53,13 @@ services:
     depends_on:
       - boat-systems-base
 
+  autopilot:
+    container_name: autopilot
+    image: autopilot
+    build:
+      context: ../autopilot
+    volumes:
+    - /tmp:/tmp
+    depends_on:
+      - compass
 
