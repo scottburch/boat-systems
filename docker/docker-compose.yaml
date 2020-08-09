@@ -44,12 +44,12 @@ services:
   rudder:
     container_name: rudder
     image: rudder
-  build:
-     context: ../hardware/rudderInterface
-  volumes:
-    - /tmp:/tmp
-  depends_on:
-    - boat-systems-base
+    build:
+      context: ../hardware/rudderInterface
+    volumes:
+      - /tmp:/tmp
+    depends_on:
+      - boat-systems-base
 
   compass:
     container_name: compass
