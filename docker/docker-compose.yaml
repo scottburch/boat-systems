@@ -46,6 +46,8 @@ services:
     image: rudder
     build:
       context: ../hardware/rudderInterface
+    devices:
+      - /dev/i2c-1
     volumes:
       - /tmp:/tmp
     depends_on:
