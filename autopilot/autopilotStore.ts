@@ -17,7 +17,7 @@ onBusMessage('AHRS', v => {
     runInAction('merge AHRS values', () => values.merge(v))
 });
 
-onBusMessage('AUTOPILOT', v => {console.log('xxxxx', v);values.merge(v)});
+onBusMessage('AUTOPILOT', v => values.merge(v));
 
 
 autorun(() => runInAction('Presets updates', () => {
