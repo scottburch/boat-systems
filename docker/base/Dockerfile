@@ -1,7 +1,7 @@
 FROM arm32v7/node:14.2.0
 
-RUN apt update
-RUN apt install net-tools vim tcpdump
+RUN apt-get -y update
+RUN apt-get -y install net-tools vim tcpdump
 
 WORKDIR /app
 RUN git clone https://github.com/scottburch/boat-systems.git
