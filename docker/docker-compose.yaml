@@ -17,15 +17,15 @@ services:
     depends_on:
       - boat-systems-base
 
-#  client:
-#    container_name: client
-#    image: client
-#    build:
-#      context: ../client
-#    ports:
-#    - "3000:3000"
-#    depends_on:
-#      - boat-systems-base
+  client:
+    container_name: client
+    image: client
+    build:
+      context: ../client
+    ports:
+    - "3000:3000"
+    depends_on:
+      - boat-systems-base
 
   http-bridge:
     container_name: http-bridge
