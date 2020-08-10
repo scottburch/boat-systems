@@ -8,6 +8,7 @@ services:
   network-bridge:
     container_name: network-bridge
     image: network-bridge
+    restart: always
     network_mode: host
     build:
       context: ../network/networkBridge
@@ -21,6 +22,7 @@ services:
   client:
     container_name: client
     image: client
+    restart: always
     network_mode: host
     build:
       context: ../client
@@ -33,6 +35,7 @@ services:
   http-bridge:
     container_name: http-bridge
     image: http-bridge
+    restart: always
     network_mode: host
     build:
       context: ../network/httpBridge
@@ -47,6 +50,7 @@ services:
   rudder:
     container_name: rudder
     image: rudder
+    restart: always
     build:
       context: ../hardware/rudderInterface
     devices:
@@ -59,6 +63,7 @@ services:
   compass:
     container_name: compass
     image: compass
+    restart: always
     build:
       context: ../hardware/compass
     devices:
@@ -71,6 +76,7 @@ services:
   autopilot:
     container_name: autopilot
     image: autopilot
+    restart: always
     build:
       context: ../autopilot
     volumes:
