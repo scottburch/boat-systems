@@ -8,14 +8,21 @@ services:
   network-bridge:
     container_name: network-bridge
     image: network-bridge
+    network_mode: host
     build:
       context: ../network/networkBridge
-    ports:
-      - "5000:5000/udp"
+#    ports:
+#      - "5000:5000/udp"
     volumes:
       - /tmp:/tmp
     depends_on:
       - boat-systems-base
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 30
+        window: 10s
 
   client:
     container_name: client
