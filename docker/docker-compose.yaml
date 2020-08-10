@@ -17,16 +17,16 @@ services:
       - /tmp:/tmp
     depends_on:
       - boat-systems-base
-    deploy:
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 30
-        window: 10s
+    restart_policy:
+      condition: any
+      delay: 5s
+      max_attempts: 30
+      window: 10s
 
   client:
     container_name: client
     image: client
+    network_mode: host
     build:
       context: ../client
     ports:
@@ -38,6 +38,7 @@ services:
   http-bridge:
     container_name: http-bridge
     image: http-bridge
+    network_mode: host
     build:
       context: ../network/httpBridge
     ports:
