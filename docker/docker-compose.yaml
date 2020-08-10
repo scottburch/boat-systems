@@ -17,11 +17,6 @@ services:
       - /tmp:/tmp
     depends_on:
       - boat-systems-base
-    restart_policy:
-      condition: any
-      delay: 5s
-      max_attempts: 30
-      window: 10s
 
   client:
     container_name: client
