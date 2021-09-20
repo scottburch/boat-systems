@@ -14,13 +14,16 @@ const network_bus_1 = require("../lib/network-bus");
 const sinon_chai_1 = __importDefault(require("sinon-chai"));
 const chai_1 = __importStar(require("chai"));
 const sinon_1 = require("sinon");
+const promise_passthrough_1 = require("promise-passthrough");
+const delay_1 = __importDefault(require("delay"));
 chai_1.default.use(sinon_chai_1.default);
 describe('network-bus', () => {
     it("should start a ipc connection and send messages", () => {
-        const listener = sinon_1.spy();
-        network_bus_1.onBusMessage('my-event', listener);
-        network_bus_1.sendMessage('my-event', { some: 'data' });
-        chai_1.expect(sinon_1.spy).to.have.been.calledWith({ some: 'data' });
+        return Promise.resolve(sinon_1.fake())
+            .then(promise_passthrough_1.passThroughAwait(listener => network_bus_1.onBusMessage('my-event', listener)))
+            .then(promise_passthrough_1.passThroughAwait(() => network_bus_1.sendMessage('my-event', { some: 'data' })))
+            .then(promise_passthrough_1.passThroughAwait(() => delay_1.default(5000)))
+            .then(listener => chai_1.expect(listener).to.have.been.calledWith({ some: 'data' }));
     });
 });
 //# sourceMappingURL=network-bus.spec.js.map

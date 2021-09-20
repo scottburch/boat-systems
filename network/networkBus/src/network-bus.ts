@@ -2,6 +2,7 @@ import {pull} from 'lodash';
 
 import ipc from 'node-ipc';
 import {msgToObj, objToMsg} from "../../utils/lib/utils";
+import {Some} from "monet";
 
 ipc.config.id = 'boat-systems';
 ipc.config.retry = 1500;
@@ -39,7 +40,11 @@ export const offBusMessage = (event: string, listener: Listener) => {
 
 
 export const sendMessage = <T>(event: string, data: T) =>
-    ipc.of['boat-systems'].emit('message', objToMsg({event: event, data: data}));
+    Some({event: event, data: data})
+        .map(objToMsg)
+        .forEach(msg =>
+            ipc.of['boat-systems'].emit('message', msg)
+        )
 
 export const sendLogMessage = (data: unknown) => sendMessage('LOG', data);
 
