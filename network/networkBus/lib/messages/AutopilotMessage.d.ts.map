@@ -1,0 +1,1 @@
+{"version":3,"file":"AutopilotMessage.d.ts","sourceRoot":"","sources":["../../src/messages/AutopilotMessage.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,gBAAgB;IAC7B,IAAI,EAAE,MAAM,CAAA;IACZ,KAAK,EAAE,MAAM,CAAA;IACb,WAAW,EAAE,MAAM,CAAA;IACnB,YAAY,EAAE,MAAM,CAAA;IACpB,MAAM,EAAE,MAAM,CAAA;IACd,OAAO,EAAE,MAAM,CAAA;IACf,KAAK,EAAE,MAAM,CAAA;IACb,MAAM,EAAE,MAAM,CAAA;CACjB"}

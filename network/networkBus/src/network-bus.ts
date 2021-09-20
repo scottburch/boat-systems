@@ -1,23 +1,24 @@
 import {pull} from 'lodash';
-import {AHRSMessage} from "./messages/AHRSMessage";
 
-const {objToMsg, msgToObj} = require("../../utils");
-const IPC = require('node-ipc/services/IPC');
-const ipc = require('node-ipc');
+import ipc from 'node-ipc';
+import {msgToObj, objToMsg} from "../../utils/lib/utils";
 
 ipc.config.id = 'boat-systems';
 ipc.config.retry = 1500;
 ipc.config.silent = true;
 
 
-const listeners = {};
+type Listener = (msg: any) => void
+const listeners: Record<string, Listener[]> = {};
+
+
 
 ipc.connectTo(
     'boat-systems',
     () => {
         ipc.of['boat-systems'].on(
             'message',
-            (msg) => {
+            (msg: string) => {
                 const obj = msgToObj(msg);
                 (listeners[obj.event] || []).forEach(listener => listener(obj.data));
             }
@@ -27,20 +28,20 @@ ipc.connectTo(
 );
 
 
-export const onBusMessage = (event, listener) => {
+export const onBusMessage = (event: string, listener: Listener) => {
     listeners[event] = listeners[event] || [];
     listeners[event].push(listener)
 };
 
-export const offBusMessage = (event, listener) => {
+export const offBusMessage = (event: string, listener: Listener) => {
     pull(listeners[event], listener);
 };
 
 
-export const sendMessage = <T>(event, data: T) =>
+export const sendMessage = <T>(event: string, data: T) =>
     ipc.of['boat-systems'].emit('message', objToMsg({event: event, data: data}));
 
-export const sendLogMessage = data => sendMessage('LOG', data);
+export const sendLogMessage = (data: unknown) => sendMessage('LOG', data);
 
 
 

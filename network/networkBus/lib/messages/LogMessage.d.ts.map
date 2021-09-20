@@ -1,0 +1,1 @@
+{"version":3,"file":"LogMessage.d.ts","sourceRoot":"","sources":["../../src/messages/LogMessage.ts"],"names":[],"mappings":"AAAA,oBAAY,eAAe;IACvB,IAAI,SAAS;IACb,KAAK,UAAU;CAClB;AAED,MAAM,WAAW,UAAU;IACvB,KAAK,EAAE,eAAe,CAAC;IACvB,GAAG,EAAE,MAAM,CAAC;IACZ,IAAI,EAAE,MAAM,CAAA;CACf"}
